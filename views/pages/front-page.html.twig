@@ -1,0 +1,34 @@
+{#
+ # Front Page
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #}
+
+{% extends 'index.html.twig' %}
+
+{%- block header -%}
+	{%- embed 'header.html.twig' with { classes: [ 'sticky top-0 inset-x-0 pt-14 pb-11' ] } -%}
+		{%- block logo -%}
+			<div class="col-5/12">
+				<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-[9.125rem] w-[22.75rem] block">
+					<img class="w-full h-full object-contain" width="364" height="146" src="{{ theme.manifest[ 'img/svg/logo-large.svg' ] }}" />
+				</a>
+			</div>
+
+			<div class="col-5/12 -ml-2/12 mt-auto mb-7"><hr class="w-full h-[0.0625rem] bg-red-vivid block border-none"></div>
+		{%- endblock -%}
+	{%- endembed -%}
+{%- endblock -%}
+
+{%- block breadcrumb -%}{%- endblock -%}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div>
+				FRONT PAGE
+			</div>
+		</div>
+	</div>
+{% endblock %}

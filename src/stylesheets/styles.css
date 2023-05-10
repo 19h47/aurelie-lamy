@@ -1,0 +1,13 @@
+@import './base/base';
+
+@import './components/button';
+@import './components/form';
+
+@import './utilities/grid';
+@import './utilities/scrollbar';
+@import './utilities/wysiwyg';
+
+@import 'swiper/swiper.min.css';
+
+@tailwind components;
+@tailwind utilities;

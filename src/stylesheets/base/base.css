@@ -1,0 +1,55 @@
+/**
+ * Base
+ *
+ * @package AurelieLamy
+ * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ */
+
+@tailwind base;
+
+@layer base {
+	/* @font-face {
+		font-family: 'KG Happy';
+		src: url('../fonts/kg-happy/kg-happy-regular.woff2') format('woff2');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	} */
+
+	*,
+	::after,
+	::before {
+		--base-font-size-unitless: 16;
+		--prototype-width-unitless: 1366;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	strong,
+	b {
+		@apply font-semibold;
+	}
+
+	@screen xl {
+		html {
+			font-size: calc(
+				var(--base-font-size-unitless) * 100vw / var(--prototype-width-unitless)
+			);
+		}
+	}
+
+	body {
+		@apply font-secondary;
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	html.js {
+		opacity: 0;
+	}
+
+	html.is-first-load {
+		opacity: 1;
+	}
+}

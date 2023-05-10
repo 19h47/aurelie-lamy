@@ -1,0 +1,26 @@
+{#
+ # Socials
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+{% if socials is iterable %}
+	<ul class="{{ html_classes( 'flex gap-x-9 justify-center', classes | default( [] ) | join( ' ' ) ) }}">
+		{% for social in socials %}
+			<li>
+				<a
+					class="{{ html_classes() }}"
+					href="{{ social.url }}"
+					target="_blank"
+					rel="noopener noreferer"
+					aria-label="{{ social.title }}"
+				>
+					{{- icon( social.slug, { classes: [ 'w-6', 'h-6' ] } ) -}}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endif %}

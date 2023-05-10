@@ -1,0 +1,23 @@
+/**
+ * Wysiwyg
+ *
+ * @package WordPress
+ * @subpackage AurelieLamy
+ */
+
+@layer utilities {
+	.wysiwyg {
+	}
+
+	.wysiwyg > *:first-child {
+		@apply mt-0;
+	}
+
+	.wysiwyg > *:last-child {
+		@apply mb-0;
+	}
+
+	.wysiwyg > p {
+		margin-top: 1em;
+	}
+}

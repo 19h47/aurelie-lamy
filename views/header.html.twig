@@ -1,0 +1,22 @@
+{#
+ # Header
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<header class="{{ html_classes( 'bg-white', classes | default( [] ) | join( ' ' ) ) }}">
+	<div class="container">
+		<div class="row">
+			{% block logo %}
+				<div class="col-5/12">
+					<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-[2.3125rem] w-[21.75rem] block">
+						<img class="w-full h-full object-contain" width="348" height="37" src="{{ theme.manifest[ 'img/svg/logo.svg' ] }}" />
+					</a>
+				</div>
+			{% endblock %}
+			<div class="col-4/12">HEADER</div>
+		</div>
+	</div>
+</header>
