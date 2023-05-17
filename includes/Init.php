@@ -23,6 +23,7 @@ class Init {
 			Setup\Enqueue::class,
 			Setup\Settings::class,
 			Setup\Theme::class,
+			Setup\Twig::class,
 			Setup\NavMenu::class,
 			Setup\Supports::class,
 			Setup\Textdomain::class,
@@ -36,6 +37,8 @@ class Init {
 			Plugins\ACF\Admin\Head::class,
 			Plugins\ACF\Admin\Fields::class,
 			Plugins\ACF\Admin\Init::class,
+			Plugins\ACF\Fields\AboutPageFields::class,
+			Plugins\ACF\Fields\BlocksFields::class,
 			Plugins\ACF\Fields\FrontPageFields::class,
 		);
 	}

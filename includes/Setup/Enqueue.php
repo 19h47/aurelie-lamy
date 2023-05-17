@@ -75,12 +75,12 @@ class Enqueue {
 			'google_api_key'         => get_option( 'google_api_key' ),
 			'messages'               => array(
 				'value_missing' => array(
-					'default' => _x( 'Please fill out this field.', 'messages', 'aurelie-lamy' ),
+					'default' => _x( 'Please fill out this field.', 'messages', 'aurelielamy' ),
 				),
 				'type_mismatch' => array(
-					'email'   => _x( 'Please enter an email address.', 'messages', 'aurelie-lamy' ),
-					'url'     => _x( 'Please enter a URL.', 'messages', 'aurelie-lamy' ),
-					'default' => _x( 'Please match the expected format.', 'messages', 'aurelie-lamy' ),
+					'email'   => _x( 'Please enter an email address.', 'messages', 'aurelielamy' ),
+					'url'     => _x( 'Please enter a URL.', 'messages', 'aurelielamy' ),
+					'default' => _x( 'Please match the expected format.', 'messages', 'aurelielamy' ),
 				),
 			),
 		);

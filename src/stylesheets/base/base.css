@@ -8,13 +8,30 @@
 @tailwind base;
 
 @layer base {
-	/* @font-face {
-		font-family: 'KG Happy';
-		src: url('../fonts/kg-happy/kg-happy-regular.woff2') format('woff2');
+	/* Hurme Geometric Sans 3 */
+	@font-face {
+		font-family: 'Hurme Geometric Sans 3';
+		src: url('../fonts/hurme-geometric-sans-3/hurme-geometric-sans-3-regular.woff2') format('woff2');
 		font-weight: 400;
 		font-style: normal;
 		font-display: swap;
-	} */
+	}
+
+	@font-face {
+		font-family: 'Hurme Geometric Sans 3';
+		src: url('../fonts/hurme-geometric-sans-3/hurme-geometric-sans-3-bold.woff2') format('woff2');
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Hurme Geometric Sans 3';
+		src: url('../fonts/hurme-geometric-sans-3/hurme-geometric-sans-3-regular-oblic.woff2') format('woff2');
+		font-weight: 400;
+		font-style: italic;
+		font-display: swap;
+	}
 
 	*,
 	::after,
@@ -24,10 +41,8 @@
 		-webkit-tap-highlight-color: transparent;
 	}
 
-	strong,
-	b {
-		@apply font-semibold;
-	}
+	/* strong,
+	b {} */
 
 	@screen xl {
 		html {
@@ -38,7 +53,7 @@
 	}
 
 	body {
-		@apply font-secondary;
+		@apply font-sans;
 	}
 
 	svg {

@@ -8,6 +8,6 @@
 @layer components {
 	/* Base */
 	.button {
-		@apply text-16 font-semibold lg:text-32 lg:min-w-[32.5rem] max-w-full text-center relative inline-block;
+		@apply lg:min-w-[32.5rem] max-w-full text-center relative inline-block;
 	}
 }

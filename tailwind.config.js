@@ -4,8 +4,15 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = {
 	red: {
 		'very-soft': '#F3B4AB',
-		vivid: '#F75322'
+		'very-pale': '#FFECEA',
+		vivid: '#F75322',
+		'light-grayish': '#FEECEA'
 	},
+	gray: {
+		light: '#D1D1D1',
+		dark: '#7C7C7C',
+		'very-dark': '#707070'
+	}
 };
 
 const fontSize = {};
@@ -19,9 +26,17 @@ const transitionDuration = {
 };
 
 const spacing = {
+	'0.5/12': `${(0.5 / 12) * 100}%`,
+	'2/6': `${(2 / 6) * 100}%`,
+	'4/6': `${(4 / 6) * 100}%`,
+	'4.5/6': `${(4.5 / 6) * 100}%`,
 	'1/12': `${(1 / 12) * 100}%`,
+	'1.5/12': `${(1.5 / 12) * 100}%`,
 	'2/12': `${(2 / 12) * 100}%`,
 	'3/12': `${(3 / 12) * 100}%`,
+	'4.5/12': `${(4.5 / 12) * 100}%`,
+	'5.5/12': `${(5.5 / 12) * 100}%`,
+	'6.5/12': `${(6.5 / 12) * 100}%`,
 	'1/8': `${(1 / 8) * 100}%`,
 	4.5: `${18 / 16}rem`,
 	7.5: `${30 / 16}rem`,
@@ -30,6 +45,7 @@ const spacing = {
 	19: `${76 / 16}rem`,
 	21: `${84 / 16}rem`, // 84px
 	21.5: `${86 / 16}rem`, // 86px
+	22: `${88 / 16}rem`, // 88px
 	23: `${92 / 16}rem`,
 	25: `${100 / 16}rem`,
 	26: `${104 / 16}rem`,
@@ -85,15 +101,17 @@ module.exports = {
 			zIndex,
 		},
 		fontFamily: {
-			primary: ['"KG Happy"', ...defaultTheme.fontFamily.sans],
-			secondary: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+			sans: ['"Hurme Geometric Sans 3"', ...defaultTheme.fontFamily.sans],
 		},
 	},
 	plugins: [
 		plugin(({ addVariant }) => addVariant('is-active', '.is-active&')),
+		plugin(({ addVariant }) => addVariant('is-ontop', '.is-ontop &')),
 		plugin(({ addVariant }) => addVariant('parent-is-selected', '.is-selected &')),
 		plugin(({ addVariant }) => addVariant('parent-has-error', '.has-error &')),
 		plugin(({ addVariant }) => addVariant('is-disabled', '&[disabled],&:disabled')),
 		plugin(({ addVariant }) => addVariant('swiper-slide-active', '.swiper-slide-active &')),
+		plugin(({ addVariant }) => addVariant('first-child', '& > *:first-child')),
+		plugin(({ addVariant }) => addVariant('last-child', '& > *:last-child')),
 	],
 };

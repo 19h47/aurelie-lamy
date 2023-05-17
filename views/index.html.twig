@@ -9,7 +9,7 @@
 <html
     itemscope
     itemtype="http://schema.org/WebPage"
-    {{ html_class( 'no-js no-touch is-loading' ) }}
+    {{ html_class( 'no-js no-touch is-loading is-ontop' ) }}
     {{ site.language_attributes }}
 >
 
@@ -31,10 +31,10 @@
 	>
 
 		<div data-load-container data-url="{{ current_url }}" class="duration-1000 ease-in-out transition-opacity">
-			<div id="{{ post.id ? "page-#{post.id}" : 'page' }}" {{ body_class( 'page-content' ) }}>
+			<div id="{{ post.id ? "page-#{post.id}" : 'page' }}" {{ body_class( 'page-content' ) }} data-module-scroll="main">
 
 				{% block header %}
-					{{- include( 'header.html.twig', { classes: [ 'sticky top-0 inset-x-0 pt-14 pb-11' ] } ) -}}
+					{{- include( 'header.html.twig', { classes: [ 'bg-white z-10 text-red-very-soft sticky top-0 inset-x-0 py-6 lg:pt-14 lg:pb-11' ] } ) -}}
 				{% endblock %}
 
 

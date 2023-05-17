@@ -1,0 +1,32 @@
+{#
+ # Blocks: Three Columns
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="py-13 lg:py-20 bg-red-very-pale">
+	<div class="container">
+		<div class="row items-end">
+			{% for column in block.columns %}
+				<div class="{{ html_classes( loop.first ? '' : 'mt-13 lg:mt-0', 'lg:col-4/12' ) }}">
+					<div class="lg:mr-6">
+						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'w-1/2', 'h-auto' ] } ) -}}
+						<h2 class="{{ html_classes( column.image ? 'mt-7' : '', 'text-[2.625rem] leading-[2.875rem] text-red-vivid' ) }}">{{- column.title -}}</h2>
+						<div class="{{ html_classes( 'text-sm wysiwyg mt-9 lg:hidden' ) }}">{{- column.content -}}</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+		<div class="lg:row hidden">
+			{% for column in block.columns %}
+				<div class="{{ html_classes( 'col-4/12' ) }}">
+					<div class="{{ html_classes( 'text-sm wysiwyg mt-9 lg:mr-6' ) }}">{{- column.content -}}</div>
+				</div>
+			{% endfor %}
+		</div>
+		</div>
+	</div>
+</div>

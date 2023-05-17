@@ -1,0 +1,32 @@
+{#
+ # Blocks: Video
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="py-20 lg:py-36 bg-red-very-pale">
+	<div class="container">
+		<div class="row lg:items-end">
+
+			<div class="{{ html_classes( 'col-10/12 ml-1/12', 'lg:col-4.5/12', 'right' == block.layout ? 'lg:order-2 lg:ml-1.5/12' : 'lg:ml-0' ) }}">
+				{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'w-auto', 'max-w-full', 'h-auto', 'block' ] } ) -}}
+			</div>
+
+			<div
+				class="{{
+					html_classes(
+						block.image ? 'mt-12 lg:mt-0' : '',
+						'right' == block.layout ? 'lg:order-1 lg:col-5.5/12' : 'lg:col-6.5/12 lg:ml-1/12'
+					)
+				}}"
+			>
+				<h2 class="text-[2.875rem] leading-none text-red-vivid">{{- block.title -}}</h2>
+				<div class="wysiwyg mt-7 text-sm">{{- block.content -}}</div>
+				{{- include( 'components/link.html.twig', block.link | default( {} ) | merge( { classes: [ 'mt-6 lg:mt-7' ] } ) ) -}}
+			</div>
+
+		</div>
+	</div>
+</div>

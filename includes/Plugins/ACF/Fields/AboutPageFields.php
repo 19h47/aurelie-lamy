@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * Front Page Fields
+ * About Page Fields
  *
  * @package WordPress
  * @subpackage AurelieLamy
@@ -9,9 +9,9 @@
 namespace AurelieLamy\Plugins\ACF\Fields;
 
 /**
- * Front Page Fields
+ * About Page Fields
  */
-class FrontPageFields {
+class AboutPageFields {
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -27,15 +27,15 @@ class FrontPageFields {
 	 * @return void
 	 */
 	public function fields() {
-		$key            = 'front_page';
+		$key            = 'about_page';
 		$hide_on_screen = array( 'the_content' );
 
 		$location = array(
 			array(
 				array(
-					'param'    => 'page_type',
+					'param'    => 'page_template',
 					'operator' => '==',
-					'value'    => $key,
+					'value'    => 'templates/about-page.php',
 				),
 			),
 		);
@@ -53,7 +53,7 @@ class FrontPageFields {
 						'name'        => 'heading',
 						'type'        => 'textarea',
 						'new_lines'   => 'br',
-						'rows'        => 2,
+						'rows'        => 3,
 						'placeholder' => __( 'Heading', 'aurelielamy' ),
 					),
 					array(
@@ -61,15 +61,9 @@ class FrontPageFields {
 						'label'       => __( 'Content', 'aurelielamy' ),
 						'name'        => 'content',
 						'type'        => 'textarea',
-						'new_lines'   => 'br',
-						'rows'        => 2,
+						'new_lines'   => 'wpautop',
+						'rows'        => 1,
 						'placeholder' => __( 'Content', 'aurelielamy' ),
-					),
-					array(
-						'key'   => 'field_' . $key . '_hero_link',
-						'label' => __( 'Link', 'aurelielamy' ),
-						'name'  => 'link',
-						'type'  => 'link',
 					),
 					array(
 						'key'           => 'field_' . $key . '_hero_image',
@@ -88,7 +82,7 @@ class FrontPageFields {
 			acf_add_local_field_group(
 				array(
 					'key'            => 'group_' . $key,
-					'title'          => __( 'Front Page Fields', 'aurelielamy' ),
+					'title'          => __( 'About Page Fields', 'aurelielamy' ),
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,

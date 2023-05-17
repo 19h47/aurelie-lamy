@@ -39,14 +39,14 @@ class Settings {
 
 		add_settings_field(
 			'public_email',
-			__( 'Public Email Address', 'aurelie-lamy' ),
+			__( 'Public Email Address', 'aurelielamy' ),
 			array( $this, 'email_callback_function' ),
 			'reading',
 			'contacts',
 			array(
 				'name'        => 'public_email',
-				'label'       => __( 'Email', 'aurelie-lamy' ),
-				'description' => __( 'This address is used for public purposes.', 'aurelie-lamy' ),
+				'label'       => __( 'Email', 'aurelielamy' ),
+				'description' => __( 'This address is used for public purposes.', 'aurelielamy' ),
 				'placeholder' => 'artvandelay@vandelayindustries.com',
 			)
 		);
@@ -60,27 +60,27 @@ class Settings {
 
 		add_settings_field(
 			'linkedin',
-			__( 'LinkedIn', 'aurelie-lamy' ),
+			__( 'LinkedIn', 'aurelielamy' ),
 			array( $this, 'text_callback_function' ),
 			'general',
 			'socials',
 			array(
 				'name'        => 'linkedin',
 				'placeholder' => 'https://www.linkedin.com/artvandelay',
-				'description' => __( 'Enter the LinkedIn URL here.', 'aurelie-lamy' ),
+				'description' => __( 'Enter the LinkedIn URL here.', 'aurelielamy' ),
 			)
 		);
 
 		add_settings_field(
 			'instagram',
-			__( 'Instagram', 'aurelie-lamy' ),
+			__( 'Instagram', 'aurelielamy' ),
 			array( $this, 'text_callback_function' ),
 			'general',
 			'socials',
 			array(
 				'name'        => 'instagram',
 				'placeholder' => 'https://instagram.com/artvandelay',
-				'description' => __( 'Enter the Instagram URL here.', 'aurelie-lamy' ),
+				'description' => __( 'Enter the Instagram URL here.', 'aurelielamy' ),
 			)
 		);
 	}

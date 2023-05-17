@@ -6,17 +6,42 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<header class="{{ html_classes( 'bg-white', classes | default( [] ) | join( ' ' ) ) }}">
+<header class="{{ html_classes( classes | default( [] ) | join( ' ' ) ) }}">
 	<div class="container">
-		<div class="row">
+		<div class="row items-center lg:items-start">
+
 			{% block logo %}
-				<div class="col-5/12">
-					<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-[2.3125rem] w-[21.75rem] block">
-						<img class="w-full h-full object-contain" width="348" height="37" src="{{ theme.manifest[ 'img/svg/logo.svg' ] }}" />
+				<div class="col-6/12 lg:col-8/12">
+					<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-[3.875rem] lg:h-[2.3125rem] w-[21.75rem] block max-w-full">
+						<img class="w-full h-full object-contain object-left hidden lg:block" width="348" height="37" src="{{ theme.manifest[ 'img/svg/logo.svg' ] }}" />
+						<img class="w-full h-full object-contain object-left lg:hidden" width="364" height="146" src="{{ theme.manifest[ 'img/svg/logo-large.svg' ] }}" />
 					</a>
 				</div>
 			{% endblock %}
-			<div class="col-4/12">HEADER</div>
+
+			<div class="col-6/12 lg:col-4/12 flex justify-end items-start">
+				<div class="flex gap-x-6 items-center">
+					<div class="relative text-lg hidden lg:block">
+						<select class="appearance-none pr-4 bg-transparent outline-none" name="language-switcher" data-module-language-switcher>
+							{% for lang in pll_the_languages() %}
+								<option
+									data-id="{{ lang.id }}"
+									class="{{ lang.classes | join( ' ' ) }}"
+									data-locale="{{ lang.locale }}"
+									value="{{ lang.url }}"
+									{{ lang.current_lang ? 'selected' : '' }}
+								>{{- lang.slug | capitalize -}}</option>
+							{% endfor %}
+						</select>
+
+						{{ icon( 'caret-down', { classes: [ 'pointer-events-none', 'my-auto', 'absolute', 'inset-y-0', 'right-0', 'w-2.5 h-1.5' ] } ) }}
+					</div>
+
+					{{- include( 'components/socials.html.twig', { classes: [ 'hidden', 'lg:flex' ] }  ) -}}
+
+					<button type="button" class="">{{- icon( 'bars', { classes: [ 'fill-red-vivid', 'w-9', 'h-7' ] } ) -}}</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </header>

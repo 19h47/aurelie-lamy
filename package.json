@@ -21,12 +21,9 @@
 		"prod": "19h47-scripts prod"
 	},
 	"dependencies": {
-
-
 		"@19h47/modular": "19h47/19h47-modular",
-
-
 		"gsap": "^3.11.5",
+		"locomotive-scroll": "^4.1.4",
 		"modularload": "^1.2.8",
 		"swiper": "^9.2.4"
 	},

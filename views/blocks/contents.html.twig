@@ -1,0 +1,46 @@
+{#
+ # Blocks: Contents
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="mt-15 lg:mt-30 overflow-hidden">
+	<div class="container">
+		<div class="row">
+			<div class="col-6/12">
+				<div class="row">
+					<div class="col-4.5/6 relative z-1">
+						<div class="relative overflow-hidden after:absolute after:w-[6.75rem] after:h-[6.75rem] after:top-0 after:right-0 after:rounded-full after:bg-white after:-mr-[3.375rem] after:-mt-[3.375rem] after:z-1 before:z-2 before:mt-1.5 before:mr-1.5 before:absolute before:top-0 before:right-0 before:w-6 before:h-6 before:rounded-full before:bg-red-vivid">
+							{{- include( 'components/image.html.twig', { image: block.images[0], classes: [ 'w-full', 'h-full', 'object-cover', 'object-center' ] } ) -}}
+						</div>
+					</div>
+					<div class="col-4/6 ml-2/6 mt-[-13.125rem] relative z-2">
+						{{- include( 'components/image.html.twig', { image: block.images[1], classes: [ 'w-full', 'h-full', 'object-cover', 'object-center' ] } ) -}}
+					</div>
+				</div>
+			</div>
+			<div class="col-5.5/12 ml-0.5/12">
+				<h2 class="text-[2.875rem] lg:text-[3.5rem] leading-none">{{- block.title -}}</h2>
+				<div class="wysiwyg text-sm mt-10">
+					{{- block.contents[0] -}}
+				</div>
+			</div>
+		</div>
+		<div class="row mt-30">
+			<div class="col-5.5/12 mb-28">
+				<div class="wysiwyg relative after:absolute after:top-full after:right-0 after:w-6 after:h-6 after:rounded-full after:bg-red-vivid">
+					{{- block.contents[1] -}}
+				</div>
+
+			</div>
+			<div class="ml-2/12 col-4.5/12">
+				<div class="w-[39.897511vw] h-full">
+					{{- include( 'components/image.html.twig', { image: block.images[2], classes: [ 'w-full', 'h-full', 'object-cover', 'object-center' ] } ) -}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

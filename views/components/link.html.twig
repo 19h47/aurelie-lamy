@@ -1,0 +1,19 @@
+{#
+ # Link
+ #
+ # @param array classes
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #}
+
+{%- if url -%}
+	<a
+		class="{{ html_classes( classes | default( [] ) | join( ' ' ), 'inline-flex gap-x-2 items-center text-sm py-2.5 px-5 border rounded-full border-red-very-soft text-red-vivid hover:bg-red-vivid transition-colors duration-300 hover:text-red-very-soft' ) }}"
+		href="{{ url }}"
+		{{ target ? 'rel="noopener noreferer" target="_blank"' : '' }}
+	>
+		{{- icon( 'chevron-right', { classes: [ 'w-1.5', 'h-2.5' ] } ) -}}
+		{{- title -}}
+	</a>
+{%- endif -%}

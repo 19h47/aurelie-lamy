@@ -1,0 +1,79 @@
+{#
+ # Blocks: Two Columns
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="lg:py-36 lg:bg-[linear-gradient(_to_right,_#FEECEA,_#FEECEA_50%,_#F75322_50%)]">
+	<div class="lg:container">
+		<div class="lg:row">
+
+			{% for column in block.columns %}
+				<div class="{{ html_classes( 'px-4 py-14 lg:py-0 lg:px-2 lg:col-5.5/12 lg:bg-transparent', loop.first ? ' bg-red-light-grayish' : '', loop.last ? 'bg-red-vivid lg:ml-1/12' : '' ) }}">
+					{%- if column.header.image and not column.header.title -%}
+						{{- include( 'components/image.html.twig', { classes: [ 'mb-11', 'h-21', 'w-auto', 'block', 'object-contain', 'object-left' ], image: column.header.image } ) -}}
+					{%- endif -%}
+
+					{%- if column.header.image and column.header.title -%}
+						<div class="flex flex-col lg:flex-row gap-y-5 lg:gap-y-0 lg:items-center gap-x-8">
+							{{- include( 'components/image.html.twig', { classes: [ 'h-26 lg:h-32', 'w-auto', 'block', 'object-contain', 'object-left' ], image: column.header.image } ) -}}
+							<h2 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.875rem] lg:text-[3.5rem] leading-none' ) }}">{{- column.header.title -}}</h2>
+						</div>
+					{%- endif -%}
+
+					{%- if column.header.title and not column.header.image -%}
+						<h2 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.875rem] lg:text-[3.5rem] leading-none' ) }}">{{- column.header.title -}}</h2>
+					{%- endif -%}
+
+					{%- if column.header.subtitle and not column.header.title -%}
+						<h2 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.625rem] leading-[2.875rem]' ) }}">
+							{{ column.header.subtitle }}
+						</h2>
+					{%- endif -%}
+
+					{%- if column.header.subtitle and column.header.title -%}
+						<h3 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.625rem] leading-[2.875rem]' ) }}">
+							{{ column.header.subtitle }}
+						</h3>
+					{%- endif -%}
+
+					<div class="{{ html_classes( 'text-sm wysiwyg mt-5 lg:mt-9', loop.last ? 'text-white' : '' ) }}">{{- column.content -}}</div>
+
+					{%- if column.link.url -%}
+						<a
+							class="{{
+								html_classes(
+									loop.first ? 'bg-red-vivid text-white hover:text-red-vivid hover:bg-red-very-soft' : '',
+									loop.last ? 'bg-white text-red-vivid hover:bg-red-very-soft hover:text-white' : '',
+									'mt-8 lg:mt-6 uppercase inline-flex gap-x-2 items-center text-sm py-2.5 px-5 rounded-full  transition-colors duration-300 hover:text-red-very-soft'
+								)
+							}}"
+							href="{{ column.link.url }}"
+							{{ column.link.target ? 'rel="noopener noreferer" target="_blank"' : '' }}
+						>
+							{{- icon( 'chevron-right', { classes: [ 'w-1.5', 'h-2.5' ] } ) -}}
+							{{- column.link.title -}}
+						</a>
+					{%- endif -%}
+
+					{% if column.quote.title or column.quote.name %}
+						<div class="{{ html_classes( 'flex items-center gap-x-6 mt-8 flex-0', loop.last ? 'text-white' : '' ) }}">
+							<div class="w-24 h-24 flex-shrink-0 rounded-full overflow-hidden">
+								{{- include( 'components/image.html.twig', { image: column.quote.image, classes: [ 'w-full', 'h-full', 'object-cover', 'object-contain', ] } ) -}}
+							</div>
+
+							<figure>
+								<blockquote>
+									<p class="text-2xl italic"><span class="block">&quot;</span>{{ column.quote.title }}<span class="block rotate-180 -mt-4.5">&quot;</span></p>
+								</blockquote>
+								<figcaption class="text-sm">{{ column.quote.name }}</figcaption>
+							</figure>
+						</div>
+					{% endif %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>

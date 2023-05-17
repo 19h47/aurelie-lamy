@@ -35,8 +35,8 @@ class NavMenu {
 	public function register_menus(): void {
 		register_nav_menus(
 			array(
-				'main' => __( 'Main Menu', 'aurelie-lamy' ),
-				'footer' => __( 'Footer Menu', 'aurelie-lamy' ),
+				'main' => __( 'Main Menu', 'aurelielamy' ),
+				'footer' => __( 'Footer Menu', 'aurelielamy' ),
 			)
 		);
 	}
