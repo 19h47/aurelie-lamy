@@ -59,7 +59,7 @@
 					{%- endif -%}
 
 					{% if column.quote.title or column.quote.name %}
-						<div class="{{ html_classes( 'flex items-center gap-x-6 mt-8 flex-0', loop.last ? 'text-white' : '' ) }}">
+						<div class="{{ html_classes( 'flex flex-col lg:flex-row lg:items-center gap-6 mt-8 flex-0', loop.last ? 'text-white' : '' ) }}">
 							<div class="w-24 h-24 flex-shrink-0 rounded-full overflow-hidden">
 								{{- include( 'components/image.html.twig', { image: column.quote.image, classes: [ 'w-full', 'h-full', 'object-cover', 'object-contain', ] } ) -}}
 							</div>
