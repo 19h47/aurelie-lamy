@@ -92,6 +92,7 @@ class FrontPageFields {
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,
+					'menu_order'     => 0,
 				)
 			);
 

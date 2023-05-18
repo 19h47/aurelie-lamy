@@ -37,6 +37,11 @@ class BlocksFields {
 					'operator' => '==',
 					'value'    => 'page',
 				),
+				array(
+					'param'    => 'page_template',
+					'operator' => '!=',
+					'value'    => 'templates/athletes-page.php',
+				),
 			),
 		);
 
@@ -108,7 +113,6 @@ class BlocksFields {
 												'tabs'    => 'all',
 												'toolbar' => 'basic',
 												'media_upload' => 0,
-												'delay'   => 0,
 											),
 											array(
 												'key'   => 'field_' . $key . '_two_columns_columns_0_link',
@@ -203,7 +207,6 @@ class BlocksFields {
 												'tabs'    => 'all',
 												'toolbar' => 'basic',
 												'media_upload' => 0,
-												'delay'   => 0,
 											),
 											array(
 												'key'   => 'field_' . $key . '_two_columns_columns_1_link',
@@ -266,6 +269,35 @@ class BlocksFields {
 									$this->three_columns_column( $key ),
 									$this->three_columns_column( $key, 1 ),
 									$this->three_columns_column( $key, 2 ),
+								),
+							),
+						),
+					),
+					'layout_' . $key . '_four_columns'  => array(
+						'key'        => 'layout_' . $key . '_four_columns',
+						'label'      => __( 'Four Columns', 'aurelielamy' ),
+						'name'       => 'four_columns',
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'         => 'field_' . $key . '_four_columns_title',
+								'label'       => __( 'Title', 'aurelielamy' ),
+								'name'        => 'title',
+								'type'        => 'textarea',
+								'rows'        => 2,
+								'new_lines'   => 'br',
+								'placeholder' => __( 'Title', 'aurelielamy' ),
+							),
+
+							array(
+								'key'        => 'field_' . $key . '_four_columns_columns',
+								'name'       => 'columns',
+								'type'       => 'group',
+								'sub_fields' => array(
+									$this->four_columns_column( $key ),
+									$this->four_columns_column( $key, 1 ),
+									$this->four_columns_column( $key, 2 ),
+									$this->four_columns_column( $key, 3 ),
 								),
 							),
 						),
@@ -360,7 +392,7 @@ class BlocksFields {
 					'layout_' . $key . '_contents'      => array(
 						'key'        => 'layout_' . $key . '_contents',
 						'name'       => 'contents',
-						'label'      => __( 'Contents', 'aurelylamy' ),
+						'label'      => __( 'Contents', 'aurelielamy' ),
 						'display'    => 'block',
 						'sub_fields' => array(
 
@@ -470,6 +502,7 @@ class BlocksFields {
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,
+					'menu_order'     => 1,
 				)
 			);
 
@@ -511,6 +544,62 @@ class BlocksFields {
 				),
 				array(
 					'key'          => 'field_' . $key . '_three_columns_columns_' . $index . '_content',
+					'label'        => __( 'Content', 'aurelielamy' ),
+					'name'         => 'content',
+					'type'         => 'wysiwyg',
+					'tabs'         => 'all',
+					'toolbar'      => 'basic',
+					'media_upload' => 0,
+					'delay'        => 0,
+				),
+
+			),
+		);
+	}
+
+
+	/**
+	 * Four Columns Column
+	 *
+	 * @param string $key Key.
+	 * @param int    $index Index.
+	 *
+	 * @return array
+	 */
+	public function four_columns_column( string $key = '', int $index = 0 ) : array {
+		return array(
+			'key'        => 'field_' . $key . '_four_columns_columns_' . $index,
+			'name'       => $index,
+			'type'       => 'group',
+			'wrapper'    => array( 'width' => 3 / 12 * 100 ),
+			'sub_fields' => array(
+				array(
+					'key'           => 'field_' . $key . '_four_columns_columns_' . $index . '_image',
+					'label'         => __( 'Image', 'aurelielamy' ),
+					'name'          => 'image',
+					'type'          => 'image',
+					'return_format' => 'array',
+					'library'       => 'all',
+					'preview_size'  => 'medium',
+				),
+				array(
+					'key'         => 'field_' . $key . '_four_columns_columns_' . $index . '_title',
+					'label'       => __( 'Title', 'aurelielamy' ),
+					'name'        => 'title',
+					'type'        => 'textarea',
+					'rows'        => 2,
+					'new_lines'   => 'br',
+					'placeholder' => __( 'Title', 'aurelielamy' ),
+				),
+				array(
+					'key'         => 'field_' . $key . '_four_columns_columns_' . $index . '_subtitle',
+					'label'       => __( 'Subtitle', 'aurelielamy' ),
+					'name'        => 'subtitle',
+					'type'        => 'text',
+					'placeholder' => __( 'Subtitle', 'aurelielamy' ),
+				),
+				array(
+					'key'          => 'field_' . $key . '_four_columns_columns_' . $index . '_content',
 					'label'        => __( 'Content', 'aurelielamy' ),
 					'name'         => 'content',
 					'type'         => 'wysiwyg',

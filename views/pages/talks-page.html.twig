@@ -1,0 +1,56 @@
+{#
+ # Talks Page
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #}
+
+{% extends 'index.html.twig' %}
+
+{%- block header -%}
+	{%- embed 'header.html.twig' with { classes: [ 'lg:is-ontop:text-white lg:is-ontop:bg-transparent transition-colors duration-300', 'bg-white text-red-very-soft', 'z-3 sticky lg:fixed top-0 inset-x-0 py-6 lg:pt-14 lg:pb-11' ] } -%}
+		{%- block logo -%}
+			<div class="col-6/12 lg:col-8/12">
+				<a href="{{ site.link }}" aria-label="{{ site.title }}" class="h-[3.875rem] lg:h-[2.3125rem] w-[21.75rem] block max-w-full">
+					<img class="w-full h-full object-contain object-left hidden lg:block" width="348" height="37" src="{{ theme.manifest[ 'img/svg/logo.svg' ] }}" />
+					<img class="w-full h-full object-contain object-left lg:hidden" width="364" height="146" src="{{ theme.manifest[ 'img/svg/logo-large.svg' ] }}" />
+				</a>
+			</div>
+		{%- endblock -%}
+	{%- endembed -%}
+{%- endblock -%}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+	<main>
+
+		{% embed 'blocks/blocks.html.twig' with { blocks: post.meta( 'blocks' ), classes: [ 'first-child:mt-0 last-child:mb-0' ] } %}
+			{%- block prepend -%}
+				<div class="overflow-hidden">
+					<div class="container">
+						<div class="row">
+							<div class="lg:col-5.5/12 lg:ml-1/12 relative z-1 lg:order-3">
+								<div class="relative h-[20.25rem] lg:h-full lg:w-[46.6325037vw]">
+									{{- include( 'components/image.html.twig', { classes: [ 'h-full', 'w-full', 'absolute', 'inset-y-0', 'left-0', 'object-cover' ], image: post.meta( 'hero' ).image } ) -}}
+								</div>
+							</div>
+							<div class="lg:col-5.5/12 pt-14 pb-13 lg:pt-36 lg:pb-24 lg:order-1">
+								<div class="text-sm">
+									{{ yoast_breadcrumb() }}
+								</div>
+								<h1 class="text-[2.875rem] mt-13 lg:text-[3.5rem] leading-none text-red-vivid">{{- post.meta( 'hero' ).heading -}}</h1>
+
+								<div class="wysiwyg mt-8 text-sm">
+									{{- post.meta( 'hero' ).content -}}
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			{%- endblock -%}
+		{%- endembed -%}
+
+	</main>
+{% endblock %}

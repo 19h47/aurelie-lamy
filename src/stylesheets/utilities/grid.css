@@ -42,6 +42,10 @@
 		@apply col w-3/12;
 	}
 
+	.col-4\/5\.5 {
+		@apply col w-4/5.5;
+	}
+
 	.col-4\/6 {
 		@apply col w-4/6;
 	}
@@ -56,6 +60,10 @@
 
 	.col-4\.5\/6 {
 		@apply col w-4.5/6;
+	}
+
+	.col-5\/5\.5 {
+		@apply col w-5/5.5;
 	}
 
 	.col-5\/12 {

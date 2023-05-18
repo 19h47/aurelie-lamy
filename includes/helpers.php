@@ -64,3 +64,48 @@ function get_webfonts() : array {
 	);
 }
 
+
+
+/**
+ * Hero group fields
+ *
+ * @param string $key Key.
+ *
+ * @return array
+ */
+function get_hero_group_fields( string $key = '' ) : array {
+	return array(
+		'key'        => 'field_' . $key . '_hero',
+		'label'      => __( 'Hero', 'aurelielamy' ),
+		'name'       => 'hero',
+		'type'       => 'group',
+		'sub_fields' => array(
+			array(
+				'key'         => 'field_' . $key . '_hero_heading',
+				'label'       => __( 'Heading', 'aurelielamy' ),
+				'name'        => 'heading',
+				'type'        => 'textarea',
+				'new_lines'   => 'br',
+				'rows'        => 3,
+				'placeholder' => __( 'Heading', 'aurelielamy' ),
+			),
+			array(
+				'key'          => 'field_' . $key . '_hero_content',
+				'label'        => __( 'Content', 'aurelielamy' ),
+				'name'         => 'content',
+				'type'         => 'wysiwyg',
+				'tabs'         => 'all',
+				'toolbar'      => 'basic',
+				'media_upload' => 0,
+			),
+			array(
+				'key'           => 'field_' . $key . '_hero_image',
+				'label'         => __( 'Image', 'aurelielamy' ),
+				'name'          => 'image',
+				'type'          => 'image',
+				'return_format' => 'array',
+				'library'       => 'all',
+			),
+		),
+	);
+}

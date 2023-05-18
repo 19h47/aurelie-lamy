@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * About Page Fields
+ * Contact Page Fields
  *
  * @package WordPress
  * @subpackage AurelieLamy
@@ -9,9 +9,9 @@
 namespace AurelieLamy\Plugins\ACF\Fields;
 
 /**
- * About Page Fields
+ * Contact Page Fields
  */
-class AboutPageFields {
+class ContactPageFields {
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -27,7 +27,7 @@ class AboutPageFields {
 	 * @return void
 	 */
 	public function fields() {
-		$key            = 'about_page';
+		$key            = 'contact_page';
 		$hide_on_screen = array( 'the_content' );
 
 		$location = array(
@@ -35,13 +35,23 @@ class AboutPageFields {
 				array(
 					'param'    => 'page_template',
 					'operator' => '==',
-					'value'    => 'templates/about-page.php',
+					'value'    => 'templates/contact-page.php',
 				),
 			),
 		);
 
 		$fields = array(
 			get_hero_group_fields( $key ),
+			array(
+				'key'           => 'field_' . $key,
+				'label'         => __( 'Contact Form ID', 'aurelielamy' ),
+				'name'          => 'contact_form_id',
+				'type'          => 'post_object',
+				'required'      => 1,
+				'post_type'     => array( 'wpcf7_contact_form' ),
+				'return_format' => 'id',
+				'multiple'      => 0,
+			),
 		);
 
 		if ( function_exists( 'acf_add_local_field_group' ) ) {
@@ -49,7 +59,7 @@ class AboutPageFields {
 			acf_add_local_field_group(
 				array(
 					'key'            => 'group_' . $key,
-					'title'          => __( 'About Page Fields', 'aurelielamy' ),
+					'title'          => __( 'Contact Page Fields', 'aurelielamy' ),
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,

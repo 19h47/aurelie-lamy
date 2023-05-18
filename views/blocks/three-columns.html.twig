@@ -20,13 +20,12 @@
 			{% endfor %}
 		</div>
 
-		<div class="lg:row hidden">
+		<div class="lg:row hidden mt-9">
 			{% for column in block.columns %}
-				<div class="{{ html_classes( 'col-4/12' ) }}">
-					<div class="{{ html_classes( 'text-sm wysiwyg mt-9 lg:mr-6' ) }}">{{- column.content -}}</div>
+				<div class="{{ html_classes( 'lg:col-4/12' ) }}">
+					<div class="{{ html_classes( 'text-sm wysiwyg mr-6' ) }}">{{- column.content -}}</div>
 				</div>
 			{% endfor %}
-		</div>
 		</div>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * About Page Fields
+ * Talks Page Fields
  *
  * @package WordPress
  * @subpackage AurelieLamy
@@ -9,9 +9,9 @@
 namespace AurelieLamy\Plugins\ACF\Fields;
 
 /**
- * About Page Fields
+ * Talks Page Fields
  */
-class AboutPageFields {
+class TalksPageFields {
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -27,7 +27,7 @@ class AboutPageFields {
 	 * @return void
 	 */
 	public function fields() {
-		$key            = 'about_page';
+		$key            = 'talks_page';
 		$hide_on_screen = array( 'the_content' );
 
 		$location = array(
@@ -35,7 +35,7 @@ class AboutPageFields {
 				array(
 					'param'    => 'page_template',
 					'operator' => '==',
-					'value'    => 'templates/about-page.php',
+					'value'    => 'templates/talks-page.php',
 				),
 			),
 		);
@@ -49,7 +49,7 @@ class AboutPageFields {
 			acf_add_local_field_group(
 				array(
 					'key'            => 'group_' . $key,
-					'title'          => __( 'About Page Fields', 'aurelielamy' ),
+					'title'          => __( 'Talks Page Fields', 'aurelielamy' ),
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,

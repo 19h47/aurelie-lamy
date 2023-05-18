@@ -1,0 +1,61 @@
+{#
+ # Athletes Page
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block content %}
+	<main>
+
+		{% embed 'blocks/blocks.html.twig' with { blocks: post.meta( 'blocks' ), classes: [ 'first-child:mt-0 last-child:mb-0 mb-15 lg:mb-30' ] } %}
+			{%- block prepend -%}
+				{%- for athlete in get_posts( { post_type: 'athlete', posts_per_page: -1 } ) -%}
+					<div class="my-15 lg:my-30">
+						<div class="container">
+							<div class="row">
+
+								<div class="{{
+									html_classes(
+										'lg:col-5/12 h-[20.25rem] lg:h-[33.625rem] relative z-1',
+										loop.index is odd ? 'lg:-ml-1/12 lg:order-3' : 'lg:order-1'
+									)
+								}}">
+									<div class="bg-gray-very-light w-full h-full">
+										{{- include( 'components/image.html.twig', { image: post.thumbnail } ) -}}
+									</div>
+								</div>
+
+								<div class="{{
+									html_classes(
+										'lg:col-5.5/12 mt-7 lg:mt-[11.25rem]',
+										loop.index is odd ? 'lg:order-1' : 'lg:order-3'
+									)
+								}}">
+									<div class="lg:row">
+										<div class="lg:col-5/5.5">
+											<h2 class="text-[2.625rem] leading-[2.875rem] text-red-vivid">{{- athlete.title -}}</h2>
+											<p class="text-2xl mt-2">{{- athlete.meta( 'position' ) -}}</p>
+										</div>
+									</div>
+									<div class="wysiwyg mt-8">{{- athlete.meta( 'testimonial' ) -}}</div>
+								</div>
+
+								<div class="{{ html_classes(
+									'hidden lg:block mt-[12.25rem] relative z-2 lg:order-2',
+									loop.index is odd ? 'col-3/12 -ml-0.5/12' : 'col-2/12 -ml-1/12'
+								) }}">
+									<hr class="w-full h-[0.0625rem] bg-red-vivid block border-none">
+								</div>
+
+							</div>
+						</div>
+					</div>
+				{%- endfor -%}
+			{%- endblock -%}
+		{%- endembed -%}
+
+	</main>
+{% endblock %}

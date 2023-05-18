@@ -10,21 +10,32 @@
 	<div class="container">
 		<div class="row lg:items-center">
 
-			<div class="{{ html_classes( 'col-10/12 ml-1/12', 'lg:col-4.5/12', 'right' == block.layout ? 'lg:order-2 lg:ml-1.5/12' : 'lg:ml-0' ) }}">
-				{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'mx-auto', 'w-auto', 'max-w-full', 'h-auto', 'block' ] } ) -}}
-			</div>
+			{%- if block.image -%}
+				<div class="{{ html_classes( 'col-10/12 ml-1/12', 'lg:col-4.5/12', 'right' == block.layout ? 'lg:order-2 lg:ml-1.5/12' : 'lg:ml-0' ) }}">
+					{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'mx-auto', 'w-auto', 'max-w-full', 'h-auto', 'block' ] } ) -}}
+				</div>
+			{%- endif -%}
 
 			<div
 				class="{{
 					html_classes(
 						block.image ? 'mt-12 lg:mt-0' : '',
-						'right' == block.layout ? 'lg:order-1 lg:col-5.5/12' : 'lg:col-6.5/12 lg:ml-1/12'
+						'left' == block.layout and block.image ? 'lg:col-6.5/12 lg:ml-1/12' : '',
+						'right' == block.layout and block.image ? 'lg:order-1 lg:col-5.5/12' : '',
+						'left' == block.layout and not block.image ? 'lg:col-6.5/12 lg:ml-5.5/12' : '',
+						'right' == block.layout and not block.image ? 'lg:col-6.5/12' : '',
 					)
 				}}"
 			>
-				<h2 class="text-[2.875rem] lg:text-[3.5rem] leading-none text-red-vivid">{{- block.title -}}</h2>
-				<div class="wysiwyg mt-7 text-sm">{{- block.content -}}</div>
-				{{- include( 'components/link.html.twig', block.link | default( {} ) | merge( { classes: [ 'mt-6 lg:mt-7' ] } ) ) -}}
+				{%- if block.title -%}
+					<h2 class="text-[2.875rem] lg:text-[3.5rem] leading-none text-red-vivid">{{- block.title -}}</h2>
+				{%- endif -%}
+
+				{%- if block.content -%}
+					<div class="{{ html_classes( 'wysiwyg text-sm', block.title ? 'mt-7' : '' ) }}">{{- block.content -}}</div>
+				{%- endif -%}
+
+				{{- include( 'components/link.html.twig', block.link | default( {} ) | merge( { classes: [  block.content or block.title ? 'mt-6 lg:mt-7' : '' ] } ) ) -}}
 			</div>
 
 		</div>

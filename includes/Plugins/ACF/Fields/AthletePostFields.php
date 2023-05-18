@@ -1,6 +1,6 @@
 <?php // phpcs:ignore
 /**
- * About Page Fields
+ * Athlete Post Fields
  *
  * @package WordPress
  * @subpackage AurelieLamy
@@ -9,9 +9,9 @@
 namespace AurelieLamy\Plugins\ACF\Fields;
 
 /**
- * About Page Fields
+ * Athlete Post Fields
  */
-class AboutPageFields {
+class AthletePostFields {
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -27,21 +27,36 @@ class AboutPageFields {
 	 * @return void
 	 */
 	public function fields() {
-		$key            = 'about_page';
+		$key            = 'athlete_post';
 		$hide_on_screen = array( 'the_content' );
 
 		$location = array(
 			array(
 				array(
-					'param'    => 'page_template',
+					'param'    => 'post_type',
 					'operator' => '==',
-					'value'    => 'templates/about-page.php',
+					'value'    => 'athlete',
 				),
 			),
 		);
 
 		$fields = array(
-			get_hero_group_fields( $key ),
+			array(
+				'key'         => 'field_' . $key . '_position',
+				'label'       => __( 'Position', 'aurelielamy' ),
+				'name'        => 'position',
+				'type'        => 'text',
+				'placeholder' => __( 'Position', 'aurelielamy' ),
+			),
+			array(
+				'key'          => 'field_' . $key . '_testimonial',
+				'label'        => __( 'Testimonial', 'aurelielamy' ),
+				'name'         => 'testimonial',
+				'type'         => 'wysiwyg',
+				'tabs'         => 'all',
+				'toolbar'      => 'basic',
+				'media_upload' => 0,
+			),
 		);
 
 		if ( function_exists( 'acf_add_local_field_group' ) ) {
@@ -49,7 +64,7 @@ class AboutPageFields {
 			acf_add_local_field_group(
 				array(
 					'key'            => 'group_' . $key,
-					'title'          => __( 'About Page Fields', 'aurelielamy' ),
+					'title'          => __( 'Athlete Post Fields', 'aurelielamy' ),
 					'fields'         => $fields,
 					'location'       => $location,
 					'hide_on_screen' => $hide_on_screen,

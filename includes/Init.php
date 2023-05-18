@@ -38,8 +38,12 @@ class Init {
 			Plugins\ACF\Admin\Fields::class,
 			Plugins\ACF\Admin\Init::class,
 			Plugins\ACF\Fields\AboutPageFields::class,
+			Plugins\ACF\Fields\AthletePostFields::class,
 			Plugins\ACF\Fields\BlocksFields::class,
+			Plugins\ACF\Fields\ContactPageFields::class,
 			Plugins\ACF\Fields\FrontPageFields::class,
+			Plugins\ACF\Fields\TalksPageFields::class,
+			Post\Athlete::class,
 		);
 	}
 
