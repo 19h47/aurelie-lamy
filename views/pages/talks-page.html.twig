@@ -39,17 +39,28 @@
 								<div class="text-sm">
 									{{ yoast_breadcrumb() }}
 								</div>
-								<h1 class="text-[2.875rem] mt-13 lg:text-[3.5rem] leading-none text-red-vivid">{{- post.meta( 'hero' ).heading -}}</h1>
+								<h1 class="text-[2.875rem] mt-13 lg:text-[3.5rem] leading-none text-red-vivid">
+									{{- post.meta( 'hero' ).heading -}}
+								</h1>
 
-								<div class="wysiwyg mt-8 text-sm">
-									{{- post.meta( 'hero' ).content -}}
-								</div>
+								{%- if post.meta( 'hero' ).content -%}
+									<div class="wysiwyg mt-8 text-sm">
+										{{- post.meta( 'hero' ).content -}}
+									</div>
+								{%- endif -%}
 
 							</div>
 						</div>
 					</div>
 				</div>
 			{%- endblock -%}
+
+			{% block append %}
+				{% for podcast in get_posts( { post_type: 'podcast', posts_per_page: -1 } ) %}
+					{{ podcast.title }}
+					{{ podcast.audio_metadata.length_formatted }}
+				{% endfor %}
+			{% endblock %}
 		{%- endembed -%}
 
 	</main>

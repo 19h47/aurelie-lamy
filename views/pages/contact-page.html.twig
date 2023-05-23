@@ -30,12 +30,12 @@
 				<div class="overflow-hidden">
 					<div class="container">
 						<div class="row">
-							<div class="lg:col-5.5/12 lg:ml-1/12 relative z-1 lg:order-3">
+							<div class="lg:col-5.5/12 lg:ml-0.5/12 relative z-1 lg:order-3">
 								<div class="relative h-[20.25rem] lg:h-full lg:w-[46.6325037vw]">
 									{{- include( 'components/image.html.twig', { classes: [ 'h-full', 'w-full', 'absolute', 'inset-y-0', 'left-0', 'object-cover' ], image: post.meta( 'hero' ).image } ) -}}
 								</div>
 							</div>
-							<div class="lg:col-5.5/12 pt-14 pb-13 lg:pt-36 lg:pb-24 lg:order-1">
+							<div class="lg:col-6/12 pt-14 pb-13 lg:pt-36 lg:pb-24 lg:order-1">
 								<div class="text-sm">
 									{{ yoast_breadcrumb() }}
 								</div>
@@ -46,6 +46,96 @@
 										{{- post.meta( 'hero' ).content -}}
 									</div>
 								{%- endif -%}
+
+								{# {{ ( '[contact-form-7 id="' ~ post.meta( 'contact_form_id' ) ~ '" title="' ~ __( 'Contact Form', 'aurelielamy' ) ~ '"]' ) | shortcodes }} #}
+
+								{% set wpcf7_unit_tag = 'wpcf7-f%1$d-p%2$d-o%3$d' | format( post.meta( 'contact_form_id' ), post.id, 1 ) %}
+
+								<div class="wpcf7 form no-js mt-6" id="{{ wpcf7_unit_tag }}" lang="en-US" dir="ltr">
+									<div class="screen-reader-response">
+										<p role="status" aria-live="polite" aria-atomic="true"></p>
+										<ul></ul>
+									</div>
+
+									<form action="/contact/#{{ wpcf7_unit_tag }}" method="post" class="wpcf7-form init" aria-label="Contact form" novalidate="novalidate" data-status="init">
+
+										<div style="display: none;">
+											<input type="hidden" name="_wpcf7" value="{{ post.meta( 'contact_form_id' ) }}" />
+											<input type="hidden" name="_wpcf7_version" value="{{ fn( 'constant', 'WPCF7_VERSION' ) }}" />
+											<input type="hidden" name="_wpcf7_locale" value="{{ site.language_attributes }}" />
+											<input type="hidden" name="_wpcf7_unit_tag" value="{{ wpcf7_unit_tag }}" />
+											<input type="hidden" name="_wpcf7_container_post" value="{{ post.id }}" />
+											<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+										</div>
+
+										<div>
+
+											<div class="row">
+												<div class="lg:col-6/12">
+													<label>
+														<span class="wpcf7-form-control-wrap" data-name="your-lastname">
+															<input
+																size="40" class="wpcf7-form-control w-full px-3 py-2 border-b border-gray-very-dark wpcf7-text wpcf7-validates-as-required" autocomplete="lastname" aria-required="true" aria-invalid="false"
+																placeholder="{{ __( 'Lastname', 'aurelielamy' ) }}" value="" type="text" name="your-lastname"
+															/>
+														</span>
+													</label>
+												</div>
+
+												<div class="lg:col-6/12 mt-4 lg:mt-0">
+													<label>
+														<span class="wpcf7-form-control-wrap" data-name="your-firstname">
+															<input
+																size="40"
+																class="wpcf7-form-control w-full px-3 py-2 border-b border-gray-very-dark wpcf7-text wpcf7-validates-as-required" autocomplete="firstname"
+																aria-required="true" aria-invalid="false"
+																placeholder="{{ __( 'Firstname', 'aurelielamy' ) }}" value="" type="text"
+																name="your-firstname"
+															/>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="row mt-4 lg:mt-6">
+												<div>
+													<label>
+														<span class="wpcf7-form-control-wrap" data-name="your-email">
+															<input
+																size="40"
+																class="wpcf7-form-control w-full px-3 py-2 border-b border-gray-very-dark wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+																autocomplete="email" aria-required="true" aria-invalid="false"
+																placeholder="{{ __( 'Mail address', 'aurelielamy' ) }}" value="" type="email" name="your-email"
+															/>
+														</span>
+													</label>
+												</div>
+											</div>
+
+
+											<div class="row mt-4 lg:mt-9">
+												<div>
+													<label>
+														{{- __( 'Tell me a few words about your project?', 'aurelielamy' ) -}}
+														<span class="wpcf7-form-control-wrap mt-2 block" data-name="your-message">
+															<textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea rounded-md w-full bg-gray-very-light" aria-invalid="false" name="your-message"></textarea>
+														</span>
+													</label>
+												</div>
+											</div>
+
+											<div class="row mt-4 lg:mt-6">
+												<div>
+													<button class="wpcf7-form-control has-spinner wpcf7-submit bg-red-vivid text-white hover:text-red-vivid hover:bg-red-very-soft uppercase inline-flex gap-x-2 items-center text-sm py-2.5 px-5 rounded-full transition-colors duration-300" type="submit" />
+														{{- __( 'Submit', 'aurelielamy' ) -}}
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<div class="wpcf7-response-output" aria-hidden="true"></div>
+									</form>
+								</div>
 
 							</div>
 						</div>

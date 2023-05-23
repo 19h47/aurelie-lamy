@@ -13,6 +13,9 @@ const colors = {
 		light: '#D1D1D1',
 		dark: '#7C7C7C',
 		'very-dark': '#707070'
+	},
+	pink: {
+		DEFAULT: '#FFD7D3'
 	}
 };
 

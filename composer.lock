@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "077439eb2f03c7d623a60eff9b4cc50a",
+    "content-hash": "39d983c9043c176cb2faf97a50e96049",
     "packages": [
         {
             "name": "19h47/wp-form-controls",
@@ -927,26 +927,29 @@
         },
         {
             "name": "timber/timber",
-            "version": "2.0.0-beta.1",
+            "version": "2.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/timber/timber.git",
-                "reference": "1b91b3c31589162b2bc1872d0ff946fa7b68665d"
+                "reference": "b71a6bd66a32f80eaf6cfc926701d056ac2a7168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/timber/timber/zipball/1b91b3c31589162b2bc1872d0ff946fa7b68665d",
-                "reference": "1b91b3c31589162b2bc1872d0ff946fa7b68665d",
+                "url": "https://api.github.com/repos/timber/timber/zipball/b71a6bd66a32f80eaf6cfc926701d056ac2a7168",
+                "reference": "b71a6bd66a32f80eaf6cfc926701d056ac2a7168",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0",
                 "php": "^7.4 || ^8.0",
-                "twig/twig": "^2.12 || ^3.0"
+                "symfony/polyfill-php80": "^1.27",
+                "twig/twig": "^2.15.3 || ^3.0"
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.28",
                 "php-parallel-lint/php-parallel-lint": "^1.3",
+                "php-stubs/acf-pro-stubs": "^5.12",
+                "php-stubs/wp-cli-stubs": "^2.0",
                 "phpro/grumphp": "^1.12",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.7",
@@ -954,8 +957,7 @@
                 "symplify/easy-coding-standard": "^11.0",
                 "szepeviktor/phpstan-wordpress": "^1.1",
                 "twig/cache-extra": "^3.3",
-                "wp-coding-standards/wpcs": "^2.0",
-                "wpackagist-plugin/advanced-custom-fields": "^5.0",
+                "wpackagist-plugin/advanced-custom-fields": "^5.0 || ^6.0",
                 "wpackagist-plugin/co-authors-plus": "^3.3",
                 "yoast/wp-test-utils": "^1.0"
             },
@@ -998,7 +1000,13 @@
                 "issues": "https://github.com/timber/timber/issues",
                 "source": "https://github.com/timber/timber"
             },
-            "time": "2022-08-04T19:34:07+00:00"
+            "funding": [
+                {
+                    "url": "https://opencollective.com/timber",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-05-20T19:14:42+00:00"
         },
         {
             "name": "twig/html-extra",

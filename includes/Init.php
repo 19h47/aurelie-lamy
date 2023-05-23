@@ -42,8 +42,10 @@ class Init {
 			Plugins\ACF\Fields\BlocksFields::class,
 			Plugins\ACF\Fields\ContactPageFields::class,
 			Plugins\ACF\Fields\FrontPageFields::class,
+			Plugins\ACF\Fields\PodcastPostFields::class,
 			Plugins\ACF\Fields\TalksPageFields::class,
 			Post\Athlete::class,
+			Post\Podcast::class,
 		);
 	}
 

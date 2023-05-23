@@ -12,6 +12,7 @@ use Timber\{ Timber, Site };
 use Twig\Extra\Html\{ HtmlExtension };
 use Twig\Extra\Intl\{ IntlExtension };
 use Twig\{ TwigFunction };
+use AurelieLamy\Models\{ PodcastPost };
 
 use WP_Post;
 
@@ -119,7 +120,9 @@ class Theme extends Site {
 	 * @return array
 	 */
 	public function add_post_classmap( $classmap ) : array {
-		$custom_classmap = array();
+		$custom_classmap = array(
+			'podcast' => PodcastPost::class,
+		);
 
 		return array_merge( $classmap, $custom_classmap );
 	}

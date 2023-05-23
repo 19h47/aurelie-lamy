@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Aurélie Lamy\n"
-"POT-Creation-Date: 2023-05-18 11:25+0200\n"
-"PO-Revision-Date: 2023-05-18 11:26+0200\n"
+"POT-Creation-Date: 2023-05-23 13:03+0200\n"
+"PO-Revision-Date: 2023-05-23 13:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -23,6 +23,14 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 "X-Poedit-SearchPathExcluded-2: dist\n"
 "X-Poedit-SearchPathExcluded-3: node_modules\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups ! Cette page est introuvable."
+
+#: 404.php:18
+msgid "It looks like nothing was found at this location."
+msgstr "On dirait que rien n'a été trouvé à cet endroit."
 
 #: includes/Plugins/ACF/Fields/AboutPageFields.php:52
 msgid "About Page Fields"
@@ -54,11 +62,11 @@ msgstr "Deux colonnes"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:173
 #: includes/Plugins/ACF/Fields/BlocksFields.php:225
 #: includes/Plugins/ACF/Fields/BlocksFields.php:340
-#: includes/Plugins/ACF/Fields/BlocksFields.php:453
-#: includes/Plugins/ACF/Fields/BlocksFields.php:465
 #: includes/Plugins/ACF/Fields/BlocksFields.php:477
-#: includes/Plugins/ACF/Fields/BlocksFields.php:529
-#: includes/Plugins/ACF/Fields/BlocksFields.php:578
+#: includes/Plugins/ACF/Fields/BlocksFields.php:489
+#: includes/Plugins/ACF/Fields/BlocksFields.php:501
+#: includes/Plugins/ACF/Fields/BlocksFields.php:553
+#: includes/Plugins/ACF/Fields/BlocksFields.php:602
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:76 includes/helpers.php:103
 msgid "Image"
 msgstr "Image"
@@ -77,12 +85,12 @@ msgstr "Image"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:318
 #: includes/Plugins/ACF/Fields/BlocksFields.php:373
 #: includes/Plugins/ACF/Fields/BlocksFields.php:378
-#: includes/Plugins/ACF/Fields/BlocksFields.php:401
-#: includes/Plugins/ACF/Fields/BlocksFields.php:405
-#: includes/Plugins/ACF/Fields/BlocksFields.php:538
-#: includes/Plugins/ACF/Fields/BlocksFields.php:543
-#: includes/Plugins/ACF/Fields/BlocksFields.php:587
-#: includes/Plugins/ACF/Fields/BlocksFields.php:592
+#: includes/Plugins/ACF/Fields/BlocksFields.php:425
+#: includes/Plugins/ACF/Fields/BlocksFields.php:429
+#: includes/Plugins/ACF/Fields/BlocksFields.php:562
+#: includes/Plugins/ACF/Fields/BlocksFields.php:567
+#: includes/Plugins/ACF/Fields/BlocksFields.php:611
+#: includes/Plugins/ACF/Fields/BlocksFields.php:616
 msgid "Title"
 msgstr "Titre"
 
@@ -90,8 +98,8 @@ msgstr "Titre"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:104
 #: includes/Plugins/ACF/Fields/BlocksFields.php:193
 #: includes/Plugins/ACF/Fields/BlocksFields.php:198
-#: includes/Plugins/ACF/Fields/BlocksFields.php:596
-#: includes/Plugins/ACF/Fields/BlocksFields.php:599
+#: includes/Plugins/ACF/Fields/BlocksFields.php:620
+#: includes/Plugins/ACF/Fields/BlocksFields.php:623
 msgid "Subtitle"
 msgstr "Sous-titre"
 
@@ -100,10 +108,10 @@ msgstr "Sous-titre"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:307
 #: includes/Plugins/ACF/Fields/BlocksFields.php:322
 #: includes/Plugins/ACF/Fields/BlocksFields.php:382
-#: includes/Plugins/ACF/Fields/BlocksFields.php:417
-#: includes/Plugins/ACF/Fields/BlocksFields.php:430
-#: includes/Plugins/ACF/Fields/BlocksFields.php:547
-#: includes/Plugins/ACF/Fields/BlocksFields.php:603
+#: includes/Plugins/ACF/Fields/BlocksFields.php:441
+#: includes/Plugins/ACF/Fields/BlocksFields.php:454
+#: includes/Plugins/ACF/Fields/BlocksFields.php:571
+#: includes/Plugins/ACF/Fields/BlocksFields.php:627
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:61
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:66 includes/helpers.php:94
 msgid "Content"
@@ -148,19 +156,24 @@ msgid "Left"
 msgstr "Gauche"
 
 #: includes/Plugins/ACF/Fields/BlocksFields.php:368
+#: includes/Plugins/ACF/Fields/BlocksFields.php:404
 msgid "Video"
 msgstr "Vidéo"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:395
-#: includes/Plugins/ACF/Fields/BlocksFields.php:410
+#: includes/Plugins/ACF/Fields/BlocksFields.php:392
+msgid "Poster"
+msgstr "Poster"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:419
+#: includes/Plugins/ACF/Fields/BlocksFields.php:434
 msgid "Contents"
 msgstr "Contenus"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:492
+#: includes/Plugins/ACF/Fields/BlocksFields.php:516
 msgid "Add Block"
 msgstr "Ajouter un bloc"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:501
+#: includes/Plugins/ACF/Fields/BlocksFields.php:525
 msgid "Blocks Fields"
 msgstr "Champs de blocs"
 
@@ -186,16 +199,28 @@ msgstr "Titre"
 msgid "Front Page Fields"
 msgstr "Champs de la page d’accueil"
 
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:46
+msgid "Duration"
+msgstr "Durée"
+
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:54
+msgid "File"
+msgstr "Fichier"
+
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:67
+msgid "Podcast Post Fields"
+msgstr "Champs du podcast"
+
 #: includes/Plugins/ACF/Fields/TalksPageFields.php:52
 msgid "Talks Page Fields"
 msgstr "Champs de la page des conférences"
 
-#: includes/Post/Athlete.php:95
+#: includes/Post/Athlete.php:95 includes/Post/Podcast.php:95
 msgid "Thumbnail"
 msgstr "Image mise en avant"
 
 #. translators: Publish box date format, see https://secure.php.net/date
-#: includes/Post/Athlete.php:148
+#: includes/Post/Athlete.php:148 includes/Post/Podcast.php:148
 msgid "M j, Y @ H:i"
 msgstr "M j, Y @ H:i"
 
@@ -212,11 +237,11 @@ msgstr "Prévisualiser l’athlète"
 msgid "Athlete updated."
 msgstr ""
 
-#: includes/Post/Athlete.php:171
+#: includes/Post/Athlete.php:171 includes/Post/Podcast.php:171
 msgid "Custom field updated."
 msgstr ""
 
-#: includes/Post/Athlete.php:172
+#: includes/Post/Athlete.php:172 includes/Post/Podcast.php:172
 msgid "Custom field deleted."
 msgstr ""
 
@@ -410,6 +435,209 @@ msgstr "Athlète"
 msgid "Athlete Description"
 msgstr "Description de l’athlète"
 
+#: includes/Post/Podcast.php:153 includes/Post/Podcast.php:231
+msgid "View Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:159 includes/Post/Podcast.php:165
+msgid "Preview Podcast"
+msgstr "Prévisualiser le podcast"
+
+#: includes/Post/Podcast.php:170 includes/Post/Podcast.php:173
+#: includes/Post/Podcast.php:251
+msgid "Podcast updated."
+msgstr ""
+
+#. translators: %s: date and time of the revision
+#: includes/Post/Podcast.php:175
+#, php-format
+msgid "Podcast restored to revision from %s."
+msgstr ""
+
+#: includes/Post/Podcast.php:176 includes/Post/Podcast.php:247
+msgid "Podcast published."
+msgstr ""
+
+#: includes/Post/Podcast.php:177
+msgid "Podcast saved."
+msgstr ""
+
+#: includes/Post/Podcast.php:178
+msgid "Podcast submitted."
+msgstr ""
+
+#: includes/Post/Podcast.php:179
+#, php-format
+msgid "Podcast scheduled for: %s."
+msgstr ""
+
+#: includes/Post/Podcast.php:180
+msgid "Podcast draft updated."
+msgstr ""
+
+#. translators: %s: Number of podcasts.
+#: includes/Post/Podcast.php:200
+#, php-format
+msgid "%s podcast updated."
+msgid_plural "%s podcasts updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Post/Podcast.php:201
+msgid "1 podcast not updated, somebody is editing it."
+msgstr ""
+
+#. translators: %s: Number of podcasts.
+#: includes/Post/Podcast.php:203
+#, php-format
+msgid "%s podcast not updated, somebody is editing it."
+msgid_plural "%s podcasts not updated, somebody is editing them."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of podcasts.
+#: includes/Post/Podcast.php:205
+#, php-format
+msgid "%s podcast permanently deleted."
+msgid_plural "%s podcasts permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of podcasts.
+#: includes/Post/Podcast.php:207
+#, php-format
+msgid "%s podcast moved to the Trash."
+msgid_plural "%s podcasts moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Number of podcasts.
+#: includes/Post/Podcast.php:209
+#, php-format
+msgid "%s podcast restored from the Trash."
+msgid_plural "%s podcasts restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Post/Podcast.php:224
+msgctxt "podcast type generale name"
+msgid "Podcasts"
+msgstr ""
+
+#: includes/Post/Podcast.php:225
+msgctxt "podcast type singular name"
+msgid "Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:226
+msgctxt "podcast type"
+msgid "Add New"
+msgstr ""
+
+#: includes/Post/Podcast.php:227
+msgid "Add New Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:228
+msgid "Edit Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:229
+msgid "New Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:230
+msgid "View Podcasts"
+msgstr ""
+
+#: includes/Post/Podcast.php:232
+msgid "Search Podcasts"
+msgstr ""
+
+#: includes/Post/Podcast.php:233
+msgid "No Podcasts found."
+msgstr ""
+
+#: includes/Post/Podcast.php:234
+msgid "No Podcasts found in Trash."
+msgstr ""
+
+#: includes/Post/Podcast.php:235
+msgid "Parent Podcast:"
+msgstr ""
+
+#: includes/Post/Podcast.php:236
+msgid "All Podcasts"
+msgstr ""
+
+#: includes/Post/Podcast.php:237
+msgid "Podcast Archives"
+msgstr ""
+
+#: includes/Post/Podcast.php:238
+msgid "Podcast Attributes"
+msgstr ""
+
+#: includes/Post/Podcast.php:239
+msgid "Insert into podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:240
+msgid "Uploaded to this podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:241
+msgctxt "podcast"
+msgid "Featured Image"
+msgstr ""
+
+#: includes/Post/Podcast.php:242
+msgctxt "podcast"
+msgid "Set featured image"
+msgstr ""
+
+#: includes/Post/Podcast.php:243
+msgctxt "podcast"
+msgid "Remove featured image"
+msgstr ""
+
+#: includes/Post/Podcast.php:244
+msgctxt "podcast"
+msgid "Use as featured image"
+msgstr ""
+
+#: includes/Post/Podcast.php:245
+msgid "Podcasts list navigation"
+msgstr ""
+
+#: includes/Post/Podcast.php:246
+msgid "Podcasts list"
+msgstr ""
+
+#: includes/Post/Podcast.php:248
+msgid "Podcast published privately."
+msgstr ""
+
+#: includes/Post/Podcast.php:249
+msgid "Podcast reverted to draft."
+msgstr ""
+
+#: includes/Post/Podcast.php:250
+msgid "Podcast scheduled."
+msgstr ""
+
+#: includes/Post/Podcast.php:255
+msgid "podcasts"
+msgstr ""
+
+#: includes/Post/Podcast.php:262
+msgid "Podcast"
+msgstr ""
+
+#: includes/Post/Podcast.php:263
+msgid "Podcast Description"
+msgstr "Description du podcast"
+
 #: includes/Setup/Enqueue.php:78
 msgctxt "messages"
 msgid "Please fill out this field."
@@ -458,7 +686,7 @@ msgstr "LinkedIn"
 msgid "Enter the LinkedIn URL here."
 msgstr "Entrez l’URL LinkedIn ici."
 
-#: includes/Setup/Settings.php:76 includes/Setup/Theme.php:75
+#: includes/Setup/Settings.php:76 includes/Setup/Theme.php:76
 msgid "Instagram"
 msgstr "Instagram"
 
@@ -466,13 +694,33 @@ msgstr "Instagram"
 msgid "Enter the Instagram URL here."
 msgstr "Indiquer l’URL du compte Instagram."
 
-#: includes/Setup/Theme.php:69
+#: includes/Setup/Theme.php:70
 msgid "Share on LinkedIn"
 msgstr "Partagez sur LinkedIn"
 
 #: views/footer.html.twig:49
 msgid "Discover"
 msgstr "Découvrir"
+
+#: views/pages/contact-page.html.twig:79
+msgid "Lastname"
+msgstr "Nom"
+
+#: views/pages/contact-page.html.twig:92
+msgid "Firstname"
+msgstr "Prénom"
+
+#: views/pages/contact-page.html.twig:108
+msgid "Mail address"
+msgstr "Adresse mail"
+
+#: views/pages/contact-page.html.twig:119
+msgid "Tell me a few words about your project?"
+msgstr "Dites-moi quelques mots à propos de votre projet ?"
+
+#: views/pages/contact-page.html.twig:130
+msgid "Submit"
+msgstr "Envoyer"
 
 #: views/pages/front-page.html.twig:60
 msgid "Scroll"
@@ -512,9 +760,6 @@ msgstr "https://19h47.fr/"
 
 #~ msgid "Heading Desktop"
 #~ msgstr "Titre bureau"
-
-#~ msgid "Firstname"
-#~ msgstr "Prénom"
 
 #~ msgid "Facebook"
 #~ msgstr "Facebook"

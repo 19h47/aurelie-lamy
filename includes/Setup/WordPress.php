@@ -24,8 +24,8 @@ class WordPress {
 		add_filter( 'pre_get_shortlink', '__return_empty_string' );
 		add_filter( 'wpseo_canonical', '__return_false' );
 
-		add_filter( 'wpcf7_load_js', '__return_false' );
-		add_filter( 'wpcf7_load_css', '__return_false' );
+		// add_filter( 'wpcf7_load_js', '__return_false' );
+		// add_filter( 'wpcf7_load_css', '__return_false' );
 
 		add_action( 'init', array( $this, 'disable_emojis' ) );
 	}

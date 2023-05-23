@@ -387,6 +387,30 @@ class BlocksFields {
 								'media_upload' => 0,
 								'delay'        => 0,
 							),
+							array(
+								'key'           => 'field_' . $key . '_video_poster',
+								'label'         => __( 'Poster', 'aurelielamy' ),
+								'name'          => 'poster',
+								'type'          => 'image',
+								'wrapper'       => array(
+									'width' => 6 / 12 * 100,
+								),
+								'return_format' => 'array',
+								'library'       => 'all',
+								'preview_size'  => 'medium',
+							),
+							array(
+								'key'           => 'field_' . $key . '_video_video',
+								'label'         => __( 'Video', 'aurelielamy' ),
+								'name'          => 'video',
+								'type'          => 'file',
+								'wrapper'       => array(
+									'width' => 6 / 12 * 100,
+								),
+								'return_format' => 'array',
+								'library'       => 'all',
+								'mime_types'    => 'mp4, ogg, webm',
+							),
 						),
 					),
 					'layout_' . $key . '_contents'      => array(

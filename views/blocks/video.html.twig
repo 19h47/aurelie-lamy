@@ -8,16 +8,36 @@
 
 <div class="py-20 lg:py-36 bg-red-very-pale">
 	<div class="container">
-		<div class="row lg:items-end">
+		<div class="row lg:items-center">
 
-			<div class="{{ html_classes( 'col-10/12 ml-1/12', 'lg:col-4.5/12', 'right' == block.layout ? 'lg:order-2 lg:ml-1.5/12' : 'lg:ml-0' ) }}">
-				{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'w-auto', 'max-w-full', 'h-auto', 'block' ] } ) -}}
+			<div class="{{ html_classes( 'lg:col-4.5/12', 'right' == block.layout ? 'lg:order-2 lg:ml-1.5/12' : 'lg:ml-0' ) }}">
+
+				<div class="w-full h-[20.625rem] lg:h-[35.875rem] relative after:bg-pink after:absolute after:inset-0 after:translate-x-[-1.5rem] after:translate-y-[1.5rem] after:rounded-3xl">
+					<div data-module-video class="relative overflow-hidden rounded-3xl h-full w-full after:absolute after:w-[6.75rem] after:h-[6.75rem] after:top-0 after:right-0 after:rounded-full after:bg-red-very-pale after:-mr-[3.375rem] after:-mt-[3.375rem] after:z-3 before:z-4 before:mt-1.5 before:mr-1.5 before:absolute before:top-0 before:right-0 before:w-6 before:h-6 before:rounded-full before:bg-red-vivid">
+						{% if block.poster and not video %}
+							{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'relative z-2', 'w-full', 'h-full', 'block' ] } ) -}}
+						{% endif %}
+
+						{% if block.video %}
+
+
+								<video data-video="video" class="relative z-2 w-full h-full object-cover object-center" {{ block.poster ? 'poster="' ~ block.poster.url ~ '"' : '' }}>
+									<source src="{{ block.video.url }}" type="{{ block.video.mime_type }}">
+								</video>
+
+								<button type="button" data-video="button" class="absolute inset-0 z-3 w-full h-full">
+									{{- icon( 'play', { classes: [ 'fill-white', 'z-3 w-15 h-13', 'absolute', 'inset-0', 'm-auto' ] } ) -}}
+								</button>
+
+						{% endif %}
+					</div>
+				</div>
 			</div>
 
 			<div
 				class="{{
 					html_classes(
-						block.image ? 'mt-12 lg:mt-0' : '',
+						block.poster or block.video ? 'mt-12 lg:mt-0' : '',
 						'right' == block.layout ? 'lg:order-1 lg:col-5.5/12' : 'lg:col-6.5/12 lg:ml-1/12'
 					)
 				}}"

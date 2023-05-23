@@ -21,6 +21,9 @@
 
 			<div class="col-6/12 lg:col-4/12 flex justify-end items-start">
 				<div class="flex gap-x-6 items-center">
+
+					{{- include( 'components/socials.html.twig', { classes: [ 'hidden', 'lg:flex' ] }  ) -}}
+
 					<div class="relative text-lg hidden lg:block">
 						<select class="appearance-none pr-4 bg-transparent outline-none" name="language-switcher" data-module-language-switcher>
 							{% for lang in pll_the_languages() %}
@@ -36,8 +39,6 @@
 
 						{{ icon( 'caret-down', { classes: [ 'pointer-events-none', 'my-auto', 'absolute', 'inset-y-0', 'right-0', 'w-2.5 h-1.5' ] } ) }}
 					</div>
-
-					{{- include( 'components/socials.html.twig', { classes: [ 'hidden', 'lg:flex' ] }  ) -}}
 
 					<button type="button" class="">{{- icon( 'bars', { classes: [ 'fill-red-vivid', 'w-9', 'h-7' ] } ) -}}</button>
 				</div>
