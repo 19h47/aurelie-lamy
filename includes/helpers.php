@@ -70,10 +70,11 @@ function get_webfonts() : array {
  * Hero group fields
  *
  * @param string $key Key.
+ * @param array  $fields Fields.
  *
  * @return array
  */
-function get_hero_group_fields( string $key = '' ) : array {
+function get_hero_group_fields( string $key = '', array $fields = array() ) : array {
 	return array(
 		'key'        => 'field_' . $key . '_hero',
 		'label'      => __( 'Hero', 'aurelielamy' ),
@@ -95,7 +96,6 @@ function get_hero_group_fields( string $key = '' ) : array {
 				'name'         => 'content',
 				'type'         => 'wysiwyg',
 				'tabs'         => 'all',
-				'toolbar'      => 'basic',
 				'media_upload' => 0,
 			),
 			array(
@@ -106,6 +106,7 @@ function get_hero_group_fields( string $key = '' ) : array {
 				'return_format' => 'array',
 				'library'       => 'all',
 			),
+			$fields,
 		),
 	);
 }

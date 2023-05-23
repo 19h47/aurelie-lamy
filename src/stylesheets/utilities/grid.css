@@ -26,6 +26,10 @@
 		@apply col w-full;
 	}
 
+	.col-1\/5 {
+		@apply col w-1/5;
+	}
+
 	.col-1\.5\/12 {
 		@apply col w-1.5/12;
 	}
@@ -40,6 +44,10 @@
 
 	.col-3\/12 {
 		@apply col w-3/12;
+	}
+
+	.col-4\/5 {
+		@apply col w-4/5;
 	}
 
 	.col-4\/5\.5 {

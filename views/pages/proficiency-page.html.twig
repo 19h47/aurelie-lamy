@@ -1,0 +1,62 @@
+{#
+ # Proficiency Page
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ #}
+
+{% extends 'index.html.twig' %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block content %}
+	<main>
+
+		{% embed 'blocks/blocks.html.twig' with { blocks: post.meta( 'blocks' ), classes: [ 'first-child:mt-0 last-child:mb-0' ] } %}
+			{%- block prepend -%}
+				<div class="overflow-hidden my-30">
+					<div class="container">
+						<div class="{{ html_classes( 'row', 'grid' == post.meta( 'hero' ).layout ? 'lg:items-center' : ''  ) }}">
+							<div class="{{ html_classes(
+								 'relative z-1 lg:order-3 lg:ml-1/12',
+								'full' == post.meta( 'hero' ).layout ? 'lg:col-5.5/12' : '',
+								'grid' == post.meta( 'hero' ).layout ? 'lg:col-4.5/12' : '',
+							) }}">
+								<div class="{{ html_classes( 'full' == post.meta( 'hero' ).layout ? 'lg:h-full relative h-[20.25rem] lg:w-[46.6325037vw]' : '' ) }}">
+									{{-
+										include(
+											'components/image.html.twig',
+											{
+												classes: [
+													'h-full', 'w-full',
+													'full' == post.meta( 'hero' ).layout ? 'object-cover absolute inset-y-0 left-0' : 'object-contain'
+												],
+												image: post.meta( 'hero' ).image
+											}
+										)
+									-}}
+								</div>
+							</div>
+							<div class="{{ html_classes( 'lg:col-5.5/12 lg:order-1 mt-14 lg:mt-0', 'full' == post.meta( 'hero' ).layout ? 'lg:pb-5' : '' ) }}">
+								<div class="text-sm">
+									{{ yoast_breadcrumb() }}
+								</div>
+								<h1 class="text-[2.875rem] mt-13 lg:text-[3.5rem] leading-none text-red-vivid">
+									{{- post.meta( 'hero' ).heading -}}
+								</h1>
+
+								{%- if post.meta( 'hero' ).content -%}
+									<div class="wysiwyg mt-13 text-sm">
+										{{- post.meta( 'hero' ).content -}}
+									</div>
+								{%- endif -%}
+
+							</div>
+						</div>
+					</div>
+				</div>
+			{%- endblock -%}
+		{%- endembed -%}
+
+	</main>
+{% endblock %}

@@ -17,7 +17,21 @@
 		@apply mb-0;
 	}
 
+	.wysiwyg h2 {
+		@apply text-[2.625rem] leading-[2.875rem];
+		margin-top: 2.625rem;
+		margin-bottom: 2.625rem;
+	}
+
 	.wysiwyg > p {
 		margin-top: 1em;
+	}
+
+	.wysiwyg > p > a {
+		color: theme('colors.red.vivid')
+	}
+
+	.wysiwyg > p > a:hover {
+		text-decoration: underline;
 	}
 }
