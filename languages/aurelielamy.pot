@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Aurélie Lamy\n"
-"POT-Creation-Date: 2023-05-23 17:15+0200\n"
+"POT-Creation-Date: 2023-05-25 12:39+0200\n"
 "PO-Revision-Date: 2023-05-10 12:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -65,8 +65,9 @@ msgstr ""
 #: includes/Plugins/ACF/Fields/BlocksFields.php:477
 #: includes/Plugins/ACF/Fields/BlocksFields.php:489
 #: includes/Plugins/ACF/Fields/BlocksFields.php:501
-#: includes/Plugins/ACF/Fields/BlocksFields.php:608
-#: includes/Plugins/ACF/Fields/BlocksFields.php:657
+#: includes/Plugins/ACF/Fields/BlocksFields.php:577
+#: includes/Plugins/ACF/Fields/BlocksFields.php:689
+#: includes/Plugins/ACF/Fields/BlocksFields.php:738
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:76
 #: includes/helpers.php:103
 msgid "Image"
@@ -90,10 +91,14 @@ msgstr ""
 #: includes/Plugins/ACF/Fields/BlocksFields.php:429
 #: includes/Plugins/ACF/Fields/BlocksFields.php:532
 #: includes/Plugins/ACF/Fields/BlocksFields.php:535
-#: includes/Plugins/ACF/Fields/BlocksFields.php:617
-#: includes/Plugins/ACF/Fields/BlocksFields.php:622
-#: includes/Plugins/ACF/Fields/BlocksFields.php:666
-#: includes/Plugins/ACF/Fields/BlocksFields.php:671
+#: includes/Plugins/ACF/Fields/BlocksFields.php:602
+#: includes/Plugins/ACF/Fields/BlocksFields.php:607
+#: includes/Plugins/ACF/Fields/BlocksFields.php:629
+#: includes/Plugins/ACF/Fields/BlocksFields.php:634
+#: includes/Plugins/ACF/Fields/BlocksFields.php:698
+#: includes/Plugins/ACF/Fields/BlocksFields.php:703
+#: includes/Plugins/ACF/Fields/BlocksFields.php:747
+#: includes/Plugins/ACF/Fields/BlocksFields.php:752
 msgid "Title"
 msgstr ""
 
@@ -101,8 +106,8 @@ msgstr ""
 #: includes/Plugins/ACF/Fields/BlocksFields.php:104
 #: includes/Plugins/ACF/Fields/BlocksFields.php:193
 #: includes/Plugins/ACF/Fields/BlocksFields.php:198
-#: includes/Plugins/ACF/Fields/BlocksFields.php:675
-#: includes/Plugins/ACF/Fields/BlocksFields.php:678
+#: includes/Plugins/ACF/Fields/BlocksFields.php:756
+#: includes/Plugins/ACF/Fields/BlocksFields.php:759
 msgid "Subtitle"
 msgstr ""
 
@@ -114,8 +119,12 @@ msgstr ""
 #: includes/Plugins/ACF/Fields/BlocksFields.php:441
 #: includes/Plugins/ACF/Fields/BlocksFields.php:454
 #: includes/Plugins/ACF/Fields/BlocksFields.php:540
-#: includes/Plugins/ACF/Fields/BlocksFields.php:626
-#: includes/Plugins/ACF/Fields/BlocksFields.php:682
+#: includes/Plugins/ACF/Fields/BlocksFields.php:595
+#: includes/Plugins/ACF/Fields/BlocksFields.php:611
+#: includes/Plugins/ACF/Fields/BlocksFields.php:622
+#: includes/Plugins/ACF/Fields/BlocksFields.php:638
+#: includes/Plugins/ACF/Fields/BlocksFields.php:707
+#: includes/Plugins/ACF/Fields/BlocksFields.php:763
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:61
 #: includes/Plugins/ACF/Fields/FrontPageFields.php:66 includes/helpers.php:95
 msgid "Content"
@@ -171,6 +180,7 @@ msgstr ""
 
 #: includes/Plugins/ACF/Fields/BlocksFields.php:419
 #: includes/Plugins/ACF/Fields/BlocksFields.php:434
+#: includes/Plugins/ACF/Fields/BlocksFields.php:587
 msgid "Contents"
 msgstr ""
 
@@ -195,11 +205,15 @@ msgstr ""
 msgid "White"
 msgstr ""
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:571
+#: includes/Plugins/ACF/Fields/BlocksFields.php:572
+msgid "Image & Contents"
+msgstr ""
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:652
 msgid "Add Block"
 msgstr ""
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:580
+#: includes/Plugins/ACF/Fields/BlocksFields.php:661
 msgid "Blocks Fields"
 msgstr ""
 
