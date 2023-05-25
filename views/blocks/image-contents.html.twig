@@ -1,0 +1,44 @@
+{#
+ # Blocks: Image Contents
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="overflow-hidden">
+	<div class="container">
+		<div class="row">
+			{% if block.image %}
+				<div class="lg:col-5/12 lg:mt-12 relative z-2">
+					<div class="overflow-hidden lg:overflow-visible relative w-full h-[20.25rem] lg:h-full after:absolute after:w-[6.75rem] after:h-[6.75rem] after:bottom-0 after:right-0 after:rounded-full after:bg-white after:lg:bg-red-very-pale after:-mr-[3.375rem] after:-mb-[3.375rem] after:z-3 before:z-4 before:mb-1.5 before:mr-1.5 before:absolute before:bottom-0 before:right-0 before:w-6 before:h-6 before:rounded-full before:bg-red-vivid">
+						<div class="w-full lg:w-[42.6793558vw] h-full lg:absolute lg:inset-y-0 lg:right-0">
+							{{- include( 'components/image.html.twig', { image: block.image, classes: [ 'w-full', 'object-cover', 'h-full' ] } ) -}}
+						</div>
+
+					</div>
+				</div>
+			{% endif %}
+
+			<div class="{{ html_classes( 'mt-12 lg:mt-0 lg:col-5/12 relative z-1', block.image ? 'lg:ml-1.5/12' : 'lg:ml-6.5/12' ) }}">
+				{% for item in block.contents %}
+					<div
+						class="{{
+							html_classes(
+								loop.first ? 'mb-12 lg:mb-23' : '',
+								loop.last ? 'py-12 lg:pt-27 lg:pb-13 relative after:absolute after:inset-y-0 after:w-[200vw] after:bg-red-light-grayish after:-ml-[100vw] after:inset-x-0' : '' )
+						}}"
+					>
+						{{ loop.last ? '<div class="relative z-2">' : '' }}
+						<h2 class="{{ html_classes( loop.first ? 'text-[2.625rem] leading-[2.875rem]' : 'text-[2.875rem] lg:text-[3.5rem] leading-none text-red-vivid' ) }}">
+							{{ item.title }}
+						</h2>
+
+						<div class="wysiwyg mt-10.5 lg:mt-10">{{ item.content }}</div>
+						{{ loop.last ? '</div>' : '' }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>

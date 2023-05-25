@@ -14,7 +14,7 @@
 
 		{% embed 'blocks/blocks.html.twig' with { blocks: post.meta( 'blocks' ), classes: [ 'first-child:mt-0 last-child:mb-0' ] } %}
 			{%- block prepend -%}
-				<div class="overflow-hidden my-30">
+				<div class="overflow-hidden my-15 lg:my-30">
 					<div class="container">
 						<div class="{{ html_classes( 'row', 'grid' == post.meta( 'hero' ).layout ? 'lg:items-center' : ''  ) }}">
 							<div class="{{ html_classes(
