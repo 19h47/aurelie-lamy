@@ -19,16 +19,24 @@
 						{% endif %}
 
 						{% if block.video %}
+							<video data-video="video" class="relative z-2 w-full h-full object-cover object-center" {{ block.poster ? 'poster="' ~ block.poster.url ~ '"' : '' }}>
+								<source src="{{ block.video.url }}" type="{{ block.video.mime_type }}">
+							</video>
 
+							<button type="button" data-video="button" class="absolute inset-0 z-3 w-full h-full">
+								{{- icon( 'play', { classes: [ 'fill-white', 'z-3 w-15 h-13', 'absolute', 'inset-0', 'm-auto' ] } ) -}}
+							</button>
+						{% endif %}
 
-								<video data-video="video" class="relative z-2 w-full h-full object-cover object-center" {{ block.poster ? 'poster="' ~ block.poster.url ~ '"' : '' }}>
-									<source src="{{ block.video.url }}" type="{{ block.video.mime_type }}">
-								</video>
-
-								<button type="button" data-video="button" class="absolute inset-0 z-3 w-full h-full">
-									{{- icon( 'play', { classes: [ 'fill-white', 'z-3 w-15 h-13', 'absolute', 'inset-0', 'm-auto' ] } ) -}}
-								</button>
-
+						{% if block.poster and not block.video %}
+							{{-
+								include(
+									'components/image.html.twig', {
+										image: block.poster,
+										classes: [ 'relative z-2 w-full h-full object-cover object-center' ]
+									}
+								)
+							-}}
 						{% endif %}
 					</div>
 				</div>

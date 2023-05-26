@@ -569,7 +569,7 @@ class BlocksFields {
 					'layout_' . $key . '_image_contents' => array(
 						'key' => 'layout_' . $key . '_image_contents',
 						'name' => 'image_contents',
-						'label' => __( 'Image & Contents', 'aurelielamy' ),
+						'label' => __( 'Image and Contents', 'aurelielamy' ),
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
