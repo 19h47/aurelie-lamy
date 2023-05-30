@@ -29,17 +29,19 @@
 
 					{%- if column.header.subtitle and not column.header.title -%}
 						<h2 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.625rem] leading-[2.875rem]' ) }}">
-							{{ column.header.subtitle }}
+							{{- column.header.subtitle -}}
 						</h2>
 					{%- endif -%}
 
 					{%- if column.header.subtitle and column.header.title -%}
 						<h3 class="{{ html_classes( loop.first ? 'text-red-vivid' : 'text-white', 'text-[2.625rem] leading-[2.875rem]' ) }}">
-							{{ column.header.subtitle }}
+							{{- column.header.subtitle -}}
 						</h3>
 					{%- endif -%}
 
-					<div class="{{ html_classes( 'text-sm wysiwyg mt-5 lg:mt-9', loop.last ? 'text-white' : '' ) }}">{{- column.content -}}</div>
+					{%- if column.content -%}
+						<div class="{{ html_classes( 'text-sm wysiwyg mt-5 lg:mt-9', loop.last ? 'text-white' : '' ) }}">{{- column.content -}}</div>
+					{%- endif -%}
 
 					{%- if column.link.url -%}
 						<a

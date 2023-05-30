@@ -57,13 +57,10 @@ class FrontPageFields {
 						'placeholder' => __( 'Heading', 'aurelielamy' ),
 					),
 					array(
-						'key'         => 'field_' . $key . '_hero_content',
-						'label'       => __( 'Content', 'aurelielamy' ),
-						'name'        => 'content',
-						'type'        => 'textarea',
-						'new_lines'   => 'br',
-						'rows'        => 2,
-						'placeholder' => __( 'Content', 'aurelielamy' ),
+						'key'   => 'field_' . $key . '_hero_content',
+						'label' => __( 'Content', 'aurelielamy' ),
+						'name'  => 'content',
+						'type'  => 'wysiwyg',
 					),
 					array(
 						'key'   => 'field_' . $key . '_hero_link',

@@ -31,10 +31,10 @@
 					>
 						{{ loop.last ? '<div class="relative z-2">' : '' }}
 						<h2 class="{{ html_classes( loop.first ? 'text-[2.625rem] leading-[2.875rem]' : 'text-[2.875rem] lg:text-[3.5rem] leading-none text-red-vivid' ) }}">
-							{{ item.title }}
+							{{- item.title -}}
 						</h2>
 
-						<div class="wysiwyg mt-10.5 lg:mt-10">{{ item.content }}</div>
+						<div class="wysiwyg mt-10.5 lg:mt-10">{{- item.content -}}</div>
 						{{ loop.last ? '</div>' : '' }}
 					</div>
 				{% endfor %}

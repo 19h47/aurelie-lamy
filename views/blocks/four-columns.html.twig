@@ -21,18 +21,23 @@
 					<div class="mt-4 pl-2 relative before:absolute before:top-0 before:right-full before:w-1.5 before:h-1.5 before:rounded-full before:bg-red-vivid before:mt-1">
 						<h3 class="text-lg leading-5 font-bold">{{ column.title }}</h3>
 						<p class="text-sm mt-1">{{- column.subtitle -}}</p>
-						<div class="wysiwyg text-sm mt-2">{{- column.content -}}</div>
+
+						{%- if column.content -%}
+							<div class="wysiwyg text-sm mt-2">{{- column.content -}}</div>
+						{%- endif -%}
 					</div>
 				</div>
 			{% endfor %}
 		</div>
 
-		<div class="hidden lg:row mt-22">
-			{% for column in block.columns %}
-				<div class="lg:col-3/12">
-					<div class="wysiwyg text-sm">{{- column.content -}}</div>
-				</div>
-			{% endfor %}
-		</div>
+		{%- if block.columns -%}
+			<div class="hidden lg:row mt-22">
+				{% for column in block.columns %}
+					<div class="lg:col-3/12">
+						<div class="wysiwyg text-sm">{{- column.content -}}</div>
+					</div>
+				{% endfor %}
+			</div>
+		{%- endif -%}
 	</div>
 </div>
