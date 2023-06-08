@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Aurélie Lamy\n"
-"POT-Creation-Date: 2023-05-25 14:44+0200\n"
-"PO-Revision-Date: 2023-05-25 14:45+0200\n"
+"POT-Creation-Date: 2023-06-08 16:32+0200\n"
+"PO-Revision-Date: 2023-06-08 16:33+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -62,13 +62,13 @@ msgstr "Deux colonnes"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:173
 #: includes/Plugins/ACF/Fields/BlocksFields.php:225
 #: includes/Plugins/ACF/Fields/BlocksFields.php:340
-#: includes/Plugins/ACF/Fields/BlocksFields.php:477
-#: includes/Plugins/ACF/Fields/BlocksFields.php:489
-#: includes/Plugins/ACF/Fields/BlocksFields.php:501
-#: includes/Plugins/ACF/Fields/BlocksFields.php:577
-#: includes/Plugins/ACF/Fields/BlocksFields.php:689
-#: includes/Plugins/ACF/Fields/BlocksFields.php:738
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:76 includes/helpers.php:103
+#: includes/Plugins/ACF/Fields/BlocksFields.php:479
+#: includes/Plugins/ACF/Fields/BlocksFields.php:491
+#: includes/Plugins/ACF/Fields/BlocksFields.php:503
+#: includes/Plugins/ACF/Fields/BlocksFields.php:579
+#: includes/Plugins/ACF/Fields/BlocksFields.php:691
+#: includes/Plugins/ACF/Fields/BlocksFields.php:740
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:73 includes/helpers.php:103
 msgid "Image"
 msgstr "Image"
 
@@ -84,20 +84,20 @@ msgstr "Image"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:289
 #: includes/Plugins/ACF/Fields/BlocksFields.php:313
 #: includes/Plugins/ACF/Fields/BlocksFields.php:318
-#: includes/Plugins/ACF/Fields/BlocksFields.php:373
-#: includes/Plugins/ACF/Fields/BlocksFields.php:378
-#: includes/Plugins/ACF/Fields/BlocksFields.php:425
-#: includes/Plugins/ACF/Fields/BlocksFields.php:429
-#: includes/Plugins/ACF/Fields/BlocksFields.php:532
-#: includes/Plugins/ACF/Fields/BlocksFields.php:535
-#: includes/Plugins/ACF/Fields/BlocksFields.php:602
-#: includes/Plugins/ACF/Fields/BlocksFields.php:607
-#: includes/Plugins/ACF/Fields/BlocksFields.php:629
-#: includes/Plugins/ACF/Fields/BlocksFields.php:634
-#: includes/Plugins/ACF/Fields/BlocksFields.php:698
-#: includes/Plugins/ACF/Fields/BlocksFields.php:703
-#: includes/Plugins/ACF/Fields/BlocksFields.php:747
-#: includes/Plugins/ACF/Fields/BlocksFields.php:752
+#: includes/Plugins/ACF/Fields/BlocksFields.php:375
+#: includes/Plugins/ACF/Fields/BlocksFields.php:380
+#: includes/Plugins/ACF/Fields/BlocksFields.php:427
+#: includes/Plugins/ACF/Fields/BlocksFields.php:431
+#: includes/Plugins/ACF/Fields/BlocksFields.php:534
+#: includes/Plugins/ACF/Fields/BlocksFields.php:537
+#: includes/Plugins/ACF/Fields/BlocksFields.php:604
+#: includes/Plugins/ACF/Fields/BlocksFields.php:609
+#: includes/Plugins/ACF/Fields/BlocksFields.php:631
+#: includes/Plugins/ACF/Fields/BlocksFields.php:636
+#: includes/Plugins/ACF/Fields/BlocksFields.php:700
+#: includes/Plugins/ACF/Fields/BlocksFields.php:705
+#: includes/Plugins/ACF/Fields/BlocksFields.php:749
+#: includes/Plugins/ACF/Fields/BlocksFields.php:754
 msgid "Title"
 msgstr "Titre"
 
@@ -105,8 +105,8 @@ msgstr "Titre"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:104
 #: includes/Plugins/ACF/Fields/BlocksFields.php:193
 #: includes/Plugins/ACF/Fields/BlocksFields.php:198
-#: includes/Plugins/ACF/Fields/BlocksFields.php:756
-#: includes/Plugins/ACF/Fields/BlocksFields.php:759
+#: includes/Plugins/ACF/Fields/BlocksFields.php:758
+#: includes/Plugins/ACF/Fields/BlocksFields.php:761
 msgid "Subtitle"
 msgstr "Sous-titre"
 
@@ -114,25 +114,24 @@ msgstr "Sous-titre"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:204
 #: includes/Plugins/ACF/Fields/BlocksFields.php:307
 #: includes/Plugins/ACF/Fields/BlocksFields.php:322
-#: includes/Plugins/ACF/Fields/BlocksFields.php:382
-#: includes/Plugins/ACF/Fields/BlocksFields.php:441
-#: includes/Plugins/ACF/Fields/BlocksFields.php:454
-#: includes/Plugins/ACF/Fields/BlocksFields.php:540
-#: includes/Plugins/ACF/Fields/BlocksFields.php:595
-#: includes/Plugins/ACF/Fields/BlocksFields.php:611
-#: includes/Plugins/ACF/Fields/BlocksFields.php:622
-#: includes/Plugins/ACF/Fields/BlocksFields.php:638
-#: includes/Plugins/ACF/Fields/BlocksFields.php:707
-#: includes/Plugins/ACF/Fields/BlocksFields.php:763
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:61
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:66 includes/helpers.php:95
+#: includes/Plugins/ACF/Fields/BlocksFields.php:384
+#: includes/Plugins/ACF/Fields/BlocksFields.php:443
+#: includes/Plugins/ACF/Fields/BlocksFields.php:456
+#: includes/Plugins/ACF/Fields/BlocksFields.php:542
+#: includes/Plugins/ACF/Fields/BlocksFields.php:597
+#: includes/Plugins/ACF/Fields/BlocksFields.php:613
+#: includes/Plugins/ACF/Fields/BlocksFields.php:624
+#: includes/Plugins/ACF/Fields/BlocksFields.php:640
+#: includes/Plugins/ACF/Fields/BlocksFields.php:709
+#: includes/Plugins/ACF/Fields/BlocksFields.php:765
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:61 includes/helpers.php:95
 msgid "Content"
 msgstr "Contenu"
 
 #: includes/Plugins/ACF/Fields/BlocksFields.php:119
 #: includes/Plugins/ACF/Fields/BlocksFields.php:213
 #: includes/Plugins/ACF/Fields/BlocksFields.php:333
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:70
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:67
 msgid "Link"
 msgstr "Lien"
 
@@ -151,68 +150,68 @@ msgstr "Trois colonnes"
 msgid "Four Columns"
 msgstr "Quatre colonnes"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:349
+#: includes/Plugins/ACF/Fields/BlocksFields.php:350
 #: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:48
 msgid "Layout"
 msgstr "Mise en page"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:352
+#: includes/Plugins/ACF/Fields/BlocksFields.php:353
 msgid "Image layout."
 msgstr "Disposition de l’image."
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:354
+#: includes/Plugins/ACF/Fields/BlocksFields.php:355
 msgid "Right"
 msgstr "Droite"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:355
+#: includes/Plugins/ACF/Fields/BlocksFields.php:356
 msgid "Left"
 msgstr "Gauche"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:368
-#: includes/Plugins/ACF/Fields/BlocksFields.php:404
+#: includes/Plugins/ACF/Fields/BlocksFields.php:370
+#: includes/Plugins/ACF/Fields/BlocksFields.php:406
 msgid "Video"
 msgstr "Vidéo"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:392
+#: includes/Plugins/ACF/Fields/BlocksFields.php:394
 msgid "Poster"
 msgstr "Poster"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:419
-#: includes/Plugins/ACF/Fields/BlocksFields.php:434
-#: includes/Plugins/ACF/Fields/BlocksFields.php:587
+#: includes/Plugins/ACF/Fields/BlocksFields.php:421
+#: includes/Plugins/ACF/Fields/BlocksFields.php:436
+#: includes/Plugins/ACF/Fields/BlocksFields.php:589
 msgid "Contents"
 msgstr "Contenus"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:518
-#: includes/Plugins/ACF/Fields/BlocksFields.php:523
+#: includes/Plugins/ACF/Fields/BlocksFields.php:520
+#: includes/Plugins/ACF/Fields/BlocksFields.php:525
 msgid "Key Figures"
 msgstr "Chiffres clés"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:527
+#: includes/Plugins/ACF/Fields/BlocksFields.php:529
 msgid "Add Key Figure"
 msgstr "Ajouter un chiffre clés"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:552
+#: includes/Plugins/ACF/Fields/BlocksFields.php:554
 msgid "Background Color"
 msgstr "Couleur de fond"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:556
+#: includes/Plugins/ACF/Fields/BlocksFields.php:558
 msgid "Red"
 msgstr "Rouge"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:557
+#: includes/Plugins/ACF/Fields/BlocksFields.php:559
 msgid "White"
 msgstr "Blanc"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:572
+#: includes/Plugins/ACF/Fields/BlocksFields.php:574
 msgid "Image and Contents"
 msgstr "Image et contenus"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:652
+#: includes/Plugins/ACF/Fields/BlocksFields.php:654
 msgid "Add Block"
 msgstr "Ajouter un bloc"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:661
+#: includes/Plugins/ACF/Fields/BlocksFields.php:663
 msgid "Blocks Fields"
 msgstr "Champs de blocs"
 
@@ -234,7 +233,7 @@ msgstr "En-tête"
 msgid "Heading"
 msgstr "Titre"
 
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:91
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:88
 msgid "Front Page Fields"
 msgstr "Champs de la page d’accueil"
 
@@ -749,6 +748,10 @@ msgstr "Partagez sur LinkedIn"
 #: views/footer.html.twig:49
 msgid "Discover"
 msgstr "Découvrir"
+
+#: views/header.html.twig:103
+msgid "Legal Notice"
+msgstr "Mentions légales"
 
 #: views/pages/contact-page.html.twig:79
 msgid "Lastname"

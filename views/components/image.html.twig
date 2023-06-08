@@ -11,27 +11,26 @@
  # @subpackage AurelieLamy
  #}
 
-
-
 {% if image %}
 	{% set image = get_image( image ) %}
+	{% set size = size | default( 'large' ) %}
 
 	<picture{{ size ? " data-size=\"#{ size }\"" : '' }}>
 
 		{% if 'image/svg+xml' != image.post_mime_type %}
-			<source type="image/webp" srcset="{{ image.src( size | default( 'full' ) ) | towebp( 100 ) }}">
-			<source type="{{ image.post_mime_type }}" srcset="{{ image.src( size | default( 'full' ) ) }}">
+			<source type="image/webp" srcset="{{ image.src( size ) | towebp( 100 ) }}">
+			<source type="{{ image.post_mime_type }}" srcset="{{ image.src( size ) }}">
 		{% endif %}
 
 		<img
 			class="{{ html_classes( classes | default( [] ) | join( ' ' ) ) }}"
 			loading="{{ loading | default( 'lazy' ) }}"
-			src="{{ image.src( size | default( 'full' ) ) }}"
+			src="{{ image.src( size ) }}"
 			alt="{{ image.alt }}"
 			width="{{ image.sizes[ size ].width | default( image.width ) }}"
 			height="{{ image.sizes[ size ].height | default( image.height ) }}"
 			{{ image.srcset ? "srcset=\"#{ image.srcset }\"" : '' }}
-			{{ image.img_sizes ? "sizes=\"#{ image.img_sizes( size | default( 'full' ) ) }\"" : '' }}
+			{{ image.img_sizes ? "sizes=\"#{ image.img_sizes( size ) }\"" : '' }}
 			{{ attributes ? attributes | map( ( value, key ) => "#{key}=\"#{value}\"" ) | join( ' ' ) | raw }}
 		>
 

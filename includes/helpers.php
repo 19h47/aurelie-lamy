@@ -1,8 +1,8 @@
 <?php // phpcs:ignore
 /**
- * Les Rapporteuses helpers function
+ * Aurelie Lamy helpers function
  *
- * @package Les Rapporteuses
+ * @package AurelieLamy
  */
 
 

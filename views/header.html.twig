@@ -6,8 +6,16 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<header class="{{ html_classes( classes | default( [] ) | join( ' ' ) ) }}">
-	<div class="container">
+<header
+	class="{{
+		html_classes(
+			'overflow-hidden is-ontop:bg-transparent',
+			'after:bg-red-vivid after:absolute after:inset-0 after:w-full after:h-full after:z-1 after:lg:hidden after:translate-x-full nav-is-active:after:translate-x-0 after:transition-transform after:duration-300 after:ease-in-out',
+			classes | default( [] ) | join( ' ' )
+		)
+	}}"
+>
+	<div class="container relative z-2">
 		<div class="row items-center lg:items-start">
 
 			{% block logo %}
@@ -24,7 +32,7 @@
 
 					{{- include( 'components/socials.html.twig', { classes: [ 'hidden', 'lg:flex' ] }  ) -}}
 
-					<div class="relative text-lg hidden lg:block">
+					<div class="relative text-lg hidden nav-is-active:block lg:block">
 						<select class="appearance-none pr-4 bg-transparent outline-none" name="language-switcher" data-module-language-switcher>
 							{% for lang in pll_the_languages() %}
 								<option
@@ -40,9 +48,67 @@
 						{{ icon( 'caret-down', { classes: [ 'pointer-events-none', 'my-auto', 'absolute', 'inset-y-0', 'right-0', 'w-2.5 h-1.5' ] } ) }}
 					</div>
 
-					<button type="button" class="">{{- icon( 'bars', { classes: [ 'fill-red-vivid', 'w-9', 'h-7' ] } ) -}}</button>
+					<button type="button" class="" data-module-nav-button>
+						{{- icon( 'bars', { classes: [ 'fill-red-vivid', 'w-9', 'h-7', 'nav-is-active:hidden block' ] } ) -}}
+						{{- icon( 'times', { classes: [ 'fill-red-vivid is-ontop:fill-white', 'w-9', 'h-7', 'nav-is-active:block hidden' ] } ) -}}
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
 </header>
+
+<div class="pointer-events-none nav-is-active:pointer-events-auto fixed overflow-hidden inset-y-0 right-0 z-5 w-full h-full">
+	<nav
+		class="h-full text-white transition-transform duration-300 ease-in-out nav-is-active:translate-x-0 translate-x-full"
+		data-module-nav="main"
+	>
+		<div class="h-full container relative z-1">
+			<div class="h-full row">
+				<div class="h-full lg:col-3/12 lg:ml-9/12">
+					<div class="h-full pt-[9.375rem] lg:pt-[10.625rem] pb-13 lg:pl-13 after:z-1 after:-ml-4 after:lg:ml-0 after:bg-red-vivid after:absolute relative after:left-0 after:inset-y-0 after:w-screen">
+						<div class="relative z-2 flex flex-col h-full">
+							<ul class="text-[1.375rem]" itemscope itemtype="http://schema.org/SiteNavigationElement">
+								{%- for item in nav_menus.main.get_items() -%}
+									<li
+										class="{{
+											html_classes(
+												loop.first ? 'mb-7' : loop.last ? 'mt-7' : 'my-7',
+											)
+										}}"
+									>
+
+										<a
+											href="{{ item.url }}"
+											class="{{
+												html_classes(
+													'flex', 'justify-between', 'items-center', 'hover:underline', 'focus:underline',
+													item.current ? 'is-active underline' : '',
+													item.classes | join( ' ' )
+												)
+											}}"
+											itemprop="url"
+											{{ item.is_target_blank or item.is_external ? " target=\"#{item.target}\" rel=\"noopener noreferer\"" }}
+										>
+											{{- item.title -}}
+											{{ icon( 'chevron-right', { classes: [ 'w-2 h-3' ] } ) }}
+										</a>
+
+									</li>
+								{%- endfor -%}
+							</ul>
+
+							<div class="mt-auto">
+								{{- include( 'components/socials.html.twig', { classes: [] } ) -}}
+								<a class="mt-4 hover:underline inline-block align-middle" href="{{ privacy_policy_url }}">{{- __( 'Legal Notice', 'aurelielamy' ) -}}</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<img class="absolute bottom-0 right-0 z-2 pointer-events-none mr-4 lg:mr-7 mb-12 lg:mb-13" src="{{ theme.manifest[ 'img/svg/cerebral.svg' ] }}" alt=""  width="127.3" height="146.2">
+
+	</nav>
+</div>

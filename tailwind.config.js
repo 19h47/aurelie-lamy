@@ -46,6 +46,7 @@ const spacing = {
 	'5.5/12': `${(5.5 / 12) * 100}%`,
 	'6.5/12': `${(6.5 / 12) * 100}%`,
 	'1/8': `${(1 / 8) * 100}%`,
+	'9/12': `${(9 / 12) * 100}%`,
 	4.5: `${18 / 16}rem`,
 	7.5: `${30 / 16}rem`,
 	10.5: `${42 / 16}rem`, // 42px
@@ -117,6 +118,7 @@ module.exports = {
 		},
 	},
 	plugins: [
+		plugin(({ addVariant }) => addVariant('nav-is-active', '.nav-is-active &')),
 		plugin(({ addVariant }) => addVariant('is-active', '.is-active&')),
 		plugin(({ addVariant }) => addVariant('is-ontop', '.is-ontop &')),
 		plugin(({ addVariant }) => addVariant('parent-is-selected', '.is-selected &')),
