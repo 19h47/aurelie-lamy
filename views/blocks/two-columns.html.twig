@@ -10,7 +10,7 @@
 	<div class="lg:container">
 		<div class="lg:row">
 
-			{% for column in block.columns %}
+			{% for column in block.columns | filter( column => column ) %}
 				<div class="{{ html_classes( 'px-4 py-14 lg:py-0 lg:px-2 lg:col-5.5/12 lg:bg-transparent', loop.first ? ' bg-red-light-grayish' : '', loop.last ? 'bg-red-vivid lg:ml-1/12' : '' ) }}">
 					{%- if column.header.image and not column.header.title -%}
 						{{- include( 'components/image.html.twig', { classes: [ 'mb-11', 'h-21', 'w-auto', 'block', 'object-contain', 'object-left' ], image: column.header.image } ) -}}
@@ -43,21 +43,35 @@
 						<div class="{{ html_classes( 'text-sm wysiwyg mt-5 lg:mt-9', loop.last ? 'text-white' : '' ) }}">{{- column.content -}}</div>
 					{%- endif -%}
 
-					{%- if column.link.url -%}
-						<a
-							class="{{
-								html_classes(
-									loop.first ? 'bg-red-vivid text-white hover:text-red-vivid hover:bg-red-very-soft' : '',
-									loop.last ? 'bg-white text-red-vivid hover:bg-red-very-soft hover:text-white' : '',
-									'mt-8 lg:mt-6 uppercase inline-flex gap-x-2 items-center text-sm py-2.5 px-5 rounded-full transition-colors duration-300'
-								)
-							}}"
-							href="{{ column.link.url }}"
-							{{ column.link.target ? 'rel="noopener noreferer" target="_blank"' : '' }}
-						>
-							{{- icon( 'chevron-right', { classes: [ 'w-1.5', 'h-2.5' ] } ) -}}
-							{{- column.link.title -}}
-						</a>
+					{%- if column.links -%}
+						<div class="row gap-y-11 mt-8 lg:mt-6">
+							{%- for link in column.links -%}
+								<div class="lg:col-6/12 space-y-4">
+									{{- include( 'components/image.html.twig', { classes: [ 'w-full h-12', 'object-contain object-left' ], image: link.image } ) -}}
+
+									{% if link.title %}
+										<p class="{{ html_classes( loop.parent.loop.last ? 'text-white' : '', 'text-2xl' ) }}">{{- link.title -}}</p>
+									{% endif %}
+
+									{%- if link.link.url -%}
+										<a
+											class="{{
+												html_classes(
+													loop.parent.loop.first ? 'bg-red-vivid text-white hover:text-red-vivid hover:bg-red-very-soft' : '',
+													loop.parent.loop.last ? 'bg-white text-red-vivid hover:bg-red-very-soft hover:text-white' : '',
+													'uppercase inline-flex gap-x-2 items-center text-sm py-2.5 px-5 rounded-full transition-colors duration-300'
+												)
+											}}"
+											href="{{ link.link.url }}"
+											{{ link.link.target ? 'rel="noopener noreferer" target="_blank"' : '' }}
+										>
+											{{- icon( 'chevron-right', { classes: [ 'w-1.5', 'h-2.5' ] } ) -}}
+											{{- link.link.title -}}
+										</a>
+									{%- endif -%}
+								</div>
+							{% endfor %}
+						</div>
 					{%- endif -%}
 
 					{% if column.quote.title or column.quote.name %}

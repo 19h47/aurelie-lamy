@@ -252,10 +252,7 @@ class Athlete {
 		);
 
 		$rewrite = array(
-			'slug'       => __( 'atheletes', 'aurelielamy' ),
-			'with_front' => true,
-			'pages'      => true,
-			'feeds'      => true,
+			'with_front' => false,
 		);
 
 		$args = array(
@@ -264,7 +261,7 @@ class Athlete {
 			'labels'              => $labels,
 			'supports'            => array( 'title', 'thumbnail' ),
 			'taxonomies'          => array(),
-			'public'              => true,
+			'public'              => false,
 			'show_ui'             => true,
 			'show_in_menu'        => true,
 			'menu_position'       => 5,

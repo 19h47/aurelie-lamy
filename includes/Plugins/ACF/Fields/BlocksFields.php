@@ -52,6 +52,23 @@ class BlocksFields {
 				'name'         => 'blocks',
 				'type'         => 'flexible_content',
 				'layouts'      => array(
+					'layout_' . $key . '_athletes'       => array(
+						'key'        => 'layout_' . $key . '_athletes',
+						'name'       => 'athletes',
+						'label'      => __( 'Athletes', 'aurelielamy' ),
+						'display'    => 'block',
+						'sub_fields' => array(
+							array(
+								'key'           => 'field_' . $key . '_athletes_athletes',
+								'label'         => __( 'Athletes', 'aurelielamy' ),
+								'name'          => 'athletes',
+								'type'          => 'relationship',
+								'post_type'     => array( 'athlete' ),
+								'filters'       => array( 'search' ),
+								'return_format' => 'id',
+							),
+						),
+					),
 					'layout_' . $key . '_two_columns'    => array(
 						'key'        => 'layout_' . $key . '_two_columns',
 						'label'      => __( 'Two Columns', 'aurelielamy' ),
@@ -64,10 +81,16 @@ class BlocksFields {
 								'type'       => 'group',
 								'sub_fields' => array(
 									array(
+										'key'       => 'field_' . $key . '_two_columns_tab_1',
+										'label'     => __( 'Left Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
+									array(
 										'key'        => 'field_' . $key . '_two_columns_columns_0',
 										'name'       => 0,
 										'type'       => 'group',
-										'wrapper'    => array( 'width' => 50 ),
 										'sub_fields' => array(
 											array(
 												'key'  => 'field_' . $key . '_two_columns_columns_0_header',
@@ -115,11 +138,42 @@ class BlocksFields {
 												'media_upload' => 0,
 											),
 											array(
-												'key'   => 'field_' . $key . '_two_columns_columns_0_link',
-												'label' => __( 'Link', 'aurelielamy' ),
-												'name'  => 'link',
-												'type'  => 'link',
-												'return_format' => 'array',
+												'key'    => 'field_' . $key . '_two_columns_columns_0_links',
+												'label'  => __( 'Links', 'aurelielamy' ),
+												'name'   => 'links',
+												'type'   => 'repeater',
+												'layout' => 'block',
+												'button_label' => __( 'Add Link', 'aurelielamy' ),
+												'sub_fields' => array(
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_0_links_image',
+														'label' => __( 'Image', 'aurelielamy' ),
+														'name' => 'image',
+														'type' => 'image',
+														'return_format' => 'id',
+														'library' => 'all',
+														'preview_size' => 'medium',
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_0_links',
+													),
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_0_links_title',
+														'label' => __( 'Title', 'aurelielamy' ),
+														'name' => 'title',
+														'type' => 'textarea',
+														'rows' => 2,
+														'new_lines' => 'br',
+														'placeholder' => __( 'Title', 'aurelielamy' ),
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_0_links',
+													),
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_0_links_link',
+														'label' => __( 'Link', 'aurelielamy' ),
+														'name' => 'link',
+														'type' => 'link',
+														'return_format' => 'array',
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_0_links',
+													),
+												),
 											),
 											array(
 												'key'  => 'field_' . $key . '_two_columns_columns_0_quote',
@@ -158,10 +212,16 @@ class BlocksFields {
 										),
 									),
 									array(
+										'key'       => 'field_' . $key . '_two_columns_tab_2',
+										'label'     => __( 'Right Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
+									array(
 										'key'        => 'field_' . $key . '_two_columns_columns_1',
 										'name'       => 1,
 										'type'       => 'group',
-										'wrapper'    => array( 'width' => 50 ),
 										'sub_fields' => array(
 											array(
 												'key'  => 'field_' . $key . '_two_columns_columns_1_header',
@@ -209,11 +269,42 @@ class BlocksFields {
 												'media_upload' => 0,
 											),
 											array(
-												'key'   => 'field_' . $key . '_two_columns_columns_1_link',
-												'label' => __( 'Link', 'aurelielamy' ),
-												'name'  => 'link',
-												'type'  => 'link',
-												'return_format' => 'array',
+												'key'    => 'field_' . $key . '_two_columns_columns_1_links',
+												'label'  => __( 'Links', 'aurelielamy' ),
+												'name'   => 'links',
+												'type'   => 'repeater',
+												'layout' => 'block',
+												'button_label' => __( 'Add Link', 'aurelielamy' ),
+												'sub_fields' => array(
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_1_links_image',
+														'label' => __( 'Image', 'aurelielamy' ),
+														'name' => 'image',
+														'type' => 'image',
+														'return_format' => 'id',
+														'library' => 'all',
+														'preview_size' => 'medium',
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_1_links',
+													),
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_1_links_title',
+														'label' => __( 'Title', 'aurelielamy' ),
+														'name' => 'title',
+														'type' => 'textarea',
+														'rows' => 2,
+														'new_lines' => 'br',
+														'placeholder' => __( 'Title', 'aurelielamy' ),
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_1_links',
+													),
+													array(
+														'key' => 'field_' . $key . '_two_columns_columns_1_links_link',
+														'label' => __( 'Link', 'aurelielamy' ),
+														'name' => 'link',
+														'type' => 'link',
+														'return_format' => 'array',
+														'parent_repeater' => 'field_' . $key . '_two_columns_columns_1_links',
+													),
+												),
 											),
 											array(
 												'key'  => 'field_' . $key . '_two_columns_columns_1_quote',

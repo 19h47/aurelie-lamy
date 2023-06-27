@@ -27,7 +27,7 @@
 
 		{% embed 'blocks/blocks.html.twig' with { blocks: post.meta( 'blocks' ), classes: [ 'first-child:mt-0 last-child:mb-0' ] } %}
 			{%- block prepend -%}
-				<div class="overflow-hidden my-30">
+				<div class="overflow-hidden my-15 lg:my-0">
 					<div class="container">
 						<div class="row">
 							<div class="lg:col-5.5/12 lg:ml-1/12 relative z-1 lg:order-3">
@@ -35,7 +35,7 @@
 									{{- include( 'components/image.html.twig', { classes: [ 'h-full', 'w-full', 'absolute', 'inset-y-0', 'left-0', 'object-cover' ], image: post.meta( 'hero' ).image } ) -}}
 								</div>
 							</div>
-							<div class="lg:col-5.5/12 pt-14 pb-13 lg:pt-36 lg:pb-24 lg:order-1">
+							<div class="lg:col-5.5/12 pt-14 lg:pt-36 lg:pb-24 lg:order-1">
 								<div class="text-sm">
 									{{ yoast_breadcrumb() }}
 								</div>
@@ -55,12 +55,12 @@
 				</div>
 			{%- endblock -%}
 
-			{% block append %}
+			{# {% block append %}
 				{% for podcast in get_posts( { post_type: 'podcast', posts_per_page: -1 } ) %}
 					{{ podcast.title }}
 					{{ podcast.audio_metadata.length_formatted }}
 				{% endfor %}
-			{% endblock %}
+			{% endblock %} #}
 		{%- endembed -%}
 
 	</main>

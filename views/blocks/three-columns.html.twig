@@ -8,22 +8,27 @@
 
 <div class="py-13 lg:py-20 bg-red-very-pale">
 	<div class="container">
-		<div class="row items-end">
+
+		<div class="lg:row lg:mb-7 hidden lg:flex">
 			{% for column in block.columns %}
 				<div class="{{ html_classes( loop.first ? '' : 'mt-13 lg:mt-0', 'lg:col-4/12' ) }}">
-					<div class="lg:mr-6">
-						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'w-1/2', 'h-auto' ] } ) -}}
-						<h2 class="{{ html_classes( column.image ? 'mt-7' : '', 'text-[2.625rem] leading-[2.875rem] text-red-vivid' ) }}">{{- column.title -}}</h2>
-						<div class="{{ html_classes( 'text-sm wysiwyg mt-9 lg:hidden' ) }}">{{- column.content -}}</div>
+					<div class="h-full">
+						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'object-center', 'object-contain', 'w-1/2', 'h-full' ] } ) -}}
 					</div>
 				</div>
 			{% endfor %}
 		</div>
 
-		<div class="lg:row hidden mt-9">
+		<div class="row">
 			{% for column in block.columns %}
-				<div class="{{ html_classes( 'lg:col-4/12' ) }}">
-					<div class="{{ html_classes( 'text-sm wysiwyg mr-6' ) }}">{{- column.content -}}</div>
+				<div class="{{ html_classes( loop.first ? '' : 'mt-13 lg:mt-0', 'lg:col-4/12' ) }}">
+					<div class="lg:mr-6">
+						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'w-1/2 lg:hidden', 'h-auto' ] } ) -}}
+						<h2 class="{{ html_classes( column.image ? 'mt-7 lg:mt-0' : '', 'text-[2.625rem] leading-[2.875rem] text-red-vivid' ) }}">
+							{{- column.title -}}
+						</h2>
+						<div class="{{ html_classes( 'text-sm wysiwyg mt-9' ) }}">{{- column.content -}}</div>
+					</div>
 				</div>
 			{% endfor %}
 		</div>
