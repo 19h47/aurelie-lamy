@@ -357,8 +357,29 @@ class BlocksFields {
 								'name'       => 'columns',
 								'type'       => 'group',
 								'sub_fields' => array(
+									array(
+										'key'       => 'field_' . $key . '_three_columns_columns_tab_0',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->three_columns_column( $key ),
+									array(
+										'key'       => 'field_' . $key . '_three_columns_columns_tab_1',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->three_columns_column( $key, 1 ),
+									array(
+										'key'       => 'field_' . $key . '_three_columns_columns_tab_2',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->three_columns_column( $key, 2 ),
 								),
 							),
@@ -775,7 +796,6 @@ class BlocksFields {
 			'key'        => 'field_' . $key . '_three_columns_columns_' . $index,
 			'name'       => $index,
 			'type'       => 'group',
-			'wrapper'    => array( 'width' => 4 / 12 * 100 ),
 			'sub_fields' => array(
 				array(
 					'key'           => 'field_' . $key . '_three_columns_columns_' . $index . '_image',
@@ -801,7 +821,7 @@ class BlocksFields {
 					'name'         => 'content',
 					'type'         => 'wysiwyg',
 					'tabs'         => 'all',
-					'toolbar'      => 'basic',
+					'toolbar'      => 'full',
 					'media_upload' => 0,
 					'delay'        => 0,
 				),

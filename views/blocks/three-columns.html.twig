@@ -10,7 +10,7 @@
 	<div class="container">
 
 		<div class="lg:row lg:mb-7 hidden lg:flex">
-			{% for column in block.columns %}
+			{% for column in block.columns | filter( column => column ) %}
 				<div class="{{ html_classes( loop.first ? '' : 'mt-13 lg:mt-0', 'lg:col-4/12' ) }}">
 					<div class="h-full">
 						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'object-center', 'object-contain', 'w-1/2', 'h-full' ] } ) -}}
@@ -20,7 +20,7 @@
 		</div>
 
 		<div class="row">
-			{% for column in block.columns %}
+			{% for column in block.columns | filter( column => column ) %}
 				<div class="{{ html_classes( loop.first ? '' : 'mt-13 lg:mt-0', 'lg:col-4/12' ) }}">
 					<div class="lg:mr-6">
 						{{- include( 'components/image.html.twig', { image: column.image, classes: [ 'w-1/2 lg:hidden', 'h-auto' ] } ) -}}
