@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Aurélie Lamy\n"
 "POT-Creation-Date: 2023-07-03 09:37+0200\n"
-"PO-Revision-Date: 2023-07-03 09:38+0200\n"
+"PO-Revision-Date: 2023-07-04 09:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -179,7 +179,7 @@ msgstr "Trois colonnes"
 #: includes/Plugins/ACF/Fields/BlocksFields.php:370
 #: includes/Plugins/ACF/Fields/BlocksFields.php:378
 msgid "Column"
-msgstr "Deux colonnes"
+msgstr "Colonne"
 
 #: includes/Plugins/ACF/Fields/BlocksFields.php:390
 msgid "Four Columns"

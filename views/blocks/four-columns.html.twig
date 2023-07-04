@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="row mt-12">
-			{% for column in block.columns %}
+			{% for column in block.columns | filter( column => column ) %}
 				<div class="{{ html_classes( 'lg:col-3/12', loop.first ? '' : 'mt-13 lg:mt-0' ) }}">
 					{{- include( 'components/image.html.twig', { classes: [ 'h-24', 'w-full', 'object-contain', 'object-left' ], image: column.image } ) -}}
 					<div class="mt-4 pl-2 relative before:absolute before:top-0 before:right-full before:w-1.5 before:h-1.5 before:rounded-full before:bg-red-vivid before:mt-1">
@@ -23,16 +23,16 @@
 						<p class="text-sm mt-1">{{- column.subtitle -}}</p>
 
 						{%- if column.content -%}
-							<div class="wysiwyg text-sm mt-2">{{- column.content -}}</div>
+							<div class="wysiwyg text-sm mt-2 lg:hidden">{{- column.content -}}</div>
 						{%- endif -%}
 					</div>
 				</div>
 			{% endfor %}
 		</div>
 
-		{%- if block.columns -%}
+		{%- if block.columns | filter( column => column.content ) -%}
 			<div class="hidden lg:row mt-22">
-				{% for column in block.columns %}
+				{% for column in block.columns | filter( column => column )  %}
 					<div class="lg:col-3/12">
 						<div class="wysiwyg text-sm">{{- column.content -}}</div>
 					</div>

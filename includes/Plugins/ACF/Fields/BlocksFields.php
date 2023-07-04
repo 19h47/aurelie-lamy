@@ -406,9 +406,37 @@ class BlocksFields {
 								'name'       => 'columns',
 								'type'       => 'group',
 								'sub_fields' => array(
+									array(
+										'key'       => 'field_' . $key . '_four_columns_columns_tab_0',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->four_columns_column( $key ),
+									array(
+										'key'       => 'field_' . $key . '_four_columns_columns_tab_1',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->four_columns_column( $key, 1 ),
+									array(
+										'key'       => 'field_' . $key . '_four_columns_columns_tab_2',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->four_columns_column( $key, 2 ),
+									array(
+										'key'       => 'field_' . $key . '_four_columns_columns_tab_3',
+										'label'     => __( 'Column', 'aurelielamy' ),
+										'type'      => 'tab',
+										'placement' => 'top',
+										'endpoint'  => 0,
+									),
 									$this->four_columns_column( $key, 3 ),
 								),
 							),
@@ -844,7 +872,6 @@ class BlocksFields {
 			'key'        => 'field_' . $key . '_four_columns_columns_' . $index,
 			'name'       => $index,
 			'type'       => 'group',
-			'wrapper'    => array( 'width' => 3 / 12 * 100 ),
 			'sub_fields' => array(
 				array(
 					'key'           => 'field_' . $key . '_four_columns_columns_' . $index . '_image',
