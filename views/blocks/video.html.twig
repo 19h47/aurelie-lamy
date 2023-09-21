@@ -42,18 +42,33 @@
 				</div>
 			</div>
 
-			<div
-				class="{{
-					html_classes(
-						block.poster or block.video ? 'mt-12 lg:mt-0' : '',
-						'right' == block.layout ? 'lg:order-1 lg:col-5.5/12' : 'lg:col-6.5/12 lg:ml-1/12'
-					)
-				}}"
-			>
-				<h2 class="text-[2.875rem] leading-none text-red-vivid">{{- block.title -}}</h2>
-				<div class="wysiwyg mt-7 text-sm">{{- block.content -}}</div>
-				{{- include( 'components/link.html.twig', block.link | default( {} ) | merge( { classes: [ 'mt-6 lg:mt-7' ] } ) ) -}}
-			</div>
+			{%- if block.title or block.content or block.link -%}
+				<div
+					class="{{
+						html_classes(
+							block.poster or block.video ? 'mt-12 lg:mt-0' : '',
+							'right' == block.layout ? 'lg:order-1 lg:col-5.5/12' : 'lg:col-6.5/12 lg:ml-1/12'
+						)
+					}}"
+				>
+					{%- if block.title -%}
+						<h2 class="text-[2.875rem] leading-none text-red-vivid">{{- block.title -}}</h2>
+					{%- endif -%}
+
+					{%- if block.content -%}
+						<div class="{{ html_classes( 'wysiwyg', block.title ? 'mt-7' : '' ) }}">{{- block.content -}}</div>
+					{%- endif -%}
+
+					{{-
+						include(
+							'components/link.html.twig',
+							block.link | default( {} ) | merge( {
+								classes: [ block.title or block.content ? 'mt-6 lg:mt-7' : '' ]
+							} )
+						)
+					-}}
+				</div>
+			{%- endif -%}
 
 		</div>
 	</div>

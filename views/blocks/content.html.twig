@@ -32,7 +32,7 @@
 				{%- endif -%}
 
 				{%- if block.content -%}
-					<div class="{{ html_classes( 'wysiwyg text-sm', block.title ? 'mt-7' : '' ) }}">{{- block.content -}}</div>
+					<div class="{{ html_classes( 'wysiwyg', block.title ? 'mt-7' : '' ) }}">{{- block.content -}}</div>
 				{%- endif -%}
 
 				{{- include( 'components/link.html.twig', block.link | default( {} ) | merge( { classes: [  block.content or block.title ? 'mt-6 lg:mt-7' : '' ] } ) ) -}}
