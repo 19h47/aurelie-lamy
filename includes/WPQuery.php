@@ -2,7 +2,7 @@
 /**
  * WP Query
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -15,12 +15,13 @@ use WP_Query;
  */
 class WPQuery {
 
+
 	/**
 	 * Run default hooks and actions for WordPress
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'posts_join', array( $this, 'search_join' ), 10, 2 );
 		add_filter( 'posts_where', array( $this, 'search_where' ), 10, 2 );
 		add_filter( 'posts_distinct', array( $this, 'search_distinct' ), 10, 2 );
@@ -30,14 +31,14 @@ class WPQuery {
 	/**
 	 * Join posts and postmeta tables
 	 *
-	 * @param string   $join The JOIN clause of the query.
+	 * @param string   $join  The JOIN clause of the query.
 	 * @param WP_Query $query The WP_Query instance (passed by reference).
 	 *
 	 * @see https://developer.wordpress.org/reference/hooks/posts_join/
 	 *
 	 * @return string
 	 */
-	public function search_join( string $join, WP_Query $query ) : string {
+	public function search_join( string $join, WP_Query $query ): string {
 		global $wpdb;
 
 		if ( is_search() ) {
@@ -58,7 +59,7 @@ class WPQuery {
 	 *
 	 * @return string
 	 */
-	public function search_where( string $where, WP_Query $query ) : string {
+	public function search_where( string $where, WP_Query $query ): string {
 		global $wpdb;
 
 		if ( is_search() ) {
@@ -77,13 +78,13 @@ class WPQuery {
 	 * Prevent duplicates
 	 *
 	 * @param string   $distinct The DISTINCT clause of the query.
-	 * @param WP_Query $query The WP_Query instance (passed by reference).
+	 * @param WP_Query $query    The WP_Query instance (passed by reference).
 	 *
 	 * @see https://developer.wordpress.org/reference/hooks/posts_distinct/
 	 *
 	 * @return string
 	 */
-	public function search_distinct( string $distinct, WP_Query $query ) : string {
+	public function search_distinct( string $distinct, WP_Query $query ): string {
 		if ( is_search() ) {
 			return 'DISTINCT';
 		}

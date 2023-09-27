@@ -2,11 +2,11 @@ import { module as M } from '@19h47/modular';
 
 class Video extends M {
 	constructor(m) {
-		super(m);
+		super( m );
 
-		this.muted = true;
+		this.muted     = true;
 		this.isPlaying = true;
-		this.autoplay = JSON.parse(this.getData('autoplay'));
+		this.autoplay  = JSON.parse( this.getData( 'autoplay' ) );
 
 		this.events = {
 			click: 'toggle',
@@ -14,7 +14,7 @@ class Video extends M {
 	}
 
 	init() {
-		if (!this.autoplay) {
+		if ( ! this.autoplay) {
 			this.isPlaying = false;
 		}
 	}
@@ -24,18 +24,18 @@ class Video extends M {
 			return;
 		}
 
-		if (!this.isPlaying) {
+		if ( ! this.isPlaying) {
 			this.isPlaying = true;
-			this.$('video')[0].play();
-			this.$('button')[0].style.setProperty('display', 'none');
+			this.$( 'video' )[0].play();
+			this.$( 'button' )[0].style.setProperty( 'display', 'none' );
 		} else {
 			this.isPlaying = false;
-			this.$('video')[0].pause();
-			this.$('button')[0].style.removeProperty('display');
+			this.$( 'video' )[0].pause();
+			this.$( 'button' )[0].style.removeProperty( 'display' );
 		}
 
-		this.muted = !this.muted;
-		this.$('video')[0].muted = this.muted;
+		this.muted                 = ! this.muted;
+		this.$( 'video' )[0].muted = this.muted;
 	}
 }
 

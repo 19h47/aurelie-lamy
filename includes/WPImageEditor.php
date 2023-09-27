@@ -2,7 +2,7 @@
 /**
  * WP Image Editor
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy;
  */
 class WPImageEditor {
 
+
 	/**
 	 * Run default hooks and actions for WordPress
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'wp_editor_set_quality', array( $this, 'quality' ), 10, 2 );
 	}
 
@@ -32,7 +33,7 @@ class WPImageEditor {
 	 *
 	 * @return int
 	 */
-	public function quality( int $quality, string $mime_type ) : int {
+	public function quality( int $quality, string $mime_type ): int {
 		return 100;
 	}
 }

@@ -2,9 +2,9 @@
 /**
  * PostClass
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
- * @since 0.0.0
+ * @since      0.0.0
  */
 
 namespace AurelieLamy\PostTemplate;
@@ -16,12 +16,13 @@ namespace AurelieLamy\PostTemplate;
  */
 class PostClass {
 
+
 	/**
 	 * Run default hooks and actions for WordPress
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'post_class', array( $this, 'post_classes' ), 10, 3 );
 	}
 
@@ -31,13 +32,13 @@ class PostClass {
 	 *
 	 * @since 0.0.0
 	 *
-	 * @param string[] $classes  An array of post class names.
-	 * @param string[] $class  An array of additional class names added to the post.
-	 * @param int      $post_id  The post ID.
+	 * @param string[] $classes An array of post class names.
+	 * @param string[] $class   An array of additional class names added to the post.
+	 * @param int      $post_id The post ID.
 	 *
 	 * @return array
 	 */
-	public function post_classes( array $classes, array $class, int $post_id ) : array {
+	public function post_classes( array $classes, array $class, int $post_id ): array {
 		return $classes;
 	}
 }

@@ -2,7 +2,7 @@
 /**
  * Twig
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy/Setup/Theme
  */
 
@@ -17,12 +17,13 @@ use Twig\{ TwigFunction };
  */
 class Twig {
 
+
 	/**
 	 * Constructor
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'timber/twig', array( $this, 'add_functions' ) );
 		add_filter( 'timber/twig', array( $this, 'add_extensions' ) );
 		add_filter( 'timber/twig/environment/options', array( $this, 'set_environment_options' ), 10, 1 );
@@ -36,7 +37,7 @@ class Twig {
 	 *
 	 * @return array $options
 	 */
-	public function set_environment_options( array $options ) : array {
+	public function set_environment_options( array $options ): array {
 		$options['cache']       = WP_DEBUG ? false : true;
 		$options['auto_reload'] = WP_DEBUG;
 
@@ -53,7 +54,7 @@ class Twig {
 	 *
 	 * @return object $twig
 	 */
-	public function add_extensions( object $twig ) : object {
+	public function add_extensions( object $twig ): object {
 		$twig->addExtension( new HtmlExtension() );
 		$twig->addExtension( new IntlExtension() );
 
@@ -70,12 +71,12 @@ class Twig {
 	 *
 	 * @return object $twig
 	 */
-	public function add_functions( object $twig ) : object {
+	public function add_functions( object $twig ): object {
 		$twig->addFunction(
 			new TwigFunction(
 				'html_class',
 				function ( $args = '' ) {
-					return html_class( $args );
+						return html_class( $args );
 				}
 			)
 		);
@@ -84,7 +85,7 @@ class Twig {
 			new TwigFunction(
 				'body_class',
 				function ( $args = '' ) {
-					return body_class( $args );
+						return body_class( $args );
 				}
 			)
 		);
@@ -92,8 +93,8 @@ class Twig {
 		$twig->addFunction(
 			new TwigFunction(
 				'set_product_global',
-				function( $post ) {
-					return set_product_global( $post );
+				function ( $post ) {
+						return set_product_global( $post );
 				}
 			)
 		);
@@ -102,8 +103,8 @@ class Twig {
 			$twig->addFunction(
 				new TwigFunction(
 					'sanitize_title',
-					function ( string $title, string $fallback_title = '', string $context = 'save' ) : string {
-						return sanitize_title( $title, $fallback_title, $context );
+					function ( string $title, string $fallback_title = '', string $context = 'save' ): string {
+							return sanitize_title( $title, $fallback_title, $context );
 					}
 				)
 			);
@@ -113,8 +114,8 @@ class Twig {
 			$twig->addFunction(
 				new TwigFunction(
 					'get_extended',
-					function( $content ) {
-						return get_extended( $content );
+					function ( $content ) {
+							return get_extended( $content );
 					}
 				)
 			);
@@ -124,8 +125,8 @@ class Twig {
 			$twig->addFunction(
 				new TwigFunction(
 					'wp_get_document_title',
-					function() {
-						return wp_get_document_title();
+					function () {
+							return wp_get_document_title();
 					}
 				)
 			);
@@ -134,8 +135,8 @@ class Twig {
 		$twig->addFunction(
 			new TwigFunction(
 				'get_post_meta',
-				function( int $post_id, string $key = '', bool $single = false ) {
-					return get_post_meta( $post_id, $key, $single );
+				function ( int $post_id, string $key = '', bool $single = false ) {
+						return get_post_meta( $post_id, $key, $single );
 				}
 			)
 		);
@@ -145,8 +146,8 @@ class Twig {
 		$twig->addFunction(
 			new TwigFunction(
 				'icon',
-				function( $icon, $args = array() ) {
-					return get_theme_icon( $icon, $args );
+				function ( $icon, $args = array() ) {
+						return get_theme_icon( $icon, $args );
 				}
 			)
 		);
@@ -155,8 +156,8 @@ class Twig {
 			$twig->addFunction(
 				new TwigFunction(
 					'yoast_breadcrumb',
-					function( $before = '', $after = '', $display = true ) {
-						return yoast_breadcrumb( $before, $after, $display );
+					function ( $before = '', $after = '', $display = true ) {
+							return yoast_breadcrumb( $before, $after, $display );
 					}
 				)
 			);
@@ -166,8 +167,8 @@ class Twig {
 			$twig->addFunction(
 				new TwigFunction(
 					'pll_the_languages',
-					function( array $args = array( 'raw' => 1 ) ) {
-						return pll_the_languages( $args );
+					function ( array $args = array( 'raw' => 1 ) ) {
+							return pll_the_languages( $args );
 					}
 				)
 			);

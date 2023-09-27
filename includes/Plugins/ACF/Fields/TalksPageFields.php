@@ -2,7 +2,7 @@
 /**
  * Talks Page Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Talks Page Fields
  */
 class TalksPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

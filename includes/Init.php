@@ -2,7 +2,7 @@
 /**
  * Bootstraps WordPress theme related functions, most importantly enqueuing javascript and styles.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy;
  */
 class Init {
 
+
 	/**
 	 * Store all the classes inside an array
 	 *
 	 * @return array Full list of classes
 	 */
-	public static function get_services() : array {
+	public static function get_services(): array {
 		return array(
 			Setup\Enqueue::class,
 			Setup\Settings::class,
@@ -56,7 +57,7 @@ class Init {
 	 *
 	 * @return void
 	 */
-	public static function run_services() : void {
+	public static function run_services(): void {
 		foreach ( self::get_services() as $class ) {
 			$service = self::instantiate( $class );
 			if ( method_exists( $service, 'run' ) ) {
@@ -72,7 +73,7 @@ class Init {
 	 * @param  string $class class name from the services array.
 	 * @return object
 	 */
-	private static function instantiate( string $class ) : object {
+	private static function instantiate( string $class ): object {
 		return new $class();
 	}
 }

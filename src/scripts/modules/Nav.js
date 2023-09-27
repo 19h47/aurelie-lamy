@@ -5,9 +5,9 @@ import { html } from 'utils/environment';
 
 class Nav extends M {
 	constructor(m) {
-		super(m);
+		super( m );
 
-		this.isActive = this.el.classList.contains('is-active');
+		this.isActive = this.el.classList.contains( 'is-active' );
 
 		this.events = {
 			click: {
@@ -16,11 +16,14 @@ class Nav extends M {
 			},
 		};
 
-		document.addEventListener('keydown', ({ keyCode }) => {
-			if (27 === keyCode) {
-				this.close();
+		document.addEventListener(
+			'keydown',
+			({ keyCode }) => {
+				if (27 === keyCode) {
+					this.close();
+				}
 			}
-		});
+		);
 	}
 
 	toggle() {
@@ -38,29 +41,29 @@ class Nav extends M {
 
 		this.isActive = true;
 
-		html.classList.add('nav-is-active');
-		this.el.classList.add('is-active');
+		html.classList.add( 'nav-is-active' );
+		this.el.classList.add( 'is-active' );
 
 		// When Nav is active, disableScroll
 		disableScroll();
-		this.call('stop', false, 'Scroll', 'main');
+		this.call( 'stop', false, 'Scroll', 'main' );
 
 		return true;
 	}
 
 	close() {
-		if (!this.isActive) {
+		if ( ! this.isActive) {
 			return false;
 		}
 
 		this.isActive = false;
 
-		html.classList.remove('nav-is-active');
-		this.el.classList.remove('is-active');
+		html.classList.remove( 'nav-is-active' );
+		this.el.classList.remove( 'is-active' );
 
 		// When Nav is closed, enableScroll
 		enableScroll();
-		this.call('start', false, 'Scroll', 'main');
+		this.call( 'start', false, 'Scroll', 'main' );
 
 		return true;
 	}

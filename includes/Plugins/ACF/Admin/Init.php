@@ -2,7 +2,7 @@
 /**
  * Init
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy/Plugins/ACF/Admin
  */
 
@@ -14,6 +14,7 @@ use Timber\Timber;
  * Init
  */
 class Init {
+
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -29,7 +30,8 @@ class Init {
 	/**
 	 * Add options pages
 	 */
-	public function add_options_theme() {}
+	public function add_options_theme() {
+	}
 
 	/**
 	 * Load More Motivations

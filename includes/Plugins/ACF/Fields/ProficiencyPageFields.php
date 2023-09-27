@@ -2,7 +2,7 @@
 /**
  * Proficiency Page Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Proficiency Page Fields
  */
 class ProficiencyPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

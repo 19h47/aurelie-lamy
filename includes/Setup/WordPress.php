@@ -2,7 +2,7 @@
 /**
  * Mostly involved with cleaning up default WordPress cruft.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Setup;
  * WordPress
  */
 class WordPress {
+
 
 	/**
 	 * Runs initialization tasks.
@@ -62,7 +63,7 @@ class WordPress {
 	 *
 	 * @return void
 	 */
-	public function remove_dashboard_widgets() : void {
+	public function remove_dashboard_widgets(): void {
 		global $wp_meta_boxes;
 
 		unset( $wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press'] );
@@ -96,7 +97,7 @@ class WordPress {
 	/**
 	 * Filter function used to remove the tinymce emoji plugin.
 	 *
-	 * @param array $plugins Plugins.
+	 * @param  array $plugins Plugins.
 	 * @return array Difference betwen the two arrays
 	 */
 	public function disable_emojis_tinymce( $plugins ) {
@@ -110,13 +111,15 @@ class WordPress {
 	/**
 	 * Remove emoji CDN hostname from DNS prefetching hints.
 	 *
-	 * @param array  $urls URLs to print for resource hints.
-	 * @param string $relation_type The relation type the URLs are printed for.
+	 * @param  array  $urls          URLs to print for resource hints.
+	 * @param  string $relation_type The relation type the URLs are printed for.
 	 * @return array Difference betwen the two arrays.
 	 */
 	public function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 		if ( 'dns-prefetch' == $relation_type ) {
-			/** This filter is documented in wp-includes/formatting.php */
+			/**
+		* This filter is documented in wp-includes/formatting.php
+*/
 			$emoji_svg_url = apply_filters( 'emoji_svg_url', 'https://s.w.org/images/core/emoji/2/svg/' );
 
 			$urls = array_diff( $urls, array( $emoji_svg_url ) );

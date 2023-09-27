@@ -2,7 +2,7 @@
 /**
  * Themes
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy/Setup/Theme
  */
 
@@ -24,12 +24,13 @@ Timber::$dirname = array( 'views', 'templates', 'dist' );
  */
 class Theme extends Site {
 
+
 	/**
 	 * Constructor
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'timber/context', array( $this, 'add_socials_to_context' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_context' ) );
 		add_filter( 'timber/context', array( $this, 'add_to_theme' ) );
@@ -42,7 +43,7 @@ class Theme extends Site {
 	 *
 	 * @param array $context Timber context.
 	 */
-	public function add_to_theme( array $context ) : array {
+	public function add_to_theme( array $context ): array {
 		$manifest = get_theme_manifest();
 
 		$context['theme']->manifest = array();
@@ -58,10 +59,10 @@ class Theme extends Site {
 	/**
 	 * Add socials to context
 	 *
-	 * @param array $context Timber context.
+	 * @param  array $context Timber context.
 	 * @return array
 	 */
-	public function add_socials_to_context( array $context ) : array {
+	public function add_socials_to_context( array $context ): array {
 		// Share and Socials links.
 		$socials = array(
 			array(
@@ -101,7 +102,7 @@ class Theme extends Site {
 	 * @return array
 	 * @since  1.0.0
 	 */
-	public function add_to_context( array $context ) : array {
+	public function add_to_context( array $context ): array {
 		global $wp;
 
 		$context['current_url']  = home_url( add_query_arg( array(), $wp->request ) );
@@ -119,7 +120,7 @@ class Theme extends Site {
 	 *
 	 * @return array
 	 */
-	public function add_post_classmap( $classmap ) : array {
+	public function add_post_classmap( $classmap ): array {
 		$custom_classmap = array(
 			'podcast' => PodcastPost::class,
 		);

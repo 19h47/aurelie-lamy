@@ -2,7 +2,7 @@
 /**
  * Post States
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -15,12 +15,13 @@ use WP_Post;
  */
 class PostStates {
 
+
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'display_post_states', array( $this, 'filter_post_states' ), 10, 2 );
 	}
 

@@ -2,7 +2,7 @@
 /**
  * Supports
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy/Setup/Supports
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy\Setup;
  */
 class Supports {
 
+
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_action( 'init', array( $this, 'add_theme_supports' ) );
 		add_action( 'init', array( $this, 'add_post_type_supports' ) );
 		add_action( 'init', array( $this, 'remove_post_type_supports' ) );
@@ -30,20 +31,20 @@ class Supports {
 	 *
 	 * @return void
 	 */
-	public function add_theme_supports() : void {
+	public function add_theme_supports(): void {
 		add_theme_support( 'title-tag' );
 
 		/*
-		 * Enable support for Post Thumbnails on posts and pages.
-		 *
-		 * @see https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-		 */
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @see https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		*/
 		add_theme_support( 'post-thumbnails' );
 
 		/*
-		 * Switch default core markup for search form, comment form, and comments
-		 * to output valid HTML5.
-		 */
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
 		add_theme_support(
 			'html5',
 			array(

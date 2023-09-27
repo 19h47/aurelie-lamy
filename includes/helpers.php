@@ -13,7 +13,7 @@
  * @return array Array of classes.
  * @access public
  */
-function get_html_class( $class = '' ) : array {
+function get_html_class( $class = '' ): array {
 	$classes = array();
 	if ( ! empty( $class ) ) {
 		if ( ! is_array( $class ) ) {
@@ -40,10 +40,10 @@ function get_html_class( $class = '' ) : array {
 /**
  * Display the classes for the html element.
  *
- * @param string|array $class One or more classes to add to the class list.
+ * @param  string|array $class One or more classes to add to the class list.
  * @return string
  */
-function html_class( $class = '' ) : string {
+function html_class( $class = '' ): string {
 	// Separates classes with a single space, collates classes for html element.
 	return 'class="' . join( ' ', get_html_class( $class ) ) . '"';
 }
@@ -58,7 +58,7 @@ function html_class( $class = '' ) : string {
  * @return array
  * @access public
  */
-function get_webfonts() : array {
+function get_webfonts(): array {
 	return array(
 		'montserrat' => '//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,500&display=swap',
 	);
@@ -69,12 +69,12 @@ function get_webfonts() : array {
 /**
  * Hero group fields
  *
- * @param string $key Key.
+ * @param string $key    Key.
  * @param array  $fields Fields.
  *
  * @return array
  */
-function get_hero_group_fields( string $key = '', array $fields = array() ) : array {
+function get_hero_group_fields( string $key = '', array $fields = array() ): array {
 	return array(
 		'key'        => 'field_' . $key . '_hero',
 		'label'      => __( 'Hero', 'aurelielamy' ),

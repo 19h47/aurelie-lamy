@@ -2,7 +2,7 @@
 /**
  * Project Post
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -14,12 +14,13 @@ use Timber\{ Post };
  * Class Podcast Post
  */
 class PodcastPost extends Post {
+
 	/**
 	 * Length
 	 *
 	 * @return array
 	 */
-	public function audio_metadata() : array {
+	public function audio_metadata(): array {
 		$file = $this->meta( 'file' );
 
 		if ( $file ) {

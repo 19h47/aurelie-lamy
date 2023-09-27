@@ -2,7 +2,7 @@
 /**
  * Front Page Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Front Page Fields
  */
 class FrontPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

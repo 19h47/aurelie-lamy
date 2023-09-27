@@ -2,7 +2,7 @@
 /**
  * Media
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy;
  */
 class Media {
 
+
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		// add_image_size( 'size-1', 146 );
 		// add_image_size( 'size-2', 340 );
 		// add_image_size( 'size-3', 534 );

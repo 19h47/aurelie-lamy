@@ -4,8 +4,8 @@
  *
  * PHP version 7.4.1
  *
- * @author  Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
- * @package WordPress
+ * @author     Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -20,6 +20,7 @@ use WP_Post;
  * @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  */
 class Athlete {
+
 
 
 	/**
@@ -43,7 +44,7 @@ class Athlete {
 	 *
 	 * @return bool
 	 */
-	public function css() : bool {
+	public function css(): bool {
 		global $typenow;
 
 		if ( 'athlete' !== $typenow ) {
@@ -81,11 +82,11 @@ class Athlete {
 	/**
 	 * Add custom columns
 	 *
-	 * @param array $columns Array of columns.
+	 * @param  array $columns Array of columns.
 	 * @return array $new_columns
-	 * @link https://developer.wordpress.org/reference/hooks/manage_post_type_posts_columns/
+	 * @link   https://developer.wordpress.org/reference/hooks/manage_post_type_posts_columns/
 	 */
-	public function add_custom_columns( array $columns ) : array {
+	public function add_custom_columns( array $columns ): array {
 		$new_columns = array();
 
 		unset( $columns['date'] );
@@ -105,12 +106,12 @@ class Athlete {
 	 * Render custom columns
 	 *
 	 * @param string $column_name The column name.
-	 * @param int    $post_id The ID of the post.
-	 * @link https://developer.wordpress.org/reference/hooks/manage_post-post_type_posts_custom_column/
+	 * @param int    $post_id     The ID of the post.
+	 * @link  https://developer.wordpress.org/reference/hooks/manage_post-post_type_posts_custom_column/
 	 *
 	 * @return void
 	 */
-	public function render_custom_columns( string $column_name, int $post_id ) : void {
+	public function render_custom_columns( string $column_name, int $post_id ): void {
 		switch ( $column_name ) {
 			case 'thumbnail':
 				$thumbnail = get_the_post_thumbnail( $post_id, 'medium' );
@@ -133,12 +134,12 @@ class Athlete {
 	/**
 	 * Updated messages
 	 *
-	 * @param array $messages Post updated messages. For defaults see $messages declarations above.
+	 * @param  array $messages Post updated messages. For defaults see $messages declarations above.
 	 * @return array $message
-	 * @link https://developer.wordpress.org/reference/hooks/post_updated_messages/
+	 * @link   https://developer.wordpress.org/reference/hooks/post_updated_messages/
 	 * @access public
 	 */
-	public function updated_messages( array $messages ) : array {
+	public function updated_messages( array $messages ): array {
 		global $post;
 
 		$post_ID     = isset( $post_ID ) ? (int) $post_ID : 0;
@@ -166,18 +167,18 @@ class Athlete {
 		);
 
 		$messages['athlete'] = array(
-			0  => '', // Unused. Messages start at index 1.
-			1  => __( 'Athlete updated.', 'aurelielamy' ) . $view_link_html,
-			2  => __( 'Custom field updated.', 'aurelielamy' ),
-			3  => __( 'Custom field deleted.', 'aurelielamy' ),
-			4  => __( 'Athlete updated.', 'aurelielamy' ),
+			0 => '', // Unused. Messages start at index 1.
+			1 => __( 'Athlete updated.', 'aurelielamy' ) . $view_link_html,
+			2 => __( 'Custom field updated.', 'aurelielamy' ),
+			3 => __( 'Custom field deleted.', 'aurelielamy' ),
+			4 => __( 'Athlete updated.', 'aurelielamy' ),
 			/* translators: %s: date and time of the revision */
-			5  => isset( $_GET['revision'] ) ? sprintf( __( 'Athlete restored to revision from %s.', 'aurelielamy' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false, // phpcs:ignore
-			6  => __( 'Athlete published.', 'aurelielamy' ) . $view_link_html,
-			7  => __( 'Athlete saved.', 'aurelielamy' ),
-			8  => __( 'Athlete submitted.', 'aurelielamy' ) . $preview_link_html,
-			9  => sprintf( __( 'Athlete scheduled for: %s.', 'aurelielamy' ), '<strong>' . $scheduled_date . '</strong>' ) . $scheduled_link_html, // phpcs:ignore
-			10 => __( 'Athlete draft updated.', 'aurelielamy' ) . $preview_link_html,
+      5  => isset( $_GET['revision'] ) ? sprintf( __( 'Athlete restored to revision from %s.', 'aurelielamy' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false, // phpcs:ignore
+		6     => __( 'Athlete published.', 'aurelielamy' ) . $view_link_html,
+		7     => __( 'Athlete saved.', 'aurelielamy' ),
+		8     => __( 'Athlete submitted.', 'aurelielamy' ) . $preview_link_html,
+      9  => sprintf( __( 'Athlete scheduled for: %s.', 'aurelielamy' ), '<strong>' . $scheduled_date . '</strong>' ) . $scheduled_link_html, // phpcs:ignore
+		10    => __( 'Athlete draft updated.', 'aurelielamy' ) . $preview_link_html,
 		);
 
 		return $messages;
@@ -188,19 +189,19 @@ class Athlete {
 	 * Bulk updated messages
 	 *
 	 * @param array $bulk_messages Arrays of messages, each keyed by the corresponding post type. Messages are keyed with 'updated', 'locked', 'deleted', 'trashed', and 'untrashed'.
-	 * @param array $bulk_counts Array of item counts for each message, used to build internationalized strings.
+	 * @param array $bulk_counts   Array of item counts for each message, used to build internationalized strings.
 	 *
 	 * @see https://developer.wordpress.org/reference/hooks/bulk_post_updated_messages/
 	 *
 	 * @return array $bulk_counts
 	 */
-	public function bulk_updated_messages( array $bulk_messages, array $bulk_counts ) : array {
+	public function bulk_updated_messages( array $bulk_messages, array $bulk_counts ): array {
 		$bulk_messages['athlete'] = array(
 			/* translators: %s: Number of athletes. */
 			'updated'   => _n( '%s athlete updated.', '%s athletes updated.', $bulk_counts['updated'], 'aurelielamy' ),
 			'locked'    => ( 1 === $bulk_counts['locked'] ) ? __( '1 athlete not updated, somebody is editing it.', 'aurelielamy' ) :
-				/* translators: %s: Number of athletes. */
-				_n( '%s athlete not updated, somebody is editing it.', '%s athletes not updated, somebody is editing them.', $bulk_counts['locked'], 'aurelielamy' ),
+			/* translators: %s: Number of athletes. */
+			_n( '%s athlete not updated, somebody is editing it.', '%s athletes not updated, somebody is editing them.', $bulk_counts['locked'], 'aurelielamy' ),
 			/* translators: %s: Number of athletes. */
 			'deleted'   => _n( '%s athlete permanently deleted.', '%s athletes permanently deleted.', $bulk_counts['deleted'], 'aurelielamy' ),
 			/* translators: %s: Number of athletes. */
@@ -219,7 +220,7 @@ class Athlete {
 	 * @return void
 	 * @access public
 	 */
-	public function register() : void {
+	public function register(): void {
 		$labels = array(
 			'name'                     => _x( 'Athletes', 'athlete type generale name', 'aurelielamy' ),
 			'singular_name'            => _x( 'Athlete', 'athlete type singular name', 'aurelielamy' ),

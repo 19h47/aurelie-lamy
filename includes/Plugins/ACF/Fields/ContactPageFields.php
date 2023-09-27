@@ -2,7 +2,7 @@
 /**
  * Contact Page Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Contact Page Fields
  */
 class ContactPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

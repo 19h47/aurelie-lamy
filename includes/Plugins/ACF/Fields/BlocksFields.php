@@ -2,7 +2,7 @@
 /**
  * Blocks Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Blocks  Fields
  */
 class BlocksFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -814,12 +815,12 @@ class BlocksFields {
 	/**
 	 * Three Columns Column
 	 *
-	 * @param string $key Key.
+	 * @param string $key   Key.
 	 * @param int    $index Index.
 	 *
 	 * @return array
 	 */
-	public function three_columns_column( string $key = '', int $index = 0 ) : array {
+	public function three_columns_column( string $key = '', int $index = 0 ): array {
 		return array(
 			'key'        => 'field_' . $key . '_three_columns_columns_' . $index,
 			'name'       => $index,
@@ -862,12 +863,12 @@ class BlocksFields {
 	/**
 	 * Four Columns Column
 	 *
-	 * @param string $key Key.
+	 * @param string $key   Key.
 	 * @param int    $index Index.
 	 *
 	 * @return array
 	 */
-	public function four_columns_column( string $key = '', int $index = 0 ) : array {
+	public function four_columns_column( string $key = '', int $index = 0 ): array {
 		return array(
 			'key'        => 'field_' . $key . '_four_columns_columns_' . $index,
 			'name'       => $index,

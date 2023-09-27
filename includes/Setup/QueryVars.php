@@ -2,7 +2,7 @@
 /**
  * Query Vars
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy\Setup;
  */
 class QueryVars {
 
+
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'query_vars', array( $this, 'query_vars' ) );
 
 		add_action( 'init', array( $this, 'add_rewrite_tags' ) );
@@ -36,7 +37,7 @@ class QueryVars {
 	 *
 	 * @return string[]
 	 */
-	public function query_vars( array $public_query_vars ) : array {
+	public function query_vars( array $public_query_vars ): array {
 		return $public_query_vars;
 	}
 
@@ -62,9 +63,9 @@ class QueryVars {
 	/**
 	 * Handle the post_type parameter given in get_terms function
 	 *
-	 * @param array $pieces Array of query SQL clauses.
-	 * @param array $taxonomies An array of taxonomy names.
-	 * @param array $args An array of term query arguments.
+	 * @param  array $pieces     Array of query SQL clauses.
+	 * @param  array $taxonomies An array of taxonomy names.
+	 * @param  array $args       An array of term query arguments.
 	 * @return mixed
 	 */
 	public function terms_clauses( array $pieces, $taxonomies, array $args ) {

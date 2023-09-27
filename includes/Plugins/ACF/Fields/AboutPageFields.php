@@ -2,7 +2,7 @@
 /**
  * About Page Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * About Page Fields
  */
 class AboutPageFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

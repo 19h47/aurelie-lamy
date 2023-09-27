@@ -2,7 +2,7 @@
 /**
  * Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy/Plugins/ACF/Admin
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Admin;
  * Fields
  */
 class Fields {
+
 	/**
 	 * Runs initialization tasks.
 	 *
@@ -24,8 +25,8 @@ class Fields {
 	/**
 	 * Relationship
 	 *
-	 * @param array      $args The query args. See WP_Query for available args.
-	 * @param array      $field The field array containing all settings.
+	 * @param array      $args    The query args. See WP_Query for available args.
+	 * @param array      $field   The field array containing all settings.
 	 * @param int|string $post_id The current post ID being edited.
 	 */
 	public function relationship( array $args, array $field, $post_id ) {

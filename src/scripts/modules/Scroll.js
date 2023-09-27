@@ -7,9 +7,9 @@ const isOntop = () => {
 	const top = window.pageYOffset || document.documentElement.scrollTop;
 
 	if (0 === top) {
-		html.classList.add('is-ontop');
+		html.classList.add( 'is-ontop' );
 	} else {
-		html.classList.remove('is-ontop');
+		html.classList.remove( 'is-ontop' );
 	}
 }
 
@@ -17,28 +17,35 @@ class Scroll extends M {
 	init() {
 		// console.info('Scroll.init');
 
-		this.scroll = new Native({
-			el: this.el,
-			getDirection: true,
-			resetNativeScroll: true,
-		});
+		this.scroll = new Native(
+			{
+				el: this.el,
+				getDirection: true,
+				resetNativeScroll: true,
+			}
+		);
 
 		this.direction = 'down';
 
-		this.scroll.on('scroll', ({ direction }) => {
-			html.setAttribute('data-direction', direction || 'down');
-			this.direction = direction;
-
-			isOntop();
-		});
+		this.scroll.on(
+			'scroll',
+			({ direction }) => {
+				html.setAttribute( 'data-direction', direction || 'down' );
+				this.direction = direction;
+				isOntop();
+			}
+		);
 
 		isOntop();
 
-		this.scroll.on('call', (func, way, obj) => {
-			if (obj.el.id) {
-				this.call(func[0], { way, obj, direction: this.direction }, func[1], obj.id);
+		this.scroll.on(
+			'call',
+			(func, way, obj) => {
+				if (obj.el.id) {
+					this.call( func[0], { way, obj, direction: this.direction }, func[1], obj.id );
+				}
 			}
-		});
+		);
 	}
 
 	update() {
@@ -59,7 +66,7 @@ class Scroll extends M {
 	}
 
 	scrollTo({ target, options = {} }) {
-		this.scroll.scrollTo(target, options)
+		this.scroll.scrollTo( target, options )
 	}
 }
 

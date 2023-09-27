@@ -2,8 +2,7 @@ import { module as M } from '@19h47/modular';
 
 class LanguageSwitcher extends M {
 	constructor(m) {
-		super(m);
-
+		super( m );
 
 		this.events = {
 			change: 'change',
@@ -11,7 +10,7 @@ class LanguageSwitcher extends M {
 	}
 
 	change({ target }) {
-		this.call('goTo', target.value, 'Load');
+		this.call( 'goTo', target.value, 'Load' );
 	}
 }
 

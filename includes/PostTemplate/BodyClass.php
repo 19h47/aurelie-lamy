@@ -2,9 +2,9 @@
 /**
  * BodyClass
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
- * @since 0.0.0
+ * @since      0.0.0
  */
 
 namespace AurelieLamy\PostTemplate;
@@ -16,12 +16,13 @@ namespace AurelieLamy\PostTemplate;
  */
 class BodyClass {
 
+
 	/**
 	 * Run default hooks and actions for WordPress
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_filter( 'body_class', array( $this, 'body_classes' ), 10, 2 );
 	}
 
@@ -36,7 +37,7 @@ class BodyClass {
 	 *
 	 * @return $classes array
 	 */
-	public function body_classes( array $classes, array $class ) : array {
+	public function body_classes( array $classes, array $class ): array {
 		return $classes;
 	}
 }

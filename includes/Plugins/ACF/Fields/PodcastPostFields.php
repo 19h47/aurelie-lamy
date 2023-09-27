@@ -2,7 +2,7 @@
 /**
  * Podcast Post Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Podcast Post Fields
  */
 class PodcastPostFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

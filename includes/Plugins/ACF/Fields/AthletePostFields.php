@@ -2,7 +2,7 @@
 /**
  * Athlete Post Fields
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -12,6 +12,7 @@ namespace AurelieLamy\Plugins\ACF\Fields;
  * Athlete Post Fields
  */
 class AthletePostFields {
+
 	/**
 	 * Runs initialization tasks.
 	 *

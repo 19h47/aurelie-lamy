@@ -1,8 +1,8 @@
-<?php // phpcs:ignore
+<?php
 /**
  * Enqueue
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage AurelieLamy
  */
 
@@ -13,12 +13,13 @@ namespace AurelieLamy\Setup;
  */
 class Enqueue {
 
+
 	/**
 	 * Runs initialization tasks.
 	 *
 	 * @return void
 	 */
-	public function run() : void {
+	public function run(): void {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'dequeue_styles' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -35,28 +36,28 @@ class Enqueue {
 	 * @return void
 	 * @since  1.0.0
 	 */
-	public function enqueue_scripts() : void {
+	public function enqueue_scripts(): void {
 		$deps = array();
 
 		wp_deregister_script( 'jquery' );
 		wp_deregister_script( 'wp-embed' );
 
 		if ( isset( get_theme_manifest()['vendors.js'] ) ) {
-			wp_enqueue_script( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+			wp_enqueue_script(
 				get_theme_text_domain() . '-vendors',
 				get_template_directory_uri() . '/' . get_theme_manifest()['vendors.js'],
 				array(),
-				null,
+				false,
 				true
 			);
 			array_push( $deps, get_theme_text_domain() . '-vendors' );
 		}
 
-		wp_register_script( // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+		wp_register_script(
 			get_theme_text_domain() . '-main',
 			get_template_directory_uri() . '/' . get_theme_manifest()['main.js'],
 			$deps,
-			null,
+			false,
 			true
 		);
 
@@ -108,7 +109,7 @@ class Enqueue {
 	 * @return void
 	 * @since  1.0.0
 	 */
-	public function enqueue_styles() : void {
+	public function enqueue_styles(): void {
 		// Add custom fonts, used in the main stylesheet.
 		$webfonts = array();
 
@@ -118,11 +119,11 @@ class Enqueue {
 		}
 
 		// Theme stylesheet.
-		wp_register_style( // phpcs:ignore
+		wp_register_style(
 			get_theme_text_domain() . '-main',
 			get_template_directory_uri() . '/' . get_theme_manifest()['main.css'],
 			$webfonts,
-			null
+			false
 		);
 
 		wp_enqueue_style( get_theme_text_domain() . '-main' );
@@ -137,7 +138,7 @@ class Enqueue {
 	 * @access public
 	 * @return void
 	 */
-	public function dequeue_styles() : void {
+	public function dequeue_styles(): void {
 		wp_dequeue_style( 'wp-block-library' );
 		wp_dequeue_style( 'wp-block-library-theme' );
 		wp_dequeue_style( 'wc-block-style' );
@@ -147,14 +148,14 @@ class Enqueue {
 	/**
 	 * Style Loader Tag
 	 *
-	 * @param string $html The link tag for the enqueued style.
+	 * @param string $html   The link tag for the enqueued style.
 	 * @param string $handle The style's registered handle.
-	 * @param string $href The stylesheet's source URL.
-	 * @param string $media The stylesheet's media attribute.
+	 * @param string $href   The stylesheet's source URL.
+	 * @param string $media  The stylesheet's media attribute.
 	 *
 	 * @return string
 	 */
-	public function style_loader_tag( string $html, string $handle, string $href, string $media ) : string {
+	public function style_loader_tag( string $html, string $handle, string $href, string $media ): string {
 		if ( get_theme_text_domain() . '-main' === $handle ) {
 			$html = str_replace( '/>', ' onload="this.media=\'all\'; this.onload=null; this.isLoaded=true" />', $html );
 		}
@@ -171,7 +172,7 @@ class Enqueue {
 	 * @access public
 	 * @return void
 	 */
-	public function preload_wp_scripts() : void {
+	public function preload_wp_scripts(): void {
 		global $wp_scripts;
 
 		foreach ( $wp_scripts->queue as $handle ) {
@@ -196,7 +197,7 @@ class Enqueue {
 	 * @access public
 	 * @return void
 	 */
-	public function preload_wp_styles() : void {
+	public function preload_wp_styles(): void {
 		global $wp_styles;
 
 		foreach ( $wp_styles->queue as $handle ) {
@@ -221,7 +222,7 @@ class Enqueue {
 	 * @access public
 	 * @return void
 	 */
-	public function preload_fonts() : void {
+	public function preload_fonts(): void {
 		foreach ( get_theme_manifest() as $key => $value ) {
 			if ( substr( $key, 0, 6 ) === 'fonts/' ) {
 				$extension = pathinfo( $key, PATHINFO_EXTENSION );
