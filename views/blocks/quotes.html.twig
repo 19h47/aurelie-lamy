@@ -1,0 +1,51 @@
+{#
+ # Blocks: Quotes
+ #
+ # @package WordPress
+ # @subpackage AurelieLamy
+ # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
+ #}
+
+<div class="py-15 lg:py-30 overflow-hidden text-center bg-red-light-grayish">
+	<div class="container">
+		<div class="row">
+			{% set parameters = {
+				autoHeight: true,
+				spaceBetween: 36,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				}
+			} %}
+			<div class="relative" data-module-carousel data-carousel-parameters='{{ parameters | json_encode }}'>
+				<div class="swiper-wrapper">
+					{% for quote in block.quotes %}
+						<div class="swiper-slide">
+							<div class="lg:row">
+								<div class="lg:col-10/12 lg:ml-1/12">
+									<p class="text-2xl">
+										<span class="text-red-vivid">“</span>{{- '&nbsp;' ~ quote.text ~ '&nbsp;' -}}<span  class="text-red-vivid">”</span>
+									</p>
+									<div class="inline-flex gap-x-5 text-left items-center mt-5 flex-grow">
+										{{- include( 'components/image.html.twig', { image: quote.image, classes: [ 'w-[3.875rem] h-[3.875rem] rounded-full overflow-hidden object-cover object-center' ] } ) -}}
+										<p>
+											<span class="text-xl leading-none">{{- quote.name -}}</span>
+											<br>{{- quote.position -}}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="absolute pointer-events-none inset-0 flex items-center justify-between z-2">
+					<button class="pointer-events-auto" type="button" data-carousel="previous">{{- icon( 'chevron-left', { classes: [ 'w-2 h-8 fill-red-very-soft' ] } ) -}}</button>
+					<button class="pointer-events-auto" type="button" data-carousel="next">{{- icon( 'chevron-right', { classes: [ 'w-2 h-8 fill-red-very-soft' ] } ) -}}</button>
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -70,6 +70,60 @@ class BlocksFields {
 							),
 						),
 					),
+					'layout_' . $key . '_quotes' => array(
+						'key' => 'layout_' . $key . '_quotes',
+						'name' => 'quotes',
+						'label' => __( 'Quotes', 'aurelielamy' ),
+						'display' => 'block',
+						'sub_fields' => array(
+							array(
+								'key' => 'field_' . $key . '_quotes_quotes',
+								'label' => __( 'Quotes', 'aurelielamy' ),
+								'name' => 'quotes',
+								'type' => 'repeater',
+								'layout' => 'block',
+								'button_label' => __( 'Add Quote', 'aurelielamy' ),
+								'sub_fields' => array(
+									array(
+										'key' => 'field_' . $key . '_quotes_quotes_text',
+										'label' => __('Text', 'aurelielamy' ),
+										'name' => 'text',
+										'type' => 'textarea',
+										'rows' => 4,
+										'placeholder' => __('Text', 'aurelielamy' ),
+										'new_lines' => 'br',
+										'parent_repeater' => 'field_' . $key . '_quotes_quotes',
+									),
+									array(
+										'key' => 'field_' . $key . '_quotes_quotes_name',
+										'label' => __('Name', 'aurelielamy' ),
+										'name' => 'name',
+										'type' => 'text',
+										'placeholder' => __('Name', 'aurelielamy' ),
+										'parent_repeater' => 'field_' . $key . '_quotes_quotes',
+									),
+									array(
+										'key' => 'field_' . $key . '_quotes_quotes_position',
+										'label' => __('Position', 'aurelielamy' ),
+										'name' => 'position',
+										'type' => 'text',
+										'placeholder' => __('Position', 'aurelielamy' ),
+										'parent_repeater' => 'field_' . $key . '_quotes_quotes',
+									),
+									array(
+										'key' => 'field_' . $key . '_quotes_quotes_image',
+										'label' => __('Image', 'aurelielamy' ),
+										'name' => 'image',
+										'type' => 'image',
+										'return_format' => 'id',
+										'library' => 'all',
+										'preview_size' => 'medium',
+										'parent_repeater' => 'field_' . $key . '_quotes_quotes',
+									),
+								),
+							),
+						),
+					),
 					'layout_' . $key . '_two_columns'    => array(
 						'key'        => 'layout_' . $key . '_two_columns',
 						'label'      => __( 'Two Columns', 'aurelielamy' ),
@@ -668,7 +722,6 @@ class BlocksFields {
 								'type'          => 'repeater',
 								'layout'        => 'block',
 								'button_label'  => __( 'Add Key Figure', 'aurelielamy' ),
-								'rows_per_page' => 20,
 								'sub_fields'    => array(
 									array(
 										'key'             => 'field_' . $key . '_key_figures_key_figures_title',

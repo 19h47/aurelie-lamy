@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Aurélie Lamy\n"
-"POT-Creation-Date: 2023-07-03 09:37+0200\n"
-"PO-Revision-Date: 2023-07-04 09:17+0200\n"
+"POT-Creation-Date: 2023-10-30 18:01+0100\n"
+"PO-Revision-Date: 2023-10-30 18:01+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -32,342 +32,365 @@ msgstr "Oups ! Cette page est introuvable."
 msgid "It looks like nothing was found at this location."
 msgstr "On dirait que rien n'a été trouvé à cet endroit."
 
-#: includes/Plugins/ACF/Fields/AboutPageFields.php:52
+#: includes/Plugins/ACF/Fields/AboutPageFields.php:53
 msgid "About Page Fields"
 msgstr "Champs de la page à propos"
 
-#: includes/Plugins/ACF/Fields/AthletePostFields.php:46
-#: includes/Plugins/ACF/Fields/AthletePostFields.php:49
+#: includes/Plugins/ACF/Fields/AthletePostFields.php:47
+#: includes/Plugins/ACF/Fields/AthletePostFields.php:50
+#: includes/Plugins/ACF/Fields/BlocksFields.php:107
+#: includes/Plugins/ACF/Fields/BlocksFields.php:110
 msgid "Position"
 msgstr "Poste"
 
-#: includes/Plugins/ACF/Fields/AthletePostFields.php:53
+#: includes/Plugins/ACF/Fields/AthletePostFields.php:54
 msgid "Testimonial"
 msgstr "Témoignage"
 
-#: includes/Plugins/ACF/Fields/AthletePostFields.php:67
+#: includes/Plugins/ACF/Fields/AthletePostFields.php:68
 msgid "Athlete Post Fields"
 msgstr "Champs de la page d’un athlète"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:51
+#: includes/Plugins/ACF/Fields/BlocksFields.php:52
 msgid "Blocks"
 msgstr "Blocs"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:58
-#: includes/Plugins/ACF/Fields/BlocksFields.php:63
+#: includes/Plugins/ACF/Fields/BlocksFields.php:59
+#: includes/Plugins/ACF/Fields/BlocksFields.php:64
 msgid "Athletes"
 msgstr "Athlètes"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:74
-msgid "Two Columns"
-msgstr "Deux colonnes"
+#: includes/Plugins/ACF/Fields/BlocksFields.php:76
+#: includes/Plugins/ACF/Fields/BlocksFields.php:81
+msgid "Quotes"
+msgstr "Citations"
 
 #: includes/Plugins/ACF/Fields/BlocksFields.php:85
-msgid "Left Column"
-msgstr "Colonne de gauche"
+msgid "Add Quote"
+msgstr "Ajouter une citation"
 
+#: includes/Plugins/ACF/Fields/BlocksFields.php:89
+#: includes/Plugins/ACF/Fields/BlocksFields.php:93
+msgid "Text"
+msgstr "Texte"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:99
 #: includes/Plugins/ACF/Fields/BlocksFields.php:102
-#: includes/Plugins/ACF/Fields/BlocksFields.php:150
-#: includes/Plugins/ACF/Fields/BlocksFields.php:185
-#: includes/Plugins/ACF/Fields/BlocksFields.php:233
-#: includes/Plugins/ACF/Fields/BlocksFields.php:281
-#: includes/Plugins/ACF/Fields/BlocksFields.php:316
-#: includes/Plugins/ACF/Fields/BlocksFields.php:452
-#: includes/Plugins/ACF/Fields/BlocksFields.php:591
-#: includes/Plugins/ACF/Fields/BlocksFields.php:603
-#: includes/Plugins/ACF/Fields/BlocksFields.php:615
-#: includes/Plugins/ACF/Fields/BlocksFields.php:691
-#: includes/Plugins/ACF/Fields/BlocksFields.php:802
-#: includes/Plugins/ACF/Fields/BlocksFields.php:851
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:73 includes/helpers.php:103
-msgid "Image"
-msgstr "Image"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:112
-#: includes/Plugins/ACF/Fields/BlocksFields.php:117
-#: includes/Plugins/ACF/Fields/BlocksFields.php:160
-#: includes/Plugins/ACF/Fields/BlocksFields.php:165
-#: includes/Plugins/ACF/Fields/BlocksFields.php:195
-#: includes/Plugins/ACF/Fields/BlocksFields.php:200
-#: includes/Plugins/ACF/Fields/BlocksFields.php:243
-#: includes/Plugins/ACF/Fields/BlocksFields.php:248
-#: includes/Plugins/ACF/Fields/BlocksFields.php:291
-#: includes/Plugins/ACF/Fields/BlocksFields.php:296
-#: includes/Plugins/ACF/Fields/BlocksFields.php:326
-#: includes/Plugins/ACF/Fields/BlocksFields.php:331
-#: includes/Plugins/ACF/Fields/BlocksFields.php:396
-#: includes/Plugins/ACF/Fields/BlocksFields.php:401
-#: includes/Plugins/ACF/Fields/BlocksFields.php:425
-#: includes/Plugins/ACF/Fields/BlocksFields.php:430
-#: includes/Plugins/ACF/Fields/BlocksFields.php:487
-#: includes/Plugins/ACF/Fields/BlocksFields.php:492
-#: includes/Plugins/ACF/Fields/BlocksFields.php:539
-#: includes/Plugins/ACF/Fields/BlocksFields.php:543
-#: includes/Plugins/ACF/Fields/BlocksFields.php:646
-#: includes/Plugins/ACF/Fields/BlocksFields.php:649
-#: includes/Plugins/ACF/Fields/BlocksFields.php:716
-#: includes/Plugins/ACF/Fields/BlocksFields.php:721
-#: includes/Plugins/ACF/Fields/BlocksFields.php:743
-#: includes/Plugins/ACF/Fields/BlocksFields.php:748
-#: includes/Plugins/ACF/Fields/BlocksFields.php:811
-#: includes/Plugins/ACF/Fields/BlocksFields.php:816
-#: includes/Plugins/ACF/Fields/BlocksFields.php:860
-#: includes/Plugins/ACF/Fields/BlocksFields.php:865
-msgid "Title"
-msgstr "Titre"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:122
-#: includes/Plugins/ACF/Fields/BlocksFields.php:127
-#: includes/Plugins/ACF/Fields/BlocksFields.php:253
-#: includes/Plugins/ACF/Fields/BlocksFields.php:258
-#: includes/Plugins/ACF/Fields/BlocksFields.php:869
-#: includes/Plugins/ACF/Fields/BlocksFields.php:872
-msgid "Subtitle"
-msgstr "Sous-titre"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:133
-#: includes/Plugins/ACF/Fields/BlocksFields.php:264
-#: includes/Plugins/ACF/Fields/BlocksFields.php:419
-#: includes/Plugins/ACF/Fields/BlocksFields.php:434
-#: includes/Plugins/ACF/Fields/BlocksFields.php:496
-#: includes/Plugins/ACF/Fields/BlocksFields.php:555
-#: includes/Plugins/ACF/Fields/BlocksFields.php:568
-#: includes/Plugins/ACF/Fields/BlocksFields.php:654
-#: includes/Plugins/ACF/Fields/BlocksFields.php:709
-#: includes/Plugins/ACF/Fields/BlocksFields.php:725
-#: includes/Plugins/ACF/Fields/BlocksFields.php:736
-#: includes/Plugins/ACF/Fields/BlocksFields.php:752
-#: includes/Plugins/ACF/Fields/BlocksFields.php:820
-#: includes/Plugins/ACF/Fields/BlocksFields.php:876
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:61 includes/helpers.php:95
-msgid "Content"
-msgstr "Contenu"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:142
-#: includes/Plugins/ACF/Fields/BlocksFields.php:273
-msgid "Links"
-msgstr "Liens"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:146
-#: includes/Plugins/ACF/Fields/BlocksFields.php:277
-msgid "Add Link"
-msgstr "Ajouter un lien"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:170
-#: includes/Plugins/ACF/Fields/BlocksFields.php:301
-#: includes/Plugins/ACF/Fields/BlocksFields.php:445
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:67
-msgid "Link"
-msgstr "Lien"
-
-#: includes/Plugins/ACF/Fields/BlocksFields.php:205
-#: includes/Plugins/ACF/Fields/BlocksFields.php:208
-#: includes/Plugins/ACF/Fields/BlocksFields.php:336
-#: includes/Plugins/ACF/Fields/BlocksFields.php:339
+#: includes/Plugins/ACF/Fields/BlocksFields.php:260
+#: includes/Plugins/ACF/Fields/BlocksFields.php:263
+#: includes/Plugins/ACF/Fields/BlocksFields.php:391
+#: includes/Plugins/ACF/Fields/BlocksFields.php:394
 msgid "Name"
 msgstr "Nom"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:216
+#: includes/Plugins/ACF/Fields/BlocksFields.php:115
+#: includes/Plugins/ACF/Fields/BlocksFields.php:157
+#: includes/Plugins/ACF/Fields/BlocksFields.php:205
+#: includes/Plugins/ACF/Fields/BlocksFields.php:240
+#: includes/Plugins/ACF/Fields/BlocksFields.php:288
+#: includes/Plugins/ACF/Fields/BlocksFields.php:336
+#: includes/Plugins/ACF/Fields/BlocksFields.php:371
+#: includes/Plugins/ACF/Fields/BlocksFields.php:535
+#: includes/Plugins/ACF/Fields/BlocksFields.php:674
+#: includes/Plugins/ACF/Fields/BlocksFields.php:686
+#: includes/Plugins/ACF/Fields/BlocksFields.php:698
+#: includes/Plugins/ACF/Fields/BlocksFields.php:773
+#: includes/Plugins/ACF/Fields/BlocksFields.php:884
+#: includes/Plugins/ACF/Fields/BlocksFields.php:932
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:74 includes/helpers.php:103
+msgid "Image"
+msgstr "Image"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:129
+msgid "Two Columns"
+msgstr "Deux colonnes"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:140
+msgid "Left Column"
+msgstr "Colonne de gauche"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:167
+#: includes/Plugins/ACF/Fields/BlocksFields.php:172
+#: includes/Plugins/ACF/Fields/BlocksFields.php:215
+#: includes/Plugins/ACF/Fields/BlocksFields.php:220
+#: includes/Plugins/ACF/Fields/BlocksFields.php:250
+#: includes/Plugins/ACF/Fields/BlocksFields.php:255
+#: includes/Plugins/ACF/Fields/BlocksFields.php:298
+#: includes/Plugins/ACF/Fields/BlocksFields.php:303
+#: includes/Plugins/ACF/Fields/BlocksFields.php:346
+#: includes/Plugins/ACF/Fields/BlocksFields.php:351
+#: includes/Plugins/ACF/Fields/BlocksFields.php:381
+#: includes/Plugins/ACF/Fields/BlocksFields.php:386
+#: includes/Plugins/ACF/Fields/BlocksFields.php:451
+#: includes/Plugins/ACF/Fields/BlocksFields.php:456
+#: includes/Plugins/ACF/Fields/BlocksFields.php:508
+#: includes/Plugins/ACF/Fields/BlocksFields.php:513
+#: includes/Plugins/ACF/Fields/BlocksFields.php:570
+#: includes/Plugins/ACF/Fields/BlocksFields.php:575
+#: includes/Plugins/ACF/Fields/BlocksFields.php:622
+#: includes/Plugins/ACF/Fields/BlocksFields.php:626
+#: includes/Plugins/ACF/Fields/BlocksFields.php:728
+#: includes/Plugins/ACF/Fields/BlocksFields.php:731
+#: includes/Plugins/ACF/Fields/BlocksFields.php:798
+#: includes/Plugins/ACF/Fields/BlocksFields.php:803
+#: includes/Plugins/ACF/Fields/BlocksFields.php:825
+#: includes/Plugins/ACF/Fields/BlocksFields.php:830
+#: includes/Plugins/ACF/Fields/BlocksFields.php:893
+#: includes/Plugins/ACF/Fields/BlocksFields.php:898
+#: includes/Plugins/ACF/Fields/BlocksFields.php:941
+#: includes/Plugins/ACF/Fields/BlocksFields.php:946
+msgid "Title"
+msgstr "Titre"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:177
+#: includes/Plugins/ACF/Fields/BlocksFields.php:182
+#: includes/Plugins/ACF/Fields/BlocksFields.php:308
+#: includes/Plugins/ACF/Fields/BlocksFields.php:313
+#: includes/Plugins/ACF/Fields/BlocksFields.php:950
+#: includes/Plugins/ACF/Fields/BlocksFields.php:953
+msgid "Subtitle"
+msgstr "Sous-titre"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:188
+#: includes/Plugins/ACF/Fields/BlocksFields.php:319
+#: includes/Plugins/ACF/Fields/BlocksFields.php:502
+#: includes/Plugins/ACF/Fields/BlocksFields.php:517
+#: includes/Plugins/ACF/Fields/BlocksFields.php:579
+#: includes/Plugins/ACF/Fields/BlocksFields.php:638
+#: includes/Plugins/ACF/Fields/BlocksFields.php:651
+#: includes/Plugins/ACF/Fields/BlocksFields.php:736
+#: includes/Plugins/ACF/Fields/BlocksFields.php:791
+#: includes/Plugins/ACF/Fields/BlocksFields.php:807
+#: includes/Plugins/ACF/Fields/BlocksFields.php:818
+#: includes/Plugins/ACF/Fields/BlocksFields.php:834
+#: includes/Plugins/ACF/Fields/BlocksFields.php:902
+#: includes/Plugins/ACF/Fields/BlocksFields.php:957
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:62 includes/helpers.php:95
+msgid "Content"
+msgstr "Contenu"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:197
+#: includes/Plugins/ACF/Fields/BlocksFields.php:328
+msgid "Links"
+msgstr "Liens"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:201
+#: includes/Plugins/ACF/Fields/BlocksFields.php:332
+msgid "Add Link"
+msgstr "Ajouter un lien"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:225
+#: includes/Plugins/ACF/Fields/BlocksFields.php:356
+#: includes/Plugins/ACF/Fields/BlocksFields.php:528
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:68
+msgid "Link"
+msgstr "Lien"
+
+#: includes/Plugins/ACF/Fields/BlocksFields.php:271
 msgid "Right Column"
 msgstr "Colonne de droite"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:351
+#: includes/Plugins/ACF/Fields/BlocksFields.php:406
 msgid "Three Columns"
 msgstr "Trois colonnes"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:362
-#: includes/Plugins/ACF/Fields/BlocksFields.php:370
-#: includes/Plugins/ACF/Fields/BlocksFields.php:378
+#: includes/Plugins/ACF/Fields/BlocksFields.php:417
+#: includes/Plugins/ACF/Fields/BlocksFields.php:425
+#: includes/Plugins/ACF/Fields/BlocksFields.php:433
+#: includes/Plugins/ACF/Fields/BlocksFields.php:466
+#: includes/Plugins/ACF/Fields/BlocksFields.php:474
+#: includes/Plugins/ACF/Fields/BlocksFields.php:482
+#: includes/Plugins/ACF/Fields/BlocksFields.php:490
 msgid "Column"
 msgstr "Colonne"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:390
+#: includes/Plugins/ACF/Fields/BlocksFields.php:445
 msgid "Four Columns"
 msgstr "Quatre colonnes"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:462
-#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:48
+#: includes/Plugins/ACF/Fields/BlocksFields.php:545
+#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:49
 msgid "Layout"
 msgstr "Mise en page"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:465
+#: includes/Plugins/ACF/Fields/BlocksFields.php:548
 msgid "Image layout."
 msgstr "Disposition de l’image."
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:467
+#: includes/Plugins/ACF/Fields/BlocksFields.php:550
 msgid "Right"
 msgstr "Droite"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:468
+#: includes/Plugins/ACF/Fields/BlocksFields.php:551
 msgid "Left"
 msgstr "Gauche"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:482
-#: includes/Plugins/ACF/Fields/BlocksFields.php:518
+#: includes/Plugins/ACF/Fields/BlocksFields.php:565
+#: includes/Plugins/ACF/Fields/BlocksFields.php:601
 msgid "Video"
 msgstr "Vidéo"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:506
+#: includes/Plugins/ACF/Fields/BlocksFields.php:589
 msgid "Poster"
 msgstr "Poster"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:533
-#: includes/Plugins/ACF/Fields/BlocksFields.php:548
-#: includes/Plugins/ACF/Fields/BlocksFields.php:701
+#: includes/Plugins/ACF/Fields/BlocksFields.php:616
+#: includes/Plugins/ACF/Fields/BlocksFields.php:631
+#: includes/Plugins/ACF/Fields/BlocksFields.php:783
 msgid "Contents"
 msgstr "Contenus"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:632
-#: includes/Plugins/ACF/Fields/BlocksFields.php:637
+#: includes/Plugins/ACF/Fields/BlocksFields.php:715
+#: includes/Plugins/ACF/Fields/BlocksFields.php:720
 msgid "Key Figures"
 msgstr "Chiffres clés"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:641
+#: includes/Plugins/ACF/Fields/BlocksFields.php:724
 msgid "Add Key Figure"
 msgstr "Ajouter un chiffre clés"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:666
+#: includes/Plugins/ACF/Fields/BlocksFields.php:748
 msgid "Background Color"
 msgstr "Couleur de fond"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:670
+#: includes/Plugins/ACF/Fields/BlocksFields.php:752
 msgid "Red"
 msgstr "Rouge"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:671
+#: includes/Plugins/ACF/Fields/BlocksFields.php:753
 msgid "White"
 msgstr "Blanc"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:686
+#: includes/Plugins/ACF/Fields/BlocksFields.php:768
 msgid "Image and Contents"
 msgstr "Image et contenus"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:766
+#: includes/Plugins/ACF/Fields/BlocksFields.php:848
 msgid "Add Block"
 msgstr "Ajouter un bloc"
 
-#: includes/Plugins/ACF/Fields/BlocksFields.php:775
+#: includes/Plugins/ACF/Fields/BlocksFields.php:857
 msgid "Blocks Fields"
 msgstr "Champs de blocs"
 
-#: includes/Plugins/ACF/Fields/ContactPageFields.php:47
+#: includes/Plugins/ACF/Fields/ContactPageFields.php:48
 msgid "Contact Form ID"
 msgstr "Identifiant du formulaire de contact"
 
-#: includes/Plugins/ACF/Fields/ContactPageFields.php:62
+#: includes/Plugins/ACF/Fields/ContactPageFields.php:63
 msgid "Contact Page Fields"
 msgstr "Champs de la page contact"
 
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:46 includes/helpers.php:80
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:47 includes/helpers.php:80
 msgid "Hero"
 msgstr "En-tête"
 
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:52
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:57 includes/helpers.php:86
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:53
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:58 includes/helpers.php:86
 #: includes/helpers.php:91
 msgid "Heading"
 msgstr "Titre"
 
-#: includes/Plugins/ACF/Fields/FrontPageFields.php:88
+#: includes/Plugins/ACF/Fields/FrontPageFields.php:89
 msgid "Front Page Fields"
 msgstr "Champs de la page d’accueil"
 
-#: includes/Plugins/ACF/Fields/PodcastPostFields.php:46
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:47
 msgid "Duration"
 msgstr "Durée"
 
-#: includes/Plugins/ACF/Fields/PodcastPostFields.php:54
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:55
 msgid "File"
 msgstr "Fichier"
 
-#: includes/Plugins/ACF/Fields/PodcastPostFields.php:67
+#: includes/Plugins/ACF/Fields/PodcastPostFields.php:68
 msgid "Podcast Post Fields"
 msgstr "Champs du podcast"
 
-#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:52
+#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:53
 msgid "Full"
 msgstr "Pleine largeur"
 
-#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:53
+#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:54
 msgid "Grid"
 msgstr "Grille"
 
-#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:68
-#: includes/Plugins/ACF/Fields/TalksPageFields.php:52
+#: includes/Plugins/ACF/Fields/ProficiencyPageFields.php:69
+#: includes/Plugins/ACF/Fields/TalksPageFields.php:53
 msgid "Talks Page Fields"
 msgstr "Champs de la page des conférences"
 
-#: includes/Post/Athlete.php:95 includes/Post/Podcast.php:95
+#: includes/Post/Athlete.php:96 includes/Post/Podcast.php:96
 msgid "Thumbnail"
 msgstr "Image mise en avant"
 
 #. translators: Publish box date format, see https://secure.php.net/date
-#: includes/Post/Athlete.php:148 includes/Post/Podcast.php:148
+#: includes/Post/Athlete.php:149 includes/Post/Podcast.php:149
 msgid "M j, Y @ H:i"
 msgstr "M j, Y @ H:i"
 
-#: includes/Post/Athlete.php:153 includes/Post/Athlete.php:231
+#: includes/Post/Athlete.php:154 includes/Post/Athlete.php:232
 msgid "View Athlete"
 msgstr "Voir l’athlète"
 
-#: includes/Post/Athlete.php:159 includes/Post/Athlete.php:165
+#: includes/Post/Athlete.php:160 includes/Post/Athlete.php:166
 msgid "Preview Athlete"
 msgstr "Prévisualiser l’athlète"
 
-#: includes/Post/Athlete.php:170 includes/Post/Athlete.php:173
-#: includes/Post/Athlete.php:251
+#: includes/Post/Athlete.php:171 includes/Post/Athlete.php:174
+#: includes/Post/Athlete.php:252
 msgid "Athlete updated."
 msgstr ""
 
-#: includes/Post/Athlete.php:171 includes/Post/Podcast.php:171
+#: includes/Post/Athlete.php:172 includes/Post/Podcast.php:172
 msgid "Custom field updated."
 msgstr ""
 
-#: includes/Post/Athlete.php:172 includes/Post/Podcast.php:172
+#: includes/Post/Athlete.php:173 includes/Post/Podcast.php:173
 msgid "Custom field deleted."
 msgstr ""
 
 #. translators: %s: date and time of the revision
-#: includes/Post/Athlete.php:175
+#: includes/Post/Athlete.php:176
 #, php-format
 msgid "Athlete restored to revision from %s."
 msgstr ""
 
-#: includes/Post/Athlete.php:176 includes/Post/Athlete.php:247
+#: includes/Post/Athlete.php:177 includes/Post/Athlete.php:248
 msgid "Athlete published."
 msgstr ""
 
-#: includes/Post/Athlete.php:177
+#: includes/Post/Athlete.php:178
 msgid "Athlete saved."
 msgstr ""
 
-#: includes/Post/Athlete.php:178
+#: includes/Post/Athlete.php:179
 msgid "Athlete submitted."
 msgstr ""
 
-#: includes/Post/Athlete.php:179
+#: includes/Post/Athlete.php:180
 #, php-format
 msgid "Athlete scheduled for: %s."
 msgstr ""
 
-#: includes/Post/Athlete.php:180
+#: includes/Post/Athlete.php:181
 msgid "Athlete draft updated."
 msgstr ""
 
 #. translators: %s: Number of athletes.
-#: includes/Post/Athlete.php:200
+#: includes/Post/Athlete.php:201
 #, php-format
 msgid "%s athlete updated."
 msgid_plural "%s athletes updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/Athlete.php:201
+#: includes/Post/Athlete.php:202
 msgid "1 athlete not updated, somebody is editing it."
 msgstr ""
 
 #. translators: %s: Number of athletes.
-#: includes/Post/Athlete.php:203
+#: includes/Post/Athlete.php:204
 #, php-format
 msgid "%s athlete not updated, somebody is editing it."
 msgid_plural "%s athletes not updated, somebody is editing them."
@@ -375,7 +398,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of athletes.
-#: includes/Post/Athlete.php:205
+#: includes/Post/Athlete.php:206
 #, php-format
 msgid "%s athlete permanently deleted."
 msgid_plural "%s athletes permanently deleted."
@@ -383,7 +406,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of athletes.
-#: includes/Post/Athlete.php:207
+#: includes/Post/Athlete.php:208
 #, php-format
 msgid "%s athlete moved to the Trash."
 msgid_plural "%s athletes moved to the Trash."
@@ -391,182 +414,182 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of athletes.
-#: includes/Post/Athlete.php:209
+#: includes/Post/Athlete.php:210
 #, php-format
 msgid "%s athlete restored from the Trash."
 msgid_plural "%s athletes restored from the Trash."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/Athlete.php:224
+#: includes/Post/Athlete.php:225
 msgctxt "athlete type generale name"
 msgid "Athletes"
 msgstr ""
 
-#: includes/Post/Athlete.php:225
+#: includes/Post/Athlete.php:226
 msgctxt "athlete type singular name"
 msgid "Athlete"
 msgstr ""
 
-#: includes/Post/Athlete.php:226
+#: includes/Post/Athlete.php:227
 msgctxt "athlete type"
 msgid "Add New"
 msgstr ""
 
-#: includes/Post/Athlete.php:227
+#: includes/Post/Athlete.php:228
 msgid "Add New Athlete"
 msgstr ""
 
-#: includes/Post/Athlete.php:228
+#: includes/Post/Athlete.php:229
 msgid "Edit Athlete"
 msgstr ""
 
-#: includes/Post/Athlete.php:229
+#: includes/Post/Athlete.php:230
 msgid "New Athlete"
 msgstr ""
 
-#: includes/Post/Athlete.php:230
+#: includes/Post/Athlete.php:231
 msgid "View Athletes"
 msgstr ""
 
-#: includes/Post/Athlete.php:232
+#: includes/Post/Athlete.php:233
 msgid "Search Athletes"
 msgstr ""
 
-#: includes/Post/Athlete.php:233
+#: includes/Post/Athlete.php:234
 msgid "No Athletes found."
 msgstr ""
 
-#: includes/Post/Athlete.php:234
+#: includes/Post/Athlete.php:235
 msgid "No Athletes found in Trash."
 msgstr ""
 
-#: includes/Post/Athlete.php:235
+#: includes/Post/Athlete.php:236
 msgid "Parent Athlete:"
 msgstr ""
 
-#: includes/Post/Athlete.php:236
+#: includes/Post/Athlete.php:237
 msgid "All Athletes"
 msgstr ""
 
-#: includes/Post/Athlete.php:237
+#: includes/Post/Athlete.php:238
 msgid "Athlete Archives"
 msgstr ""
 
-#: includes/Post/Athlete.php:238
+#: includes/Post/Athlete.php:239
 msgid "Athlete Attributes"
 msgstr ""
 
-#: includes/Post/Athlete.php:239
+#: includes/Post/Athlete.php:240
 msgid "Insert into athlete"
 msgstr ""
 
-#: includes/Post/Athlete.php:240
-msgid "Uploaded to this athlete"
-msgstr ""
-
 #: includes/Post/Athlete.php:241
-msgctxt "athlete"
-msgid "Featured Image"
+msgid "Uploaded to this athlete"
 msgstr ""
 
 #: includes/Post/Athlete.php:242
 msgctxt "athlete"
-msgid "Set featured image"
+msgid "Featured Image"
 msgstr ""
 
 #: includes/Post/Athlete.php:243
 msgctxt "athlete"
-msgid "Remove featured image"
+msgid "Set featured image"
 msgstr ""
 
 #: includes/Post/Athlete.php:244
 msgctxt "athlete"
-msgid "Use as featured image"
+msgid "Remove featured image"
 msgstr ""
 
 #: includes/Post/Athlete.php:245
-msgid "Athletes list navigation"
+msgctxt "athlete"
+msgid "Use as featured image"
 msgstr ""
 
 #: includes/Post/Athlete.php:246
+msgid "Athletes list navigation"
+msgstr ""
+
+#: includes/Post/Athlete.php:247
 msgid "Athletes list"
 msgstr ""
 
-#: includes/Post/Athlete.php:248
+#: includes/Post/Athlete.php:249
 msgid "Athlete published privately."
 msgstr ""
 
-#: includes/Post/Athlete.php:249
+#: includes/Post/Athlete.php:250
 msgid "Athlete reverted to draft."
 msgstr ""
 
-#: includes/Post/Athlete.php:250
+#: includes/Post/Athlete.php:251
 msgid "Athlete scheduled."
 msgstr ""
 
-#: includes/Post/Athlete.php:259
+#: includes/Post/Athlete.php:260
 msgid "Athlete"
 msgstr "Athlète"
 
-#: includes/Post/Athlete.php:260
+#: includes/Post/Athlete.php:261
 msgid "Athlete Description"
 msgstr "Description de l’athlète"
 
-#: includes/Post/Podcast.php:153 includes/Post/Podcast.php:231
+#: includes/Post/Podcast.php:154 includes/Post/Podcast.php:232
 msgid "View Podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:159 includes/Post/Podcast.php:165
+#: includes/Post/Podcast.php:160 includes/Post/Podcast.php:166
 msgid "Preview Podcast"
 msgstr "Prévisualiser le podcast"
 
-#: includes/Post/Podcast.php:170 includes/Post/Podcast.php:173
-#: includes/Post/Podcast.php:251
+#: includes/Post/Podcast.php:171 includes/Post/Podcast.php:174
+#: includes/Post/Podcast.php:252
 msgid "Podcast updated."
 msgstr ""
 
 #. translators: %s: date and time of the revision
-#: includes/Post/Podcast.php:175
+#: includes/Post/Podcast.php:176
 #, php-format
 msgid "Podcast restored to revision from %s."
 msgstr ""
 
-#: includes/Post/Podcast.php:176 includes/Post/Podcast.php:247
+#: includes/Post/Podcast.php:177 includes/Post/Podcast.php:248
 msgid "Podcast published."
 msgstr ""
 
-#: includes/Post/Podcast.php:177
+#: includes/Post/Podcast.php:178
 msgid "Podcast saved."
 msgstr ""
 
-#: includes/Post/Podcast.php:178
+#: includes/Post/Podcast.php:179
 msgid "Podcast submitted."
 msgstr ""
 
-#: includes/Post/Podcast.php:179
+#: includes/Post/Podcast.php:180
 #, php-format
 msgid "Podcast scheduled for: %s."
 msgstr ""
 
-#: includes/Post/Podcast.php:180
+#: includes/Post/Podcast.php:181
 msgid "Podcast draft updated."
 msgstr ""
 
 #. translators: %s: Number of podcasts.
-#: includes/Post/Podcast.php:200
+#: includes/Post/Podcast.php:201
 #, php-format
 msgid "%s podcast updated."
 msgid_plural "%s podcasts updated."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/Podcast.php:201
+#: includes/Post/Podcast.php:202
 msgid "1 podcast not updated, somebody is editing it."
 msgstr ""
 
 #. translators: %s: Number of podcasts.
-#: includes/Post/Podcast.php:203
+#: includes/Post/Podcast.php:204
 #, php-format
 msgid "%s podcast not updated, somebody is editing it."
 msgid_plural "%s podcasts not updated, somebody is editing them."
@@ -574,7 +597,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of podcasts.
-#: includes/Post/Podcast.php:205
+#: includes/Post/Podcast.php:206
 #, php-format
 msgid "%s podcast permanently deleted."
 msgid_plural "%s podcasts permanently deleted."
@@ -582,7 +605,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of podcasts.
-#: includes/Post/Podcast.php:207
+#: includes/Post/Podcast.php:208
 #, php-format
 msgid "%s podcast moved to the Trash."
 msgid_plural "%s podcasts moved to the Trash."
@@ -590,189 +613,189 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: Number of podcasts.
-#: includes/Post/Podcast.php:209
+#: includes/Post/Podcast.php:210
 #, php-format
 msgid "%s podcast restored from the Trash."
 msgid_plural "%s podcasts restored from the Trash."
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/Post/Podcast.php:224
+#: includes/Post/Podcast.php:225
 msgctxt "podcast type generale name"
 msgid "Podcasts"
 msgstr ""
 
-#: includes/Post/Podcast.php:225
+#: includes/Post/Podcast.php:226
 msgctxt "podcast type singular name"
 msgid "Podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:226
+#: includes/Post/Podcast.php:227
 msgctxt "podcast type"
 msgid "Add New"
 msgstr ""
 
-#: includes/Post/Podcast.php:227
+#: includes/Post/Podcast.php:228
 msgid "Add New Podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:228
+#: includes/Post/Podcast.php:229
 msgid "Edit Podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:229
+#: includes/Post/Podcast.php:230
 msgid "New Podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:230
+#: includes/Post/Podcast.php:231
 msgid "View Podcasts"
 msgstr ""
 
-#: includes/Post/Podcast.php:232
+#: includes/Post/Podcast.php:233
 msgid "Search Podcasts"
 msgstr ""
 
-#: includes/Post/Podcast.php:233
+#: includes/Post/Podcast.php:234
 msgid "No Podcasts found."
 msgstr ""
 
-#: includes/Post/Podcast.php:234
+#: includes/Post/Podcast.php:235
 msgid "No Podcasts found in Trash."
 msgstr ""
 
-#: includes/Post/Podcast.php:235
+#: includes/Post/Podcast.php:236
 msgid "Parent Podcast:"
 msgstr ""
 
-#: includes/Post/Podcast.php:236
+#: includes/Post/Podcast.php:237
 msgid "All Podcasts"
 msgstr ""
 
-#: includes/Post/Podcast.php:237
+#: includes/Post/Podcast.php:238
 msgid "Podcast Archives"
 msgstr ""
 
-#: includes/Post/Podcast.php:238
+#: includes/Post/Podcast.php:239
 msgid "Podcast Attributes"
 msgstr ""
 
-#: includes/Post/Podcast.php:239
+#: includes/Post/Podcast.php:240
 msgid "Insert into podcast"
 msgstr ""
 
-#: includes/Post/Podcast.php:240
-msgid "Uploaded to this podcast"
-msgstr ""
-
 #: includes/Post/Podcast.php:241
-msgctxt "podcast"
-msgid "Featured Image"
+msgid "Uploaded to this podcast"
 msgstr ""
 
 #: includes/Post/Podcast.php:242
 msgctxt "podcast"
-msgid "Set featured image"
+msgid "Featured Image"
 msgstr ""
 
 #: includes/Post/Podcast.php:243
 msgctxt "podcast"
-msgid "Remove featured image"
+msgid "Set featured image"
 msgstr ""
 
 #: includes/Post/Podcast.php:244
 msgctxt "podcast"
-msgid "Use as featured image"
+msgid "Remove featured image"
 msgstr ""
 
 #: includes/Post/Podcast.php:245
-msgid "Podcasts list navigation"
+msgctxt "podcast"
+msgid "Use as featured image"
 msgstr ""
 
 #: includes/Post/Podcast.php:246
+msgid "Podcasts list navigation"
+msgstr ""
+
+#: includes/Post/Podcast.php:247
 msgid "Podcasts list"
 msgstr ""
 
-#: includes/Post/Podcast.php:248
+#: includes/Post/Podcast.php:249
 msgid "Podcast published privately."
 msgstr ""
 
-#: includes/Post/Podcast.php:249
+#: includes/Post/Podcast.php:250
 msgid "Podcast reverted to draft."
 msgstr ""
 
-#: includes/Post/Podcast.php:250
+#: includes/Post/Podcast.php:251
 msgid "Podcast scheduled."
 msgstr ""
 
-#: includes/Post/Podcast.php:255
+#: includes/Post/Podcast.php:256
 msgid "podcasts"
 msgstr "podcasts"
 
-#: includes/Post/Podcast.php:262
+#: includes/Post/Podcast.php:263
 msgid "Podcast"
 msgstr "Podcast"
 
-#: includes/Post/Podcast.php:263
+#: includes/Post/Podcast.php:264
 msgid "Podcast Description"
 msgstr "Description du podcast"
 
-#: includes/Setup/Enqueue.php:78
+#: includes/Setup/Enqueue.php:79
 msgctxt "messages"
 msgid "Please fill out this field."
 msgstr "Veuillez remplir ce champ."
 
-#: includes/Setup/Enqueue.php:81
+#: includes/Setup/Enqueue.php:82
 msgctxt "messages"
 msgid "Please enter an email address."
 msgstr "Veuillez entrer une adresse email."
 
-#: includes/Setup/Enqueue.php:82
+#: includes/Setup/Enqueue.php:83
 msgctxt "messages"
 msgid "Please enter a URL."
 msgstr "Veuillez entrer une URL."
 
-#: includes/Setup/Enqueue.php:83
+#: includes/Setup/Enqueue.php:84
 msgctxt "messages"
 msgid "Please match the expected format."
 msgstr "Veuillez correspondre au format attendu."
 
-#: includes/Setup/NavMenu.php:38
+#: includes/Setup/NavMenu.php:39
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: includes/Setup/NavMenu.php:39
+#: includes/Setup/NavMenu.php:40
 msgid "Footer Menu"
 msgstr "Menu pied de page"
 
-#: includes/Setup/Settings.php:42
+#: includes/Setup/Settings.php:43
 msgid "Public Email Address"
 msgstr "Adresse email publique"
 
-#: includes/Setup/Settings.php:48
+#: includes/Setup/Settings.php:49
 msgid "Email"
 msgstr "Email"
 
-#: includes/Setup/Settings.php:49
+#: includes/Setup/Settings.php:50
 msgid "This address is used for public purposes."
 msgstr "Cette adresse est utilisée à des fins publiques."
 
-#: includes/Setup/Settings.php:63
+#: includes/Setup/Settings.php:64
 msgid "LinkedIn"
 msgstr "LinkedIn"
 
-#: includes/Setup/Settings.php:70
+#: includes/Setup/Settings.php:71
 msgid "Enter the LinkedIn URL here."
 msgstr "Entrez l’URL LinkedIn ici."
 
-#: includes/Setup/Settings.php:76 includes/Setup/Theme.php:76
+#: includes/Setup/Settings.php:77 includes/Setup/Theme.php:77
 msgid "Instagram"
 msgstr "Instagram"
 
-#: includes/Setup/Settings.php:83
+#: includes/Setup/Settings.php:84
 msgid "Enter the Instagram URL here."
 msgstr "Indiquer l’URL du compte Instagram."
 
-#: includes/Setup/Theme.php:70
+#: includes/Setup/Theme.php:71
 msgid "Share on LinkedIn"
 msgstr "Partagez sur LinkedIn"
 

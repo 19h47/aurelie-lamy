@@ -24,7 +24,7 @@
 		"@19h47/modular": "19h47/19h47-modular",
 		"locomotive-scroll": "^4.1.4",
 		"modularload": "^1.2.8",
-		"swiper": "^10.2.0"
+		"swiper": "^11.0.3"
 	},
 	"devDependencies": {
 		"@19h47/prettier-config": "^1.0.0",

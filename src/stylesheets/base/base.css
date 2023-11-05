@@ -67,4 +67,24 @@
 	html.is-first-load {
 		opacity: 1;
 	}
+
+	.swiper-pagination {
+		margin-top: 2.125rem;
+		display: flex;
+		column-gap: 1.125rem;
+		justify-content: center;
+	}
+
+	.swiper-pagination .swiper-pagination-bullet {
+		cursor: pointer;
+		width: 0.625rem;
+		height: 0.625rem;
+		border-radius: 9999px;
+		background-color: #F3B4AB;
+		display: block;
+	}
+
+	.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+		background-color: #F73D22;
+	}
 }

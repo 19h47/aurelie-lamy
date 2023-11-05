@@ -23,7 +23,7 @@ function init() {
 }
 
 window.onload    = async() => {
-	const $style = document.getElementById( `${aurelielamy.text_domain} - main - css` );
+	const $style = document.getElementById( `${aurelielamy.text_domain}-main-css` );
 
 	if ($style) {
 		if ($style.isLoaded) {
