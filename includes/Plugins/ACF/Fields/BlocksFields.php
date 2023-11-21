@@ -77,6 +77,20 @@ class BlocksFields {
 						'display' => 'block',
 						'sub_fields' => array(
 							array(
+								'key'           => 'field_' . $key . '_quotes_background_color',
+								'label'         => __( 'Background Color', 'aurelielamy' ),
+								'name'          => 'background_color',
+								'type'          => 'select',
+								'choices'       => array(
+									'bg-red-light-grayish' => __( 'Red Light Grayish', 'aurelielamy' ),
+									'bg-red-vivid text-white' => __( 'Red Vivid', 'aurelielamy' ),
+								),
+								'default_value' => 'bg-red-light-grayish',
+								'return_format' => 'value',
+								'multiple'      => 0,
+								'allow_null'    => 0,
+							),
+							array(
 								'key' => 'field_' . $key . '_quotes_quotes',
 								'label' => __( 'Quotes', 'aurelielamy' ),
 								'name' => 'quotes',
@@ -756,9 +770,6 @@ class BlocksFields {
 								'return_format' => 'value',
 								'multiple'      => 0,
 								'allow_null'    => 0,
-								'ui'            => 0,
-								'ajax'          => 0,
-								'placeholder'   => '',
 							),
 						),
 					),

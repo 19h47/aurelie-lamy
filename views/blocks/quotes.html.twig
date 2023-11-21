@@ -6,7 +6,14 @@
  # @author Jérémy Levron <jeremylevron@19h47.fr> (https://19h47.fr)
  #}
 
-<div class="py-15 lg:py-30 overflow-hidden text-center bg-red-light-grayish">
+<div
+	class="{{
+		html_classes(
+			'py-15 lg:py-30 overflow-hidden text-center',
+			block.background_color | default( 'bg-red-light-grayish' )
+		)
+	}}"
+>
 	<div class="container">
 		<div class="row">
 			{% set parameters = {
