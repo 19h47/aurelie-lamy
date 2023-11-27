@@ -19,7 +19,7 @@ class ContactPageFields {
 	 * @return void
 	 */
 	public function run() {
-		add_action( 'acf/init', array( $this, 'fields' ) );
+		add_action( 'acf/include_fields', array( $this, 'fields' ) );
 	}
 
 	/**
