@@ -1,6 +1,6 @@
 {
 	"require": {
-		"timber/timber": "^2.0",
+		"timber/timber": "^2.1",
 		"19h47/wp-form-controls": "dev-master",
 		"19h47/wp-sanitize-title-with-underscores": "dev-master",
 		"19h47/wp-get-theme": "dev-master",
